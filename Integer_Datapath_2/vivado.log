@@ -2,38 +2,252 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Feb 25 19:50:04 2019
-# Process ID: 2716
-# Current directory: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5500 C:\Users\Jesus Luciano\Desktop\Computer_Architecture\Integer_Datapath_2\Integer_Datapath_2.xpr
-# Log file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/vivado.log
-# Journal file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2\vivado.jou
+# Start of session at: Thu Feb 28 20:49:23 2019
+# Process ID: 824
+# Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8712 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\Integer_Datapath_2\Integer_Datapath_2.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.xpr}
+open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 798.074 ; gain = 73.750
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 774.234 ; gain = 116.602
 update_compile_order -fileset sources_1
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-file mkdir C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new
-can't create directory "C:/Users/Jesus": permission denied
-file mkdir {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new}
-close [ open {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v} w ]
-add_files -fileset sim_1 {{C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v}}
+close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/dMem_Lab4.mem} w ]
+add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/dMem_Lab4.mem}}
+close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/IntReg_Lab4.mem} w ]
+add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/IntReg_Lab4.mem}}
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_behav xil_defaultlib.Integer_Datapath xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Jesus -notrace
+couldn't read file "C:/Users/Jesus": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 28 21:56:38 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 805.496 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_behav -key {Behavioral:sim_1:Functional:Integer_Datapath} -tclbatch {Integer_Datapath.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 819.664 ; gain = 14.168
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top Integer_Datapath_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
 update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <Integer_Datapth> not found while processing module instance <dut> [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:34]
+ERROR: [VRFC 10-2063] Module <Data_Memory> not found while processing module instance <dut_mem> [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Jesus -notrace
+couldn't read file "C:/Users/Jesus": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 28 22:05:37 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   M e m o r y
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 848.926 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Feb 25 19:58:10 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 28 22:10:15 2019...
