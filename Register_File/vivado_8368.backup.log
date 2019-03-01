@@ -1,0 +1,734 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb  7 15:31:22 2019
+# Process ID: 8368
+# Current directory: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8428 C:\Users\Jesus Luciano\Desktop\Computer_Architecture\Register_File\Register_File.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 787.555 ; gain = 85.121
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Jesus -notrace
+couldn't read file "C:/Users/Jesus": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb  7 15:39:34 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 819.102 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+*********************************************************
+**              (1) - Initial Regdump                  **
+*********************************************************
+Time:   30.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 00000000
+Time:   40.0 ps  | S_Addr =  1  S = 00000000  |  T_Addr = 17 T = 000001ff
+Time:   50.0 ps  | S_Addr =  2  S = ffffffff  |  T_Addr = 18 T = 000003ff
+Time:   60.0 ps  | S_Addr =  3  S = 5a5a5a5a  |  T_Addr = 19 T = 000007ff
+Time:   70.0 ps  | S_Addr =  4  S = a5a5a5a5  |  T_Addr = 20 T = 00000fff
+Time:   80.0 ps  | S_Addr =  5  S = cccccccc  |  T_Addr = 21 T = 10000001
+Time:   90.0 ps  | S_Addr =  6  S = 33333333  |  T_Addr = 22 T = 30000003
+Time:  100.0 ps  | S_Addr =  7  S = c3c3c3c3  |  T_Addr = 23 T = 70000007
+Time:  110.0 ps  | S_Addr =  8  S = 3c3c3c3c  |  T_Addr = 24 T = f000000f
+Time:  120.0 ps  | S_Addr =  9  S = 00000001  |  T_Addr = 25 T = f800001f
+Time:  130.0 ps  | S_Addr = 10  S = 00000003  |  T_Addr = 26 T = fc00003f
+Time:  140.0 ps  | S_Addr = 11  S = 00000007  |  T_Addr = 27 T = fe00007f
+Time:  150.0 ps  | S_Addr = 12  S = 0000000f  |  T_Addr = 28 T = ff0000ff
+Time:  160.0 ps  | S_Addr = 13  S = 0000001f  |  T_Addr = 29 T = ff8001ff
+Time:  170.0 ps  | S_Addr = 14  S = 0000003f  |  T_Addr = 30 T = ffc003ff
+Time:  180.0 ps  | S_Addr = 15  S = 0000007f  |  T_Addr = 31 T = f0f0f0f0
+Time:  190.0 ps  | S_Addr = 16  S = 000000ff  |  T_Addr =  0 T = 0f0f0f0f
+Time:  200.0 ps  | S_Addr = 17  S = 000001ff  |  T_Addr =  1 T = 00000000
+Time:  210.0 ps  | S_Addr = 18  S = 000003ff  |  T_Addr =  2 T = ffffffff
+Time:  220.0 ps  | S_Addr = 19  S = 000007ff  |  T_Addr =  3 T = 5a5a5a5a
+Time:  230.0 ps  | S_Addr = 20  S = 00000fff  |  T_Addr =  4 T = a5a5a5a5
+Time:  240.0 ps  | S_Addr = 21  S = 10000001  |  T_Addr =  5 T = cccccccc
+Time:  250.0 ps  | S_Addr = 22  S = 30000003  |  T_Addr =  6 T = 33333333
+Time:  260.0 ps  | S_Addr = 23  S = 70000007  |  T_Addr =  7 T = c3c3c3c3
+Time:  270.0 ps  | S_Addr = 24  S = f000000f  |  T_Addr =  8 T = 3c3c3c3c
+Time:  280.0 ps  | S_Addr = 25  S = f800001f  |  T_Addr =  9 T = 00000001
+Time:  290.0 ps  | S_Addr = 26  S = fc00003f  |  T_Addr = 10 T = 00000003
+Time:  300.0 ps  | S_Addr = 27  S = fe00007f  |  T_Addr = 11 T = 00000007
+Time:  310.0 ps  | S_Addr = 28  S = ff0000ff  |  T_Addr = 12 T = 0000000f
+Time:  320.0 ps  | S_Addr = 29  S = ff8001ff  |  T_Addr = 13 T = 0000001f
+Time:  330.0 ps  | S_Addr = 30  S = ffc003ff  |  T_Addr = 14 T = 0000003f
+Time:  340.0 ps  | S_Addr = 31  S = f0f0f0f0  |  T_Addr = 15 T = 0000007f
+$finish called at time : 350 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 70
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 833.074 ; gain = 14.074
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+*********************************************************
+**              (1) - Initial Regdump                  **
+*********************************************************
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+Time:  196.0 ps  | S_Addr = 16  S = 000001ff  |  T_Addr =  0 T = 00000000
+Time:  206.0 ps  | S_Addr = 17  S = 000003ff  |  T_Addr =  1 T = ffffffff
+Time:  216.0 ps  | S_Addr = 18  S = 000007ff  |  T_Addr =  2 T = 5a5a5a5a
+Time:  226.0 ps  | S_Addr = 19  S = 00000fff  |  T_Addr =  3 T = a5a5a5a5
+Time:  236.0 ps  | S_Addr = 20  S = 10000001  |  T_Addr =  4 T = cccccccc
+Time:  246.0 ps  | S_Addr = 21  S = 30000003  |  T_Addr =  5 T = 33333333
+Time:  256.0 ps  | S_Addr = 22  S = 70000007  |  T_Addr =  6 T = c3c3c3c3
+Time:  266.0 ps  | S_Addr = 23  S = f000000f  |  T_Addr =  7 T = 3c3c3c3c
+Time:  276.0 ps  | S_Addr = 24  S = f800001f  |  T_Addr =  8 T = 00000001
+Time:  286.0 ps  | S_Addr = 25  S = fc00003f  |  T_Addr =  9 T = 00000003
+Time:  296.0 ps  | S_Addr = 26  S = fe00007f  |  T_Addr = 10 T = 00000007
+Time:  306.0 ps  | S_Addr = 27  S = ff0000ff  |  T_Addr = 11 T = 0000000f
+Time:  316.0 ps  | S_Addr = 28  S = ff8001ff  |  T_Addr = 12 T = 0000001f
+Time:  326.0 ps  | S_Addr = 29  S = ffc003ff  |  T_Addr = 13 T = 0000003f
+Time:  336.0 ps  | S_Addr = 30  S = f0f0f0f0  |  T_Addr = 14 T = 0000007f
+Time:  346.0 ps  | S_Addr = 31  S = 0f0f0f0f  |  T_Addr = 15 T = 000000ff
+$finish called at time : 350 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 73
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 838.297 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+*********************************************************
+**              (1) - Initial Regdump                  **
+*********************************************************
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+$finish called at time : 190 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 73
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 839.918 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v:76]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+ 
+ ( 1 )   -   I n i t i a l   R e g d u m p    
+ 
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+$finish called at time : 186 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 61
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 845.660 ; gain = 2.004
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v:104]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+ 
+ ( 1 )   -   I n i t i a l   R e g d u m p    
+ 
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+ 
+ ( 2 )   -   W r i t i n g   t o   M e m o r y     
+ 
+ 
+ ( 3 )   -   F i n a l   R e g d u m p      
+ 
+Time:  536.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = ffefef10
+Time:  546.0 ps  | S_Addr =  1  S = fffefe01  |  T_Addr = 17 T = ffeeee11
+Time:  556.0 ps  | S_Addr =  2  S = fffdfd02  |  T_Addr = 18 T = ffeded12
+Time:  566.0 ps  | S_Addr =  3  S = fffcfc03  |  T_Addr = 19 T = ffecec13
+Time:  576.0 ps  | S_Addr =  4  S = fffbfb04  |  T_Addr = 20 T = ffebeb14
+Time:  586.0 ps  | S_Addr =  5  S = fffafa05  |  T_Addr = 21 T = ffeaea15
+Time:  596.0 ps  | S_Addr =  6  S = fff9f906  |  T_Addr = 22 T = ffe9e916
+Time:  606.0 ps  | S_Addr =  7  S = fff8f807  |  T_Addr = 23 T = ffe8e817
+Time:  616.0 ps  | S_Addr =  8  S = fff7f708  |  T_Addr = 24 T = ffe7e718
+Time:  626.0 ps  | S_Addr =  9  S = fff6f609  |  T_Addr = 25 T = ffe6e619
+Time:  636.0 ps  | S_Addr = 10  S = fff5f50a  |  T_Addr = 26 T = ffe5e51a
+Time:  646.0 ps  | S_Addr = 11  S = fff4f40b  |  T_Addr = 27 T = ffe4e41b
+Time:  656.0 ps  | S_Addr = 12  S = fff3f30c  |  T_Addr = 28 T = ffe3e31c
+Time:  666.0 ps  | S_Addr = 13  S = fff2f20d  |  T_Addr = 29 T = ffe2e21d
+Time:  676.0 ps  | S_Addr = 14  S = fff1f10e  |  T_Addr = 30 T = ffe1e11e
+Time:  686.0 ps  | S_Addr = 15  S = fff0f00f  |  T_Addr = 31 T = ffe0e01f
+$finish called at time : 686 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 86
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 848.566 ; gain = 2.730
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'regfile32_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim/IntReg_Lab2.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj regfile32_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v:105]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1ee95401b5e44d2ea5dedc28d9796c7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot regfile32_TB_behav xil_defaultlib.regfile32_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.regfile32_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot regfile32_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "regfile32_TB_behav -key {Behavioral:sim_1:Functional:regfile32_TB} -tclbatch {regfile32_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source regfile32_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+ 
+ ( 1 )   -   I n i t i a l   R e g d u m p    
+ 
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+ 
+ ( 2 )   -   W r i t i n g   t o   M e m o r y     
+ 
+ 
+ ( 3 )   -   F i n a l   R e g d u m p      
+ 
+Time:  536.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = ffefef10
+Time:  546.0 ps  | S_Addr =  1  S = fffefe01  |  T_Addr = 17 T = ffeeee11
+Time:  556.0 ps  | S_Addr =  2  S = fffdfd02  |  T_Addr = 18 T = ffeded12
+Time:  566.0 ps  | S_Addr =  3  S = fffcfc03  |  T_Addr = 19 T = ffecec13
+Time:  576.0 ps  | S_Addr =  4  S = fffbfb04  |  T_Addr = 20 T = ffebeb14
+Time:  586.0 ps  | S_Addr =  5  S = fffafa05  |  T_Addr = 21 T = ffeaea15
+Time:  596.0 ps  | S_Addr =  6  S = fff9f906  |  T_Addr = 22 T = ffe9e916
+Time:  606.0 ps  | S_Addr =  7  S = fff8f807  |  T_Addr = 23 T = ffe8e817
+Time:  616.0 ps  | S_Addr =  8  S = fff7f708  |  T_Addr = 24 T = ffe7e718
+Time:  626.0 ps  | S_Addr =  9  S = fff6f609  |  T_Addr = 25 T = ffe6e619
+Time:  636.0 ps  | S_Addr = 10  S = fff5f50a  |  T_Addr = 26 T = ffe5e51a
+Time:  646.0 ps  | S_Addr = 11  S = fff4f40b  |  T_Addr = 27 T = ffe4e41b
+Time:  656.0 ps  | S_Addr = 12  S = fff3f30c  |  T_Addr = 28 T = ffe3e31c
+Time:  666.0 ps  | S_Addr = 13  S = fff2f20d  |  T_Addr = 29 T = ffe2e21d
+Time:  676.0 ps  | S_Addr = 14  S = fff1f10e  |  T_Addr = 30 T = ffe1e11e
+Time:  686.0 ps  | S_Addr = 15  S = fff0f00f  |  T_Addr = 31 T = ffe0e01f
+$finish called at time : 686 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'regfile32_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 851.469 ; gain = 1.770
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+create_project RISC_PROCESSOR_V {C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+import_xise {C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_Processor.xise}
+
+INFO: [Project 1-267] Adding IP 'ram_256x16' to the project...
+CRITICAL WARNING: [IP_Flow 19-1673] Failed to find file 'c:/Users/Jesus/Desktop/ram_256x16_lab8aFa17.coe' while importing IP 'ram_256x16'. This is a mandatory source file and must exist for import to be successful. Please ensure this file exists.
+WARNING: [IP_Flow 19-2162] IP 'ram_256x16' is locked:
+* IP definition 'Block Memory Generator (7.3)' for IP 'ram_256x16' has a newer major version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Project 1-53] IP 'ram_256x16' imported successfully
+CRITICAL WARNING: [Project 1-467] UCF constraints are not supported in Vivado (top_level_ucf.ucf). Please convert these constraints to XDC and add then add the converted XDC constraints file to the project.
+INFO: [Project 1-195] The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+                           Please see the summary report file for details.
+
+WARNING: [Project 1-99] The behavioral simulation 'top' could not be imported. Please set it manually on the simulation fileset.
+INFO: [Project 1-52] Generating summary report file 'C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V/import_ise_summary.txt'...
+INFO: [Project 1-88] Report file generated.
+
+WARNING: [Project 1-91] Some exceptions were encountered while importing contents of the ISE project file. Please review the "EXCEPTIONS" section in the summary log file C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V/import_ise_summary.txt at line 41 for details.
+
+INFO: [Coretcl 2-54] ISE import finished.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-3
+WARNING: [IP_Flow 19-2162] IP 'ram_256x16' is locked:
+* IP definition 'Block Memory Generator (7.3)' for IP 'ram_256x16' has a newer major version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Top: top_level_lab8
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 965.063 ; gain = 103.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_level_lab8' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/top_level_lab8.v:19]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/debounce.v:14]
+INFO: [Synth 8-6157] synthesizing module 'clk_500Hz' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/clk_500Hz.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'clk_500Hz' (1#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/clk_500Hz.v:15]
+INFO: [Synth 8-6157] synthesizing module 'one_shot' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/one_shot.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'one_shot' (2#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/one_shot.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/debounce.v:14]
+INFO: [Synth 8-6157] synthesizing module 'RISC_PROCESSOR' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR.v:15]
+INFO: [Synth 8-6157] synthesizing module 'cu' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:15]
+	Parameter RESET bound to: 0 - type: integer 
+	Parameter FETCH bound to: 1 - type: integer 
+	Parameter DECODE bound to: 2 - type: integer 
+	Parameter ADD bound to: 3 - type: integer 
+	Parameter SUB bound to: 4 - type: integer 
+	Parameter CMP bound to: 5 - type: integer 
+	Parameter MOV bound to: 6 - type: integer 
+	Parameter INC bound to: 7 - type: integer 
+	Parameter DEC bound to: 8 - type: integer 
+	Parameter SHL bound to: 9 - type: integer 
+	Parameter SHR bound to: 10 - type: integer 
+	Parameter LD bound to: 11 - type: integer 
+	Parameter STO bound to: 12 - type: integer 
+	Parameter LDI bound to: 13 - type: integer 
+	Parameter JE bound to: 14 - type: integer 
+	Parameter JNE bound to: 15 - type: integer 
+	Parameter JC bound to: 16 - type: integer 
+	Parameter JMP bound to: 17 - type: integer 
+	Parameter HALT bound to: 18 - type: integer 
+	Parameter ILLEGAL_OP bound to: 31 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:82]
+WARNING: [Synth 8-567] referenced signal 'ps_N' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'ps_Z' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'ps_C' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'IR' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'N' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'Z' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+WARNING: [Synth 8-567] referenced signal 'C' should be on the sensitivity list [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'cu' (4#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/cu.v:15]
+INFO: [Synth 8-6157] synthesizing module 'CPU_EU' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/CPU_EU.v:16]
+INFO: [Synth 8-6157] synthesizing module 'IDP' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/IDP.v:19]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/Register_File.v:16]
+INFO: [Synth 8-6157] synthesizing module 'decoder3to8' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/decoder3to8.v:15]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/decoder3to8.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'decoder3to8' (5#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/decoder3to8.v:15]
+INFO: [Synth 8-6157] synthesizing module 'reg16' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/reg16.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'reg16' (6#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/reg16.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (7#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/Register_File.v:16]
+INFO: [Synth 8-6157] synthesizing module 'alu16' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/alu16.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'alu16' (8#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/alu16.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'IDP' (9#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/IDP.v:19]
+INFO: [Synth 8-6157] synthesizing module 'reg16_L_Inc' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/reg16_L_Inc.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'reg16_L_Inc' (10#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/reg16_L_Inc.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'CPU_EU' (11#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/CPU_EU.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'RISC_PROCESSOR' (12#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR.v:15]
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/ram7.v:15]
+INFO: [Synth 8-6157] synthesizing module 'ram_256x16' [c:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V/RISC_PROCESSOR_V.srcs/sources_1/ip/ram_256x16/ram_256x16.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'ram_256x16' (13#1) [c:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V/RISC_PROCESSOR_V.srcs/sources_1/ip/ram_256x16/ram_256x16.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (14#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/ram7.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Display_Controller' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/Display_Controller.v:14]
+INFO: [Synth 8-6157] synthesizing module 'pixel_clk' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_clk.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_clk' (15#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_clk.v:14]
+INFO: [Synth 8-6157] synthesizing module 'pixel_controller' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_controller.v:16]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_controller.v:44]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_controller.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_controller' (16#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/pixel_controller.v:16]
+INFO: [Synth 8-6157] synthesizing module 'ad_mux' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/ad_mux.v:14]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/ad_mux.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'ad_mux' (17#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/ad_mux.v:14]
+INFO: [Synth 8-6157] synthesizing module 'hexto7segment' [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/hexto7segment.v:16]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/hexto7segment.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'hexto7segment' (18#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/hexto7segment.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'Display_Controller' (19#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/Display_Controller.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_lab8' (20#1) [C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/top_level_lab8.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1019.918 ; gain = 158.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1019.918 ; gain = 158.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1019.918 ; gain = 158.113
+---------------------------------------------------------------------------------
+Release 14.7 - ngc2edif P_INT.20180321 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ram_256x16.ngc ...
+WARNING:NetListWriters:298 - No output is written to ram_256x16.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ram_256x16.edif ...
+ngc2edif: Total memory usage is 4319260 kilobytes
+
+Reading core file 'c:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V/RISC_PROCESSOR_V.srcs/sources_1/ip/ram_256x16/ram_256x16.ngc' for (cell view 'ram_256x16', library 'work')
+Parsing EDIF File [./.ngc2edfcache/ram_256x16_ngc_b767700a.edif]
+Finished Parsing EDIF File [./.ngc2edfcache/ram_256x16_ngc_b767700a.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20180321
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1374.172 ; gain = 512.367
+54 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1374.172 ; gain = 512.367
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  7 16:36:37 2019...

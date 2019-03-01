@@ -1,0 +1,2022 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Feb 13 12:03:49 2019
+# Process ID: 9584
+# Current directory: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9960 C:\Users\Jesus Luciano\Desktop\Computer_Architecture\Integer_Datapath_1\Integer_Datapath_1.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 777.926 ; gain = 77.328
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: Integer_Datapath
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 925.672 ; gain = 104.363
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Integer_Datapath' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v:12]
+INFO: [Synth 8-6157] synthesizing module 'alu_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'MIPS_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v:16]
+	Parameter PASS_S bound to: 5'b00000 
+	Parameter PASS_T bound to: 5'b00001 
+	Parameter ADD bound to: 5'b00010 
+	Parameter ADDU bound to: 5'b00011 
+	Parameter SUB bound to: 5'b00100 
+	Parameter SUBU bound to: 5'b00101 
+	Parameter SLT bound to: 5'b00110 
+	Parameter SLTU bound to: 5'b00111 
+	Parameter AND bound to: 5'b01000 
+	Parameter OR bound to: 5'b01001 
+	Parameter XOR bound to: 5'b01010 
+	Parameter NOR bound to: 5'b01011 
+	Parameter SRL bound to: 5'b01100 
+	Parameter SRA bound to: 5'b01101 
+	Parameter SLL bound to: 5'b01110 
+	Parameter ANDI bound to: 5'b10110 
+	Parameter ORI bound to: 5'b10111 
+	Parameter LUI bound to: 5'b11000 
+	Parameter XORI bound to: 5'b11001 
+	Parameter INC bound to: 5'b01111 
+	Parameter INC4 bound to: 5'b10000 
+	Parameter DEC bound to: 5'b10001 
+	Parameter DEC4 bound to: 5'b10010 
+	Parameter ZEROS bound to: 5'b10011 
+	Parameter ONES bound to: 5'b10100 
+	Parameter SP_INIT bound to: 5'b10101 
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_32' (1#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v:16]
+INFO: [Synth 8-6157] synthesizing module 'DIV_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'DIV_32' (2#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v:14]
+INFO: [Synth 8-6157] synthesizing module 'MPY_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'MPY_32' (3#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu_32' (4#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'regfile32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:17]
+WARNING: [Synth 8-5788] Register reg32_reg[1] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[2] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[3] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[4] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[5] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[6] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[7] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[8] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[9] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[10] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[11] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[12] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[13] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[14] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[15] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[16] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[17] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[18] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[19] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[20] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[21] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[22] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[23] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[24] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[25] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[26] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[27] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[28] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[29] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[30] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[31] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'regfile32' (5#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Integer_Datapath' (6#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 981.473 ; gain = 160.164
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 981.473 ; gain = 160.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 981.473 ; gain = 160.164
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1320.957 ; gain = 499.648
+16 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1320.957 ; gain = 499.648
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: Integer_Datapath
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1320.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Integer_Datapath' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v:12]
+INFO: [Synth 8-6157] synthesizing module 'alu_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'MIPS_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v:16]
+	Parameter PASS_S bound to: 5'b00000 
+	Parameter PASS_T bound to: 5'b00001 
+	Parameter ADD bound to: 5'b00010 
+	Parameter ADDU bound to: 5'b00011 
+	Parameter SUB bound to: 5'b00100 
+	Parameter SUBU bound to: 5'b00101 
+	Parameter SLT bound to: 5'b00110 
+	Parameter SLTU bound to: 5'b00111 
+	Parameter AND bound to: 5'b01000 
+	Parameter OR bound to: 5'b01001 
+	Parameter XOR bound to: 5'b01010 
+	Parameter NOR bound to: 5'b01011 
+	Parameter SRL bound to: 5'b01100 
+	Parameter SRA bound to: 5'b01101 
+	Parameter SLL bound to: 5'b01110 
+	Parameter ANDI bound to: 5'b10110 
+	Parameter ORI bound to: 5'b10111 
+	Parameter LUI bound to: 5'b11000 
+	Parameter XORI bound to: 5'b11001 
+	Parameter INC bound to: 5'b01111 
+	Parameter INC4 bound to: 5'b10000 
+	Parameter DEC bound to: 5'b10001 
+	Parameter DEC4 bound to: 5'b10010 
+	Parameter ZEROS bound to: 5'b10011 
+	Parameter ONES bound to: 5'b10100 
+	Parameter SP_INIT bound to: 5'b10101 
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_32' (1#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v:16]
+INFO: [Synth 8-6157] synthesizing module 'DIV_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'DIV_32' (2#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v:14]
+INFO: [Synth 8-6157] synthesizing module 'MPY_32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'MPY_32' (3#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu_32' (4#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'regfile32' [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:17]
+WARNING: [Synth 8-5788] Register reg32_reg[1] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[2] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[3] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[4] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[5] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[6] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[7] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[8] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[9] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[10] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[11] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[12] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[13] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[14] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[15] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[16] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[17] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[18] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[19] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[20] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[21] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[22] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[23] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[24] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[25] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[26] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[27] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[28] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[29] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[30] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+WARNING: [Synth 8-5788] Register reg32_reg[31] in module regfile32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'regfile32' (5#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Integer_Datapath' (6#1) [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1320.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1320.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1320.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1355.035 ; gain = 34.078
+15 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1355.035 ; gain = 34.078
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:78]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Jesus -notrace
+couldn't read file "C:/Users/Jesus": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Feb 13 17:34:44 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1355.035 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1355.035 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1355.035 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:83]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-91] S is not declared [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:78]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:83]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time:   56.0 ps  | S_Addr =  0  ALU_OUT = 00000000
+Time:   66.0 ps  | S_Addr =  1  ALU_OUT = 12345678
+Time:   76.0 ps  | S_Addr =  2  ALU_OUT = 89abcdef
+Time:   86.0 ps  | S_Addr =  3  ALU_OUT = a5a5a5a5
+Time:   96.0 ps  | S_Addr =  4  ALU_OUT = 5a5a5a5a
+Time:  106.0 ps  | S_Addr =  5  ALU_OUT = 2468ace0
+Time:  116.0 ps  | S_Addr =  6  ALU_OUT = 13579bdf
+Time:  126.0 ps  | S_Addr =  7  ALU_OUT = 0f0f0f0f
+Time:  136.0 ps  | S_Addr =  8  ALU_OUT = f0f0f0f0
+Time:  146.0 ps  | S_Addr =  9  ALU_OUT = 00000009
+Time:  156.0 ps  | S_Addr = 10  ALU_OUT = 0000000a
+Time:  166.0 ps  | S_Addr = 11  ALU_OUT = 0000000b
+Time:  176.0 ps  | S_Addr = 12  ALU_OUT = 0000000c
+Time:  186.0 ps  | S_Addr = 13  ALU_OUT = 0000000d
+Time:  196.0 ps  | S_Addr = 14  ALU_OUT = fffffff8
+Time:  206.0 ps  | S_Addr = 15  ALU_OUT = 000075cc
+$finish called at time : 206 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1355.355 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:82]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time:   56.0 ps  | S_Addr =  0  ALU_OUT = 00000000
+Time:   66.0 ps  | S_Addr =  1  ALU_OUT = 12345678
+Time:   76.0 ps  | S_Addr =  2  ALU_OUT = 89abcdef
+Time:   86.0 ps  | S_Addr =  3  ALU_OUT = a5a5a5a5
+Time:   96.0 ps  | S_Addr =  4  ALU_OUT = 5a5a5a5a
+Time:  106.0 ps  | S_Addr =  5  ALU_OUT = 2468ace0
+Time:  116.0 ps  | S_Addr =  6  ALU_OUT = 13579bdf
+Time:  126.0 ps  | S_Addr =  7  ALU_OUT = 0f0f0f0f
+Time:  136.0 ps  | S_Addr =  8  ALU_OUT = f0f0f0f0
+Time:  146.0 ps  | S_Addr =  9  ALU_OUT = 00000009
+Time:  156.0 ps  | S_Addr = 10  ALU_OUT = 0000000a
+Time:  166.0 ps  | S_Addr = 11  ALU_OUT = 0000000b
+Time:  176.0 ps  | S_Addr = 12  ALU_OUT = 0000000c
+Time:  186.0 ps  | S_Addr = 13  ALU_OUT = 0000000d
+Time:  196.0 ps  | S_Addr = 14  ALU_OUT = fffffff8
+Time:  206.0 ps  | S_Addr = 15  ALU_OUT = 000075cc
+$finish called at time : 206 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1357.574 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:82]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time:   56.0 ps  | Register[ 0] = 00000000
+Time:   66.0 ps  | Register[ 1] = 12345678
+Time:   76.0 ps  | Register[ 2] = 89abcdef
+Time:   86.0 ps  | Register[ 3] = a5a5a5a5
+Time:   96.0 ps  | Register[ 4] = 5a5a5a5a
+Time:  106.0 ps  | Register[ 5] = 2468ace0
+Time:  116.0 ps  | Register[ 6] = 13579bdf
+Time:  126.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  136.0 ps  | Register[ 8] = f0f0f0f0
+Time:  146.0 ps  | Register[ 9] = 00000009
+Time:  156.0 ps  | Register[10] = 0000000a
+Time:  166.0 ps  | Register[11] = 0000000b
+Time:  176.0 ps  | Register[12] = 0000000c
+Time:  186.0 ps  | Register[13] = 0000000d
+Time:  196.0 ps  | Register[14] = fffffff8
+Time:  206.0 ps  | Register[15] = 000075cc
+$finish called at time : 206 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 62
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1362.625 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:97]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  226.0 ps  | Register[ 0] = 00000000
+Time:  236.0 ps  | Register[ 1] = ffffffff
+Time:  246.0 ps  | Register[ 2] = 89abcdef
+Time:  256.0 ps  | Register[ 3] = a5a5a5a5
+Time:  266.0 ps  | Register[ 4] = 5a5a5a5a
+Time:  276.0 ps  | Register[ 5] = 2468ace0
+Time:  286.0 ps  | Register[ 6] = 13579bdf
+Time:  296.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  306.0 ps  | Register[ 8] = f0f0f0f0
+Time:  316.0 ps  | Register[ 9] = 00000009
+Time:  326.0 ps  | Register[10] = 0000000a
+Time:  336.0 ps  | Register[11] = 0000000b
+Time:  346.0 ps  | Register[12] = 0000000c
+Time:  356.0 ps  | Register[13] = 0000000d
+Time:  366.0 ps  | Register[14] = fffffff8
+Time:  376.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 376 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 77
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.625 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:153]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = a5a5a5a5
+Time:  396.0 ps  | Register[ 4] = 5a5a5a5a
+Time:  406.0 ps  | Register[ 5] = 2468ace0
+Time:  416.0 ps  | Register[ 6] = 13579bdf
+Time:  426.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  436.0 ps  | Register[ 8] = f0f0f0f0
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 133
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.703 ; gain = 0.078
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:153]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = b4b4b4b4
+Time:  396.0 ps  | Register[ 4] = 5a5a5a5a
+Time:  406.0 ps  | Register[ 5] = 2468ace0
+Time:  416.0 ps  | Register[ 6] = 13579bdf
+Time:  426.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  436.0 ps  | Register[ 8] = f0f0f0f0
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 133
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1364.168 ; gain = 1.465
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:153]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 5a5a5a5a
+Time:  406.0 ps  | Register[ 5] = 2468ace0
+Time:  416.0 ps  | Register[ 6] = 13579bdf
+Time:  426.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  436.0 ps  | Register[ 8] = f0f0f0f0
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 133
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1365.867 ; gain = 1.699
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:153]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = 2468ace0
+Time:  416.0 ps  | Register[ 6] = 13579bdf
+Time:  426.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  436.0 ps  | Register[ 8] = f0f0f0f0
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 133
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1366.973 ; gain = 1.105
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:154]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  436.0 ps  | Register[ 8] = f0f0f0f0
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 134
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1367.266 ; gain = 0.293
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = 0000000c
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1367.910 ; gain = 0.645
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = 0000000b
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1368.094 ; gain = 0.184
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = fffffff4
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1372.406 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = 0000000a
+Time:  466.0 ps  | Register[11] = fffffff6
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1372.406 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = 00000009
+Time:  456.0 ps  | Register[10] = fffffff6
+Time:  466.0 ps  | Register[11] = fffffff4
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1372.406 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = ffffffea
+Time:  456.0 ps  | Register[10] = fffffff6
+Time:  466.0 ps  | Register[11] = fffffff4
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 0000000d
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1372.406 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim/IntReg_Lab3.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto e19c1396e3c24296913adf574472e627 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initial Contents of Memory
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+Displaying Final Contents of Memory
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = ffffffea
+Time:  456.0 ps  | Register[10] = fffffff6
+Time:  466.0 ps  | Register[11] = fffffff4
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 100100c0
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1372.406 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 13 20:10:16 2019...

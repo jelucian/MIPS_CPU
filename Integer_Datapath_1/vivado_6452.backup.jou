@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb 14 15:46:33 2019
+# Process ID: 6452
+# Current directory: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9220 C:\Users\Jesus Luciano\Desktop\Computer_Architecture\Integer_Datapath_1\Integer_Datapath_1.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.xpr}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/reg32.v} w ]
+add_files {{C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/new/reg32.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source Integer_Datapath_TB.tcl
+close_sim
+launch_simulation
+source Integer_Datapath_TB.tcl
+close_sim
+launch_simulation
+source Integer_Datapath_TB.tcl
+close_sim
+launch_simulation
+source Integer_Datapath_TB.tcl
+close_sim

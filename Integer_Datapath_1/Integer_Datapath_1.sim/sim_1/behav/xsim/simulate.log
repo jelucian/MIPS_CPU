@@ -1,0 +1,42 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ 
+ ( 1 ) - I n i t i a l  C o n t e n t s  o f  M e m o r y
+ 
+Time:   36.0 ps  | Register[ 0] = 00000000
+Time:   46.0 ps  | Register[ 1] = 12345678
+Time:   56.0 ps  | Register[ 2] = 89abcdef
+Time:   66.0 ps  | Register[ 3] = a5a5a5a5
+Time:   76.0 ps  | Register[ 4] = 5a5a5a5a
+Time:   86.0 ps  | Register[ 5] = 2468ace0
+Time:   96.0 ps  | Register[ 6] = 13579bdf
+Time:  106.0 ps  | Register[ 7] = 0f0f0f0f
+Time:  116.0 ps  | Register[ 8] = f0f0f0f0
+Time:  126.0 ps  | Register[ 9] = 00000009
+Time:  136.0 ps  | Register[10] = 0000000a
+Time:  146.0 ps  | Register[11] = 0000000b
+Time:  156.0 ps  | Register[12] = 0000000c
+Time:  166.0 ps  | Register[13] = 0000000d
+Time:  176.0 ps  | Register[14] = fffffff8
+Time:  186.0 ps  | Register[15] = 000075cc
+ 
+ (2) - F i n a l  C o n t e n t s  o f  M e m o r y 
+ 
+Time:  356.0 ps  | Register[ 0] = 00000000
+Time:  366.0 ps  | Register[ 1] = ffffffff
+Time:  376.0 ps  | Register[ 2] = 00000007
+Time:  386.0 ps  | Register[ 3] = 2d2d2d2d
+Time:  396.0 ps  | Register[ 4] = 48d159c0
+Time:  406.0 ps  | Register[ 5] = fffff147
+Time:  416.0 ps  | Register[ 6] = 00000004
+Time:  426.0 ps  | Register[ 7] = ffffffc9
+Time:  436.0 ps  | Register[ 8] = ffffffff
+Time:  446.0 ps  | Register[ 9] = ffffffea
+Time:  456.0 ps  | Register[10] = fffffff6
+Time:  466.0 ps  | Register[11] = fffffff4
+Time:  476.0 ps  | Register[12] = abcdef01
+Time:  486.0 ps  | Register[13] = 100100c0
+Time:  496.0 ps  | Register[14] = fffffff8
+Time:  506.0 ps  | Register[15] = 000075cc
+ 
+$finish called at time : 506 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sim_1/new/Integer_Datapath_TB.v" Line 214

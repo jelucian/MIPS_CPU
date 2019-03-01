@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb  7 15:31:22 2019
+# Process ID: 8368
+# Current directory: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8428 C:\Users\Jesus Luciano\Desktop\Computer_Architecture\Register_File\Register_File.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+launch_simulation
+source regfile32_TB.tcl
+close_sim
+close_project
+create_project RISC_PROCESSOR_V {C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_PROCESSOR_V}
+import_xise {C:/Users/Jesus Luciano/Desktop/CPU-master/RISC_Processor/RISC_Processor.xise}
+synth_design -rtl -name rtl_1

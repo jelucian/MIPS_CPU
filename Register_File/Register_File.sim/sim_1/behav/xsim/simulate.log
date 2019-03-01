@@ -1,0 +1,46 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+*********************************************************
+**       CECS 440 - Lab 2 Register File Testbench      **
+*********************************************************
+ 
+ ( 1 )   -   I n i t i a l   R e g d u m p    
+ 
+Time:   36.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = 000001ff
+Time:   46.0 ps  | S_Addr =  1  S = ffffffff  |  T_Addr = 17 T = 000003ff
+Time:   56.0 ps  | S_Addr =  2  S = 5a5a5a5a  |  T_Addr = 18 T = 000007ff
+Time:   66.0 ps  | S_Addr =  3  S = a5a5a5a5  |  T_Addr = 19 T = 00000fff
+Time:   76.0 ps  | S_Addr =  4  S = cccccccc  |  T_Addr = 20 T = 10000001
+Time:   86.0 ps  | S_Addr =  5  S = 33333333  |  T_Addr = 21 T = 30000003
+Time:   96.0 ps  | S_Addr =  6  S = c3c3c3c3  |  T_Addr = 22 T = 70000007
+Time:  106.0 ps  | S_Addr =  7  S = 3c3c3c3c  |  T_Addr = 23 T = f000000f
+Time:  116.0 ps  | S_Addr =  8  S = 00000001  |  T_Addr = 24 T = f800001f
+Time:  126.0 ps  | S_Addr =  9  S = 00000003  |  T_Addr = 25 T = fc00003f
+Time:  136.0 ps  | S_Addr = 10  S = 00000007  |  T_Addr = 26 T = fe00007f
+Time:  146.0 ps  | S_Addr = 11  S = 0000000f  |  T_Addr = 27 T = ff0000ff
+Time:  156.0 ps  | S_Addr = 12  S = 0000001f  |  T_Addr = 28 T = ff8001ff
+Time:  166.0 ps  | S_Addr = 13  S = 0000003f  |  T_Addr = 29 T = ffc003ff
+Time:  176.0 ps  | S_Addr = 14  S = 0000007f  |  T_Addr = 30 T = f0f0f0f0
+Time:  186.0 ps  | S_Addr = 15  S = 000000ff  |  T_Addr = 31 T = 0f0f0f0f
+ 
+ ( 2 )   -   W r i t i n g   t o   M e m o r y     
+ 
+ ( 3 )   -   F i n a l   R e g d u m p      
+ 
+Time:  536.0 ps  | S_Addr =  0  S = 00000000  |  T_Addr = 16 T = ffefef10
+Time:  546.0 ps  | S_Addr =  1  S = fffefe01  |  T_Addr = 17 T = ffeeee11
+Time:  556.0 ps  | S_Addr =  2  S = fffdfd02  |  T_Addr = 18 T = ffeded12
+Time:  566.0 ps  | S_Addr =  3  S = fffcfc03  |  T_Addr = 19 T = ffecec13
+Time:  576.0 ps  | S_Addr =  4  S = fffbfb04  |  T_Addr = 20 T = ffebeb14
+Time:  586.0 ps  | S_Addr =  5  S = fffafa05  |  T_Addr = 21 T = ffeaea15
+Time:  596.0 ps  | S_Addr =  6  S = fff9f906  |  T_Addr = 22 T = ffe9e916
+Time:  606.0 ps  | S_Addr =  7  S = fff8f807  |  T_Addr = 23 T = ffe8e817
+Time:  616.0 ps  | S_Addr =  8  S = fff7f708  |  T_Addr = 24 T = ffe7e718
+Time:  626.0 ps  | S_Addr =  9  S = fff6f609  |  T_Addr = 25 T = ffe6e619
+Time:  636.0 ps  | S_Addr = 10  S = fff5f50a  |  T_Addr = 26 T = ffe5e51a
+Time:  646.0 ps  | S_Addr = 11  S = fff4f40b  |  T_Addr = 27 T = ffe4e41b
+Time:  656.0 ps  | S_Addr = 12  S = fff3f30c  |  T_Addr = 28 T = ffe3e31c
+Time:  666.0 ps  | S_Addr = 13  S = fff2f20d  |  T_Addr = 29 T = ffe2e21d
+Time:  676.0 ps  | S_Addr = 14  S = fff1f10e  |  T_Addr = 30 T = ffe1e11e
+Time:  686.0 ps  | S_Addr = 15  S = fff0f00f  |  T_Addr = 31 T = ffe0e01f
+$finish called at time : 686 ns : File "C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Register_File/Register_File.srcs/sim_1/new/regfile32_TB.v" Line 89
