@@ -6,7 +6,11 @@
  * Date:     2/25/2019
  * Version:  1.0
  *
- * Notes:    Testbench
+ * Notes:    Testbench forEnhanced Integet Datapath Module
+ *           (1) Displays contents of register file
+ *           (2) Performs micro operations
+ *           (3) Displays changed contents of register file and memory location
+ *               written to
  *
  *******************************************************************************/
 module Integer_Datapath_TB();
@@ -39,11 +43,12 @@ module Integer_Datapath_TB();
     //module Data_Memory(clk, dm_cs, dm_wr, dm_rd, Address, D_In, D_Out);
     Data_Memory dut_mem(.clk(clk), .dm_cs(dm_cs), .dm_wr(dm_wr), .dm_rd(dm_rd),
                        .Address(ALU_OUT),.D_In(IDP_D_OUT), .D_Out(MEM_D_OUT) );
-
+    //10 ns clock
     always #5 clk = ~clk;
 
     initial begin
         $timeformat(-9, 1, " ps", 9);    //Display time in nanoseconds
+        
         //initial clock and reset values
           clk = 1'b0;
         reset = 1'b0;
@@ -58,8 +63,11 @@ module Integer_Datapath_TB();
         $readmemh("IntReg_Lab4.mem", dut.REG_FILE.reg32);
         //load memory
         $readmemh("dMem_Lab4.mem", dut_mem.M);
-
-        $display(" ( 1 )  -  I n i t i a l  C o n t e n t s   o f   R e g i s t e r s");
+        
+        $display(" ");
+        $display(" ( 1 )  -  I n i t i a l  C o n t e n t s   o f ");
+        $display("                 R e g i s t e r s");
+        $display(" ");
         Reg_Dump();
 
         //Initial Values @ zero
@@ -262,14 +270,12 @@ module Integer_Datapath_TB();
             //Data Memory Control
             { dm_cs, dm_rd, dm_wr } = 3'b0_0_0;
 
-
-
         //************************************************************//
         //f) {$r8, $r7} <- $r11*0xFFFF_FFFB
         //RS <- R[$r11], RT <- 0xFFFF_FFFB
         @(negedge clk);
             { D_En, D_Addr, S_Addr, T_Addr } = 16'b0_00000_01011_00000;
-            { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b1_00000_0_000;
+            { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_00000_0_000;
             //Integer Datapath Constants
               DT    = 32'hFFFF_FFFB;
               PC_in = 32'h1001_00C0;
@@ -277,7 +283,8 @@ module Integer_Datapath_TB();
             //Data Memory Control
             { dm_cs, dm_rd, dm_wr } = 3'b0_0_0;
 
-        //HI <- RS($r11) * RT(0xFFFF_FFFB), LO <- RS($r11) * RT(0xFFFF_FFFB)
+        //HI <- RS($r11) * RT(0xFFFF_FFFB), 
+        //LO <- RS($r11) * RT(0xFFFF_FFFB)
         @(negedge clk);
             { D_En, D_Addr, S_Addr, T_Addr } = 16'b0_00000_00000_00000;
             { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_11110_1_000;
@@ -325,7 +332,7 @@ module Integer_Datapath_TB();
             //Data Memory Control
             { dm_cs, dm_rd, dm_wr } = 3'b0_0_0;
 
-        //ALU_OUT <- RT($r15)
+        //ALU_OUT <- RT($r15) 
         @(negedge clk);
             { D_En, D_Addr, S_Addr, T_Addr } = 16'b0_00000_00000_00000;
             { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_00001_0_000;
@@ -339,7 +346,7 @@ module Integer_Datapath_TB();
         //D_in <- DY
         @(negedge clk);
             { D_En, D_Addr, S_Addr, T_Addr } = 16'b0_00000_00000_00000;
-            { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_00000_0_000;
+            { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_00000_0_010;
             //Integer Datapath Constants
               DT    = 32'hFFFF_FFFB;
               PC_in = 32'h1001_00C0;
@@ -503,7 +510,7 @@ module Integer_Datapath_TB();
     //ALU_OUT <- RT($r14); RT <-($r12)
     @(negedge clk);
         { D_En, D_Addr, S_Addr, T_Addr } = 16'b0_00000_00000_01100;
-        { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b0_00001_0_000;
+        { T_Sel, FS, HILO_ld, Y_Sel }    = 10'b1_00001_0_000;
         //Integer Datapath Constants
           DT    = 32'hFFFF_FFFB;
           PC_in = 32'h1001_00C0;
@@ -522,17 +529,21 @@ module Integer_Datapath_TB();
         //Data Memory Control
         { dm_cs, dm_rd, dm_wr } = 3'b1_0_1;
 
-        @(negedge clk);
-        $display(" (2) - F i n a l  C o n t e n t s  o f  M e m o r y ");
-        $display(" ");
-        Reg_Dump;
-        $finish;
+    @(negedge clk);
+        
+    $display(" (2) - F i n a l  C o n t e n t s  o f");
+    $display("       R e g i s t e r s   a n d   M e m o r y");
+    $display(" ");
+    Reg_Dump;
+        
+    Mem_Dump;
+    $finish;
 
 
 
     end
 
-    task Reg_Dump();
+    task Reg_Dump();//task displays contents of R0-R15 in regfile
     begin
        for(i = 0; i < 16; i = i + 1)
        begin
@@ -556,9 +567,10 @@ module Integer_Datapath_TB();
     end
     endtask
 
-    task Mem_Dump();//Display all of memory
+    task Mem_Dump();//Display data at location FF8 of memory
     begin
-        for(i = 0; i < 4096; i = i + 4)//loop through all contents of memory
+        $display(" ");
+        for(i = 0; i < 1; i = i + 1)//loop through all contents of memory
         begin
             @(negedge clk);
             //Integer Datapath Control
@@ -567,17 +579,17 @@ module Integer_Datapath_TB();
 
             //Integer Datapath Constants
               DT    = 32'hFFFF_FFFB;
-              PC_in = 32'h1001_00C0;
+              PC_in = 32'hFFFF_FFF8;
 
-             //Address = i;
             //Data Memory Control
             { dm_cs, dm_rd, dm_wr } = 3'b1_1_0;
 
             @(posedge clk);
             #1//wait 1 time unit to display contents
-            $display("Memory Address: %h | Data: %h",i, MEM_D_OUT);
+            $display("Memory Address: %h | Data: %h",dut_mem.mem_addr, dut_mem.D_Out);
 
         end
+        $display(" ");
     end
     endtask
 
