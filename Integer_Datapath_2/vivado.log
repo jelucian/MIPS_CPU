@@ -2,40 +2,39 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Feb 28 20:49:23 2019
-# Process ID: 824
+# Start of session at: Mon Mar  4 17:53:57 2019
+# Process ID: 5456
 # Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8712 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\Integer_Datapath_2\Integer_Datapath_2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent212 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\Integer_Datapath_2\Integer_Datapath_2.xpr
 # Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/vivado.log
 # Journal file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/Jesus Luciano/Desktop/Computer_Architecture/Integer_Datapath_2' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 774.234 ; gain = 116.602
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 822.980 ; gain = 123.379
 update_compile_order -fileset sources_1
-close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/dMem_Lab4.mem} w ]
-add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/dMem_Lab4.mem}}
-close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/IntReg_Lab4.mem} w ]
-add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/IntReg_Lab4.mem}}
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
 INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
 INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj Integer_Datapath_vlog.prj"
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MIPS_32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
@@ -46,16 +45,60 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS
 INFO: [VRFC 10-311] analyzing module reg32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-1581] illegal format specifier i for display [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:127]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-91] D_Out is not declared [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:127]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Integer_Datapath
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+WARNING: [VRFC 10-1581] illegal format specifier i for display [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:127]
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_behav xil_defaultlib.Integer_Datapath xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -69,8 +112,10 @@ Compiling module xil_defaultlib.MPY_32
 Compiling module xil_defaultlib.alu_32
 Compiling module xil_defaultlib.regfile32
 Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Integer_Datapath_behav
+Built simulation snapshot Integer_Datapath_TB_behav
 
 ****** Webtalk v2018.2 (64-bit)
   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
@@ -79,17 +124,17 @@ Built simulation snapshot Integer_Datapath_behav
 
 source C:/Users/Jesus -notrace
 couldn't read file "C:/Users/Jesus": no such file or directory
-INFO: [Common 17-206] Exiting Webtalk at Thu Feb 28 21:56:38 2019...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 805.496 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar  4 18:06:35 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 851.016 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "Integer_Datapath_behav -key {Behavioral:sim_1:Functional:Integer_Datapath} -tclbatch {Integer_Datapath.tcl} -log {simulate.log}"
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2018.2
 Time resolution is 1 ps
-source Integer_Datapath.tcl
+source Integer_Datapath_TB.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -100,14 +145,110 @@ source Integer_Datapath.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_behav' loaded.
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: i | Data: 00000000         0
+Memory Address: i | Data: 00000004         4
+Memory Address: i | Data: 00000008         8
+Memory Address: i | Data: 0000000c        12
+Memory Address: i | Data: 00000010        16
+Memory Address: i | Data: 00000014        20
+Memory Address: i | Data: 00000018        24
+Memory Address: i | Data: 0000001c        28
+Memory Address: i | Data: 00000020        32
+Memory Address: i | Data: 00000024        36
+Memory Address: i | Data: 00000028        40
+Memory Address: i | Data: 0000002c        44
+Memory Address: i | Data: 00000030        48
+Memory Address: i | Data: 00000034        52
+Memory Address: i | Data: 00000038        56
+Memory Address: i | Data: 0000003c        60
+Memory Address: i | Data: 00000040        64
+Memory Address: i | Data: 00000044        68
+Memory Address: i | Data: 00000048        72
+Memory Address: i | Data: 0000004c        76
+Memory Address: i | Data: 00000050        80
+Memory Address: i | Data: 00000054        84
+Memory Address: i | Data: 00000058        88
+Memory Address: i | Data: 0000005c        92
+Memory Address: i | Data: 00000060        96
+Memory Address: i | Data: 00000064       100
+Memory Address: i | Data: 00000068       104
+Memory Address: i | Data: 0000006c       108
+Memory Address: i | Data: 00000070       112
+Memory Address: i | Data: 00000074       116
+Memory Address: i | Data: 00000078       120
+Memory Address: i | Data: 0000007c       124
+Memory Address: i | Data: 00000080       128
+Memory Address: i | Data: 00000084       132
+Memory Address: i | Data: 00000088       136
+Memory Address: i | Data: 0000008c       140
+Memory Address: i | Data: 00000090       144
+Memory Address: i | Data: 00000094       148
+Memory Address: i | Data: 00000098       152
+Memory Address: i | Data: 0000009c       156
+Memory Address: i | Data: 000000a0       160
+Memory Address: i | Data: 000000a4       164
+Memory Address: i | Data: 000000a8       168
+Memory Address: i | Data: 000000ac       172
+Memory Address: i | Data: 000000b0       176
+Memory Address: i | Data: 000000b4       180
+Memory Address: i | Data: 000000b8       184
+Memory Address: i | Data: 000000bc       188
+Memory Address: i | Data: 000000c0       192
+Memory Address: i | Data: 000000c4       196
+Memory Address: i | Data: 000000c8       200
+Memory Address: i | Data: 000000cc       204
+Memory Address: i | Data: 000000d0       208
+Memory Address: i | Data: 000000d4       212
+Memory Address: i | Data: 000000d8       216
+Memory Address: i | Data: 000000dc       220
+Memory Address: i | Data: 000000e0       224
+Memory Address: i | Data: 000000e4       228
+Memory Address: i | Data: 000000e8       232
+Memory Address: i | Data: 000000ec       236
+Memory Address: i | Data: 000000f0       240
+Memory Address: i | Data: 000000f4       244
+Memory Address: i | Data: 000000f8       248
+Memory Address: i | Data: 000000fc       252
+Memory Address: i | Data: 00000100       256
+Memory Address: i | Data: 00000104       260
+Memory Address: i | Data: 00000108       264
+Memory Address: i | Data: 0000010c       268
+Memory Address: i | Data: 00000110       272
+Memory Address: i | Data: 00000114       276
+Memory Address: i | Data: 00000118       280
+Memory Address: i | Data: 0000011c       284
+Memory Address: i | Data: 00000120       288
+Memory Address: i | Data: 00000124       292
+Memory Address: i | Data: 00000128       296
+Memory Address: i | Data: 0000012c       300
+Memory Address: i | Data: 00000130       304
+Memory Address: i | Data: 00000134       308
+Memory Address: i | Data: 00000138       312
+Memory Address: i | Data: 0000013c       316
+Memory Address: i | Data: 00000140       320
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 819.664 ; gain = 14.168
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 861.672 ; gain = 10.656
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-set_property top Integer_Datapath_TB [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -119,8 +260,22 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
@@ -131,22 +286,144 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-2063] Module <Integer_Datapth> not found while processing module instance <dut> [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:34]
-ERROR: [VRFC 10-2063] Module <Data_Memory> not found while processing module instance <dut_mem> [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v:42]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-close_project
-open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.xpr}
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-update_compile_order -fileset sources_1
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: 00000000
+Memory Address: 00000004 | Data: 00000004
+Memory Address: 00000008 | Data: 00000008
+Memory Address: 0000000c | Data: 0000000c
+Memory Address: 00000010 | Data: 00000010
+Memory Address: 00000014 | Data: 00000014
+Memory Address: 00000018 | Data: 00000018
+Memory Address: 0000001c | Data: 0000001c
+Memory Address: 00000020 | Data: 00000020
+Memory Address: 00000024 | Data: 00000024
+Memory Address: 00000028 | Data: 00000028
+Memory Address: 0000002c | Data: 0000002c
+Memory Address: 00000030 | Data: 00000030
+Memory Address: 00000034 | Data: 00000034
+Memory Address: 00000038 | Data: 00000038
+Memory Address: 0000003c | Data: 0000003c
+Memory Address: 00000040 | Data: 00000040
+Memory Address: 00000044 | Data: 00000044
+Memory Address: 00000048 | Data: 00000048
+Memory Address: 0000004c | Data: 0000004c
+Memory Address: 00000050 | Data: 00000050
+Memory Address: 00000054 | Data: 00000054
+Memory Address: 00000058 | Data: 00000058
+Memory Address: 0000005c | Data: 0000005c
+Memory Address: 00000060 | Data: 00000060
+Memory Address: 00000064 | Data: 00000064
+Memory Address: 00000068 | Data: 00000068
+Memory Address: 0000006c | Data: 0000006c
+Memory Address: 00000070 | Data: 00000070
+Memory Address: 00000074 | Data: 00000074
+Memory Address: 00000078 | Data: 00000078
+Memory Address: 0000007c | Data: 0000007c
+Memory Address: 00000080 | Data: 00000080
+Memory Address: 00000084 | Data: 00000084
+Memory Address: 00000088 | Data: 00000088
+Memory Address: 0000008c | Data: 0000008c
+Memory Address: 00000090 | Data: 00000090
+Memory Address: 00000094 | Data: 00000094
+Memory Address: 00000098 | Data: 00000098
+Memory Address: 0000009c | Data: 0000009c
+Memory Address: 000000a0 | Data: 000000a0
+Memory Address: 000000a4 | Data: 000000a4
+Memory Address: 000000a8 | Data: 000000a8
+Memory Address: 000000ac | Data: 000000ac
+Memory Address: 000000b0 | Data: 000000b0
+Memory Address: 000000b4 | Data: 000000b4
+Memory Address: 000000b8 | Data: 000000b8
+Memory Address: 000000bc | Data: 000000bc
+Memory Address: 000000c0 | Data: 000000c0
+Memory Address: 000000c4 | Data: 000000c4
+Memory Address: 000000c8 | Data: 000000c8
+Memory Address: 000000cc | Data: 000000cc
+Memory Address: 000000d0 | Data: 000000d0
+Memory Address: 000000d4 | Data: 000000d4
+Memory Address: 000000d8 | Data: 000000d8
+Memory Address: 000000dc | Data: 000000dc
+Memory Address: 000000e0 | Data: 000000e0
+Memory Address: 000000e4 | Data: 000000e4
+Memory Address: 000000e8 | Data: 000000e8
+Memory Address: 000000ec | Data: 000000ec
+Memory Address: 000000f0 | Data: 000000f0
+Memory Address: 000000f4 | Data: 000000f4
+Memory Address: 000000f8 | Data: 000000f8
+Memory Address: 000000fc | Data: 000000fc
+Memory Address: 00000100 | Data: 00000100
+Memory Address: 00000104 | Data: 00000104
+Memory Address: 00000108 | Data: 00000108
+Memory Address: 0000010c | Data: 0000010c
+Memory Address: 00000110 | Data: 00000110
+Memory Address: 00000114 | Data: 00000114
+Memory Address: 00000118 | Data: 00000118
+Memory Address: 0000011c | Data: 0000011c
+Memory Address: 00000120 | Data: 00000120
+Memory Address: 00000124 | Data: 00000124
+Memory Address: 00000128 | Data: 00000128
+Memory Address: 0000012c | Data: 0000012c
+Memory Address: 00000130 | Data: 00000130
+Memory Address: 00000134 | Data: 00000134
+Memory Address: 00000138 | Data: 00000138
+Memory Address: 0000013c | Data: 0000013c
+Memory Address: 00000140 | Data: 00000140
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 870.461 ; gain = 0.309
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -199,15 +476,707 @@ Compiling module xil_defaultlib.Data_Memory
 Compiling module xil_defaultlib.Integer_Datapath_TB
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Integer_Datapath_TB_behav
-
-****** Webtalk v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/Jesus -notrace
-couldn't read file "C:/Users/Jesus": no such file or directory
-INFO: [Common 17-206] Exiting Webtalk at Thu Feb 28 22:05:37 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: xxxxxxxx
+Memory Address: 00000004 | Data: xxxxxxxx
+Memory Address: 00000008 | Data: xxxxxxxx
+Memory Address: 0000000c | Data: xxxxxxxx
+Memory Address: 00000010 | Data: xxxxxxxx
+Memory Address: 00000014 | Data: xxxxxxxx
+Memory Address: 00000018 | Data: xxxxxxxx
+Memory Address: 0000001c | Data: xxxxxxxx
+Memory Address: 00000020 | Data: xxxxxxxx
+Memory Address: 00000024 | Data: xxxxxxxx
+Memory Address: 00000028 | Data: xxxxxxxx
+Memory Address: 0000002c | Data: xxxxxxxx
+Memory Address: 00000030 | Data: xxxxxxxx
+Memory Address: 00000034 | Data: xxxxxxxx
+Memory Address: 00000038 | Data: xxxxxxxx
+Memory Address: 0000003c | Data: xxxxxxxx
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 875.375 ; gain = 2.887
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Out of bounds address specified in datafile. Read terminated.
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: xxxxxxxx
+Memory Address: 00000004 | Data: xxxxxxxx
+Memory Address: 00000008 | Data: xxxxxxxx
+Memory Address: 0000000c | Data: xxxxxxxx
+Memory Address: 00000010 | Data: xxxxxxxx
+Memory Address: 00000014 | Data: xxxxxxxx
+Memory Address: 00000018 | Data: xxxxxxxx
+Memory Address: 0000001c | Data: xxxxxxxx
+Memory Address: 00000020 | Data: xxxxxxxx
+Memory Address: 00000024 | Data: xxxxxxxx
+Memory Address: 00000028 | Data: xxxxxxxx
+Memory Address: 0000002c | Data: xxxxxxxx
+Memory Address: 00000030 | Data: xxxxxxxx
+Memory Address: 00000034 | Data: xxxxxxxx
+Memory Address: 00000038 | Data: xxxxxxxx
+Memory Address: 0000003c | Data: xxxxxxxx
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 901.348 ; gain = 22.395
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: xxxxxxxx
+Memory Address: 00000004 | Data: xxxxxxxx
+Memory Address: 00000008 | Data: xxxxxxxx
+Memory Address: 0000000c | Data: xxxxxxxx
+Memory Address: 00000010 | Data: xxxxxxxx
+Memory Address: 00000014 | Data: xxxxxxxx
+Memory Address: 00000018 | Data: xxxxxxxx
+Memory Address: 0000001c | Data: xxxxxxxx
+Memory Address: 00000020 | Data: xxxxxxxx
+Memory Address: 00000024 | Data: xxxxxxxx
+Memory Address: 00000028 | Data: xxxxxxxx
+Memory Address: 0000002c | Data: xxxxxxxx
+Memory Address: 00000030 | Data: xxxxxxxx
+Memory Address: 00000034 | Data: xxxxxxxx
+Memory Address: 00000038 | Data: xxxxxxxx
+Memory Address: 0000003c | Data: xxxxxxxx
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 901.348 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: 000000xx
+Memory Address: 00000004 | Data: 000000xx
+Memory Address: 00000008 | Data: 000000xx
+Memory Address: 0000000c | Data: 000000xx
+Memory Address: 00000010 | Data: 000000xx
+Memory Address: 00000014 | Data: 000000xx
+Memory Address: 00000018 | Data: 000000xx
+Memory Address: 0000001c | Data: 000000xx
+Memory Address: 00000020 | Data: 000000xx
+Memory Address: 00000024 | Data: 000000xx
+Memory Address: 00000028 | Data: 000000xx
+Memory Address: 0000002c | Data: 000000xx
+Memory Address: 00000030 | Data: 000000xx
+Memory Address: 00000034 | Data: 000000xx
+Memory Address: 00000038 | Data: 000000xx
+Memory Address: 0000003c | Data: 000000xx
+Memory Address: 00000040 | Data: 000000xx
+Memory Address: 00000044 | Data: 000000xx
+Memory Address: 00000048 | Data: 000000xx
+Memory Address: 0000004c | Data: 000000xx
+Memory Address: 00000050 | Data: 000000xx
+Memory Address: 00000054 | Data: 000000xx
+Memory Address: 00000058 | Data: 000000xx
+Memory Address: 0000005c | Data: 000000xx
+Memory Address: 00000060 | Data: 000000xx
+Memory Address: 00000064 | Data: 000000xx
+Memory Address: 00000068 | Data: 000000xx
+Memory Address: 0000006c | Data: 000000xx
+Memory Address: 00000070 | Data: 000000xx
+Memory Address: 00000074 | Data: 000000xx
+Memory Address: 00000078 | Data: 000000xx
+Memory Address: 0000007c | Data: 000000xx
+Memory Address: 00000080 | Data: 000000xx
+Memory Address: 00000084 | Data: 000000xx
+Memory Address: 00000088 | Data: 000000xx
+Memory Address: 0000008c | Data: 000000xx
+Memory Address: 00000090 | Data: 000000xx
+Memory Address: 00000094 | Data: 000000xx
+Memory Address: 00000098 | Data: 000000xx
+Memory Address: 0000009c | Data: 000000xx
+Memory Address: 000000a0 | Data: 000000xx
+Memory Address: 000000a4 | Data: 000000xx
+Memory Address: 000000a8 | Data: 000000xx
+Memory Address: 000000ac | Data: 000000xx
+Memory Address: 000000b0 | Data: 000000xx
+Memory Address: 000000b4 | Data: 000000xx
+Memory Address: 000000b8 | Data: 000000xx
+Memory Address: 000000bc | Data: 000000xx
+Memory Address: 000000c0 | Data: 000000xx
+Memory Address: 000000c4 | Data: 000000xx
+Memory Address: 000000c8 | Data: 000000xx
+Memory Address: 000000cc | Data: 000000xx
+Memory Address: 000000d0 | Data: 000000xx
+Memory Address: 000000d4 | Data: 000000xx
+Memory Address: 000000d8 | Data: 000000xx
+Memory Address: 000000dc | Data: 000000xx
+Memory Address: 000000e0 | Data: 000000xx
+Memory Address: 000000e4 | Data: 000000xx
+Memory Address: 000000e8 | Data: 000000xx
+Memory Address: 000000ec | Data: 000000xx
+Memory Address: 000000f0 | Data: 000000xx
+Memory Address: 000000f4 | Data: 000000xx
+Memory Address: 000000f8 | Data: 000000xx
+Memory Address: 000000fc | Data: 000000xx
+Memory Address: 00000100 | Data: 000000xx
+Memory Address: 00000104 | Data: 000000xx
+Memory Address: 00000108 | Data: 000000xx
+Memory Address: 0000010c | Data: 000000xx
+Memory Address: 00000110 | Data: 000000xx
+Memory Address: 00000114 | Data: 000000xx
+Memory Address: 00000118 | Data: 000000xx
+Memory Address: 0000011c | Data: 000000xx
+Memory Address: 00000120 | Data: 000000xx
+Memory Address: 00000124 | Data: 000000xx
+Memory Address: 00000128 | Data: 000000xx
+Memory Address: 0000012c | Data: 000000xx
+Memory Address: 00000130 | Data: 000000xx
+Memory Address: 00000134 | Data: 000000xx
+Memory Address: 00000138 | Data: 000000xx
+Memory Address: 0000013c | Data: 000000xx
+Memory Address: 00000140 | Data: 000000xx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 901.348 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
@@ -227,7 +1196,7 @@ source Integer_Datapath_TB.tcl
 #   }
 # }
 # run 1000ns
- ( 1 )  -  I n i t i a l   C o n t e n t s   o f   M e m o r y
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
 Time =   36.0 ps | Register [          0] = 00000000
 Time =   46.0 ps | Register [          1] = 12345678
 Time =   56.0 ps | Register [          2] = 89abcdef
@@ -244,10 +1213,1639 @@ Time =  156.0 ps | Register [         12] = 0000000c
 Time =  166.0 ps | Register [         13] = 0000000d
 Time =  176.0 ps | Register [         14] = fffffff8
 Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: 000000c3
+Memory Address: 00000004 | Data: 000000c3
+Memory Address: 00000008 | Data: 000000c3
+Memory Address: 0000000c | Data: 000000c3
+Memory Address: 00000010 | Data: 000000c3
+Memory Address: 00000014 | Data: 000000c3
+Memory Address: 00000018 | Data: 000000c3
+Memory Address: 0000001c | Data: 000000c3
+Memory Address: 00000020 | Data: 000000c3
+Memory Address: 00000024 | Data: 000000c3
+Memory Address: 00000028 | Data: 000000c3
+Memory Address: 0000002c | Data: 000000c3
+Memory Address: 00000030 | Data: 000000c3
+Memory Address: 00000034 | Data: 000000c3
+Memory Address: 00000038 | Data: 000000c3
+Memory Address: 0000003c | Data: 000000c3
+Memory Address: 00000040 | Data: 000000c3
+Memory Address: 00000044 | Data: 000000c3
+Memory Address: 00000048 | Data: 000000c3
+Memory Address: 0000004c | Data: 000000c3
+Memory Address: 00000050 | Data: 000000c3
+Memory Address: 00000054 | Data: 000000c3
+Memory Address: 00000058 | Data: 000000c3
+Memory Address: 0000005c | Data: 000000c3
+Memory Address: 00000060 | Data: 000000c3
+Memory Address: 00000064 | Data: 000000c3
+Memory Address: 00000068 | Data: 000000c3
+Memory Address: 0000006c | Data: 000000c3
+Memory Address: 00000070 | Data: 000000c3
+Memory Address: 00000074 | Data: 000000c3
+Memory Address: 00000078 | Data: 000000c3
+Memory Address: 0000007c | Data: 000000c3
+Memory Address: 00000080 | Data: 000000c3
+Memory Address: 00000084 | Data: 000000c3
+Memory Address: 00000088 | Data: 000000c3
+Memory Address: 0000008c | Data: 000000c3
+Memory Address: 00000090 | Data: 000000c3
+Memory Address: 00000094 | Data: 000000c3
+Memory Address: 00000098 | Data: 000000c3
+Memory Address: 0000009c | Data: 000000c3
+Memory Address: 000000a0 | Data: 000000c3
+Memory Address: 000000a4 | Data: 000000c3
+Memory Address: 000000a8 | Data: 000000c3
+Memory Address: 000000ac | Data: 000000c3
+Memory Address: 000000b0 | Data: 000000c3
+Memory Address: 000000b4 | Data: 000000c3
+Memory Address: 000000b8 | Data: 000000c3
+Memory Address: 000000bc | Data: 000000c3
+Memory Address: 000000c0 | Data: 000000c3
+Memory Address: 000000c4 | Data: 000000c3
+Memory Address: 000000c8 | Data: 000000c3
+Memory Address: 000000cc | Data: 000000c3
+Memory Address: 000000d0 | Data: 000000c3
+Memory Address: 000000d4 | Data: 000000c3
+Memory Address: 000000d8 | Data: 000000c3
+Memory Address: 000000dc | Data: 000000c3
+Memory Address: 000000e0 | Data: 000000c3
+Memory Address: 000000e4 | Data: 000000c3
+Memory Address: 000000e8 | Data: 000000c3
+Memory Address: 000000ec | Data: 000000c3
+Memory Address: 000000f0 | Data: 000000c3
+Memory Address: 000000f4 | Data: 000000c3
+Memory Address: 000000f8 | Data: 000000c3
+Memory Address: 000000fc | Data: 000000c3
+Memory Address: 00000100 | Data: 000000c3
+Memory Address: 00000104 | Data: 000000c3
+Memory Address: 00000108 | Data: 000000c3
+Memory Address: 0000010c | Data: 000000c3
+Memory Address: 00000110 | Data: 000000c3
+Memory Address: 00000114 | Data: 000000c3
+Memory Address: 00000118 | Data: 000000c3
+Memory Address: 0000011c | Data: 000000c3
+Memory Address: 00000120 | Data: 000000c3
+Memory Address: 00000124 | Data: 000000c3
+Memory Address: 00000128 | Data: 000000c3
+Memory Address: 0000012c | Data: 000000c3
+Memory Address: 00000130 | Data: 000000c3
+Memory Address: 00000134 | Data: 000000c3
+Memory Address: 00000138 | Data: 000000c3
+Memory Address: 0000013c | Data: 000000c3
+Memory Address: 00000140 | Data: 000000c3
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 848.926 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 901.348 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 28 22:10:15 2019...
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: c3c3c3c3
+Memory Address: 00000004 | Data: 12345678
+Memory Address: 00000008 | Data: 89abcdef
+Memory Address: 0000000c | Data: a5a5a5a5
+Memory Address: 00000010 | Data: 5a5a5a5a
+Memory Address: 00000014 | Data: 2468ace0
+Memory Address: 00000018 | Data: 13579bdf
+Memory Address: 0000001c | Data: 0f0f0f0f
+Memory Address: 00000020 | Data: f0f0f0f0
+Memory Address: 00000024 | Data: 00000009
+Memory Address: 00000028 | Data: 0000000a
+Memory Address: 0000002c | Data: 0000000b
+Memory Address: 00000030 | Data: 0000000c
+Memory Address: 00000034 | Data: 0000000d
+Memory Address: 00000038 | Data: fffffff8
+Memory Address: 0000003c | Data: 000075cc
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 901.348 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: c3c3c3c3
+Memory Address: 00000004 | Data: 12345678
+Memory Address: 00000008 | Data: 89abcdef
+Memory Address: 0000000c | Data: a5a5a5a5
+Memory Address: 00000010 | Data: 5a5a5a5a
+Memory Address: 00000014 | Data: 2468ace0
+Memory Address: 00000018 | Data: 13579bdf
+Memory Address: 0000001c | Data: 0f0f0f0f
+Memory Address: 00000020 | Data: f0f0f0f0
+Memory Address: 00000024 | Data: 00000009
+Memory Address: 00000028 | Data: 0000000a
+Memory Address: 0000002c | Data: 0000000b
+Memory Address: 00000030 | Data: 0000000c
+Memory Address: 00000034 | Data: 0000000d
+Memory Address: 00000038 | Data: fffffff8
+Memory Address: 0000003c | Data: 000075cc
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 901.348 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l   C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ ( 2 )   -   I n i t i a l   C o n t e n t s   o f   M e m o r y 
+Memory Address: 00000000 | Data: c3c3c3c3
+Memory Address: 00000004 | Data: 12345678
+Memory Address: 00000008 | Data: 89abcdef
+Memory Address: 0000000c | Data: a5a5a5a5
+Memory Address: 00000010 | Data: 5a5a5a5a
+Memory Address: 00000014 | Data: 2468ace0
+Memory Address: 00000018 | Data: 13579bdf
+Memory Address: 0000001c | Data: 0f0f0f0f
+Memory Address: 00000020 | Data: f0f0f0f0
+Memory Address: 00000024 | Data: 00000009
+Memory Address: 00000028 | Data: 0000000a
+Memory Address: 0000002c | Data: 0000000b
+Memory Address: 00000030 | Data: 0000000c
+Memory Address: 00000034 | Data: 0000000d
+Memory Address: 00000038 | Data: fffffff8
+Memory Address: 0000003c | Data: 000075cc
+Memory Address: 00000040 | Data: xxxxxxxx
+Memory Address: 00000044 | Data: xxxxxxxx
+Memory Address: 00000048 | Data: xxxxxxxx
+Memory Address: 0000004c | Data: xxxxxxxx
+Memory Address: 00000050 | Data: xxxxxxxx
+Memory Address: 00000054 | Data: xxxxxxxx
+Memory Address: 00000058 | Data: xxxxxxxx
+Memory Address: 0000005c | Data: xxxxxxxx
+Memory Address: 00000060 | Data: xxxxxxxx
+Memory Address: 00000064 | Data: xxxxxxxx
+Memory Address: 00000068 | Data: xxxxxxxx
+Memory Address: 0000006c | Data: xxxxxxxx
+Memory Address: 00000070 | Data: xxxxxxxx
+Memory Address: 00000074 | Data: xxxxxxxx
+Memory Address: 00000078 | Data: xxxxxxxx
+Memory Address: 0000007c | Data: xxxxxxxx
+Memory Address: 00000080 | Data: xxxxxxxx
+Memory Address: 00000084 | Data: xxxxxxxx
+Memory Address: 00000088 | Data: xxxxxxxx
+Memory Address: 0000008c | Data: xxxxxxxx
+Memory Address: 00000090 | Data: xxxxxxxx
+Memory Address: 00000094 | Data: xxxxxxxx
+Memory Address: 00000098 | Data: xxxxxxxx
+Memory Address: 0000009c | Data: xxxxxxxx
+Memory Address: 000000a0 | Data: xxxxxxxx
+Memory Address: 000000a4 | Data: xxxxxxxx
+Memory Address: 000000a8 | Data: xxxxxxxx
+Memory Address: 000000ac | Data: xxxxxxxx
+Memory Address: 000000b0 | Data: xxxxxxxx
+Memory Address: 000000b4 | Data: xxxxxxxx
+Memory Address: 000000b8 | Data: xxxxxxxx
+Memory Address: 000000bc | Data: xxxxxxxx
+Memory Address: 000000c0 | Data: xxxxxxxx
+Memory Address: 000000c4 | Data: xxxxxxxx
+Memory Address: 000000c8 | Data: xxxxxxxx
+Memory Address: 000000cc | Data: xxxxxxxx
+Memory Address: 000000d0 | Data: xxxxxxxx
+Memory Address: 000000d4 | Data: xxxxxxxx
+Memory Address: 000000d8 | Data: xxxxxxxx
+Memory Address: 000000dc | Data: xxxxxxxx
+Memory Address: 000000e0 | Data: xxxxxxxx
+Memory Address: 000000e4 | Data: xxxxxxxx
+Memory Address: 000000e8 | Data: xxxxxxxx
+Memory Address: 000000ec | Data: xxxxxxxx
+Memory Address: 000000f0 | Data: xxxxxxxx
+Memory Address: 000000f4 | Data: xxxxxxxx
+Memory Address: 000000f8 | Data: xxxxxxxx
+Memory Address: 000000fc | Data: xxxxxxxx
+Memory Address: 00000100 | Data: xxxxxxxx
+Memory Address: 00000104 | Data: xxxxxxxx
+Memory Address: 00000108 | Data: xxxxxxxx
+Memory Address: 0000010c | Data: xxxxxxxx
+Memory Address: 00000110 | Data: xxxxxxxx
+Memory Address: 00000114 | Data: xxxxxxxx
+Memory Address: 00000118 | Data: xxxxxxxx
+Memory Address: 0000011c | Data: xxxxxxxx
+Memory Address: 00000120 | Data: xxxxxxxx
+Memory Address: 00000124 | Data: xxxxxxxx
+Memory Address: 00000128 | Data: xxxxxxxx
+Memory Address: 0000012c | Data: xxxxxxxx
+Memory Address: 00000130 | Data: xxxxxxxx
+Memory Address: 00000134 | Data: xxxxxxxx
+Memory Address: 00000138 | Data: xxxxxxxx
+Memory Address: 0000013c | Data: xxxxxxxx
+Memory Address: 00000140 | Data: xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 901.348 ; gain = 0.000
+run 20 ms
+Memory Address: 00000144 | Data: xxxxxxxx
+Memory Address: 00000148 | Data: xxxxxxxx
+Memory Address: 0000014c | Data: xxxxxxxx
+Memory Address: 00000150 | Data: xxxxxxxx
+Memory Address: 00000154 | Data: xxxxxxxx
+Memory Address: 00000158 | Data: xxxxxxxx
+Memory Address: 0000015c | Data: xxxxxxxx
+Memory Address: 00000160 | Data: xxxxxxxx
+Memory Address: 00000164 | Data: xxxxxxxx
+Memory Address: 00000168 | Data: xxxxxxxx
+Memory Address: 0000016c | Data: xxxxxxxx
+Memory Address: 00000170 | Data: xxxxxxxx
+Memory Address: 00000174 | Data: xxxxxxxx
+Memory Address: 00000178 | Data: xxxxxxxx
+Memory Address: 0000017c | Data: xxxxxxxx
+Memory Address: 00000180 | Data: xxxxxxxx
+Memory Address: 00000184 | Data: xxxxxxxx
+Memory Address: 00000188 | Data: xxxxxxxx
+Memory Address: 0000018c | Data: xxxxxxxx
+Memory Address: 00000190 | Data: xxxxxxxx
+Memory Address: 00000194 | Data: xxxxxxxx
+Memory Address: 00000198 | Data: xxxxxxxx
+Memory Address: 0000019c | Data: xxxxxxxx
+Memory Address: 000001a0 | Data: xxxxxxxx
+Memory Address: 000001a4 | Data: xxxxxxxx
+Memory Address: 000001a8 | Data: xxxxxxxx
+Memory Address: 000001ac | Data: xxxxxxxx
+Memory Address: 000001b0 | Data: xxxxxxxx
+Memory Address: 000001b4 | Data: xxxxxxxx
+Memory Address: 000001b8 | Data: xxxxxxxx
+Memory Address: 000001bc | Data: xxxxxxxx
+Memory Address: 000001c0 | Data: xxxxxxxx
+Memory Address: 000001c4 | Data: xxxxxxxx
+Memory Address: 000001c8 | Data: xxxxxxxx
+Memory Address: 000001cc | Data: xxxxxxxx
+Memory Address: 000001d0 | Data: xxxxxxxx
+Memory Address: 000001d4 | Data: xxxxxxxx
+Memory Address: 000001d8 | Data: xxxxxxxx
+Memory Address: 000001dc | Data: xxxxxxxx
+Memory Address: 000001e0 | Data: xxxxxxxx
+Memory Address: 000001e4 | Data: xxxxxxxx
+Memory Address: 000001e8 | Data: xxxxxxxx
+Memory Address: 000001ec | Data: xxxxxxxx
+Memory Address: 000001f0 | Data: xxxxxxxx
+Memory Address: 000001f4 | Data: xxxxxxxx
+Memory Address: 000001f8 | Data: xxxxxxxx
+Memory Address: 000001fc | Data: xxxxxxxx
+Memory Address: 00000200 | Data: xxxxxxxx
+Memory Address: 00000204 | Data: xxxxxxxx
+Memory Address: 00000208 | Data: xxxxxxxx
+Memory Address: 0000020c | Data: xxxxxxxx
+Memory Address: 00000210 | Data: xxxxxxxx
+Memory Address: 00000214 | Data: xxxxxxxx
+Memory Address: 00000218 | Data: xxxxxxxx
+Memory Address: 0000021c | Data: xxxxxxxx
+Memory Address: 00000220 | Data: xxxxxxxx
+Memory Address: 00000224 | Data: xxxxxxxx
+Memory Address: 00000228 | Data: xxxxxxxx
+Memory Address: 0000022c | Data: xxxxxxxx
+Memory Address: 00000230 | Data: xxxxxxxx
+Memory Address: 00000234 | Data: xxxxxxxx
+Memory Address: 00000238 | Data: xxxxxxxx
+Memory Address: 0000023c | Data: xxxxxxxx
+Memory Address: 00000240 | Data: xxxxxxxx
+Memory Address: 00000244 | Data: xxxxxxxx
+Memory Address: 00000248 | Data: xxxxxxxx
+Memory Address: 0000024c | Data: xxxxxxxx
+Memory Address: 00000250 | Data: xxxxxxxx
+Memory Address: 00000254 | Data: xxxxxxxx
+Memory Address: 00000258 | Data: xxxxxxxx
+Memory Address: 0000025c | Data: xxxxxxxx
+Memory Address: 00000260 | Data: xxxxxxxx
+Memory Address: 00000264 | Data: xxxxxxxx
+Memory Address: 00000268 | Data: xxxxxxxx
+Memory Address: 0000026c | Data: xxxxxxxx
+Memory Address: 00000270 | Data: xxxxxxxx
+Memory Address: 00000274 | Data: xxxxxxxx
+Memory Address: 00000278 | Data: xxxxxxxx
+Memory Address: 0000027c | Data: xxxxxxxx
+Memory Address: 00000280 | Data: xxxxxxxx
+Memory Address: 00000284 | Data: xxxxxxxx
+Memory Address: 00000288 | Data: xxxxxxxx
+Memory Address: 0000028c | Data: xxxxxxxx
+Memory Address: 00000290 | Data: xxxxxxxx
+Memory Address: 00000294 | Data: xxxxxxxx
+Memory Address: 00000298 | Data: xxxxxxxx
+Memory Address: 0000029c | Data: xxxxxxxx
+Memory Address: 000002a0 | Data: xxxxxxxx
+Memory Address: 000002a4 | Data: xxxxxxxx
+Memory Address: 000002a8 | Data: xxxxxxxx
+Memory Address: 000002ac | Data: xxxxxxxx
+Memory Address: 000002b0 | Data: xxxxxxxx
+Memory Address: 000002b4 | Data: xxxxxxxx
+Memory Address: 000002b8 | Data: xxxxxxxx
+Memory Address: 000002bc | Data: xxxxxxxx
+Memory Address: 000002c0 | Data: xxxxxxxx
+Memory Address: 000002c4 | Data: xxxxxxxx
+Memory Address: 000002c8 | Data: xxxxxxxx
+Memory Address: 000002cc | Data: xxxxxxxx
+Memory Address: 000002d0 | Data: xxxxxxxx
+Memory Address: 000002d4 | Data: xxxxxxxx
+Memory Address: 000002d8 | Data: xxxxxxxx
+Memory Address: 000002dc | Data: xxxxxxxx
+Memory Address: 000002e0 | Data: xxxxxxxx
+Memory Address: 000002e4 | Data: xxxxxxxx
+Memory Address: 000002e8 | Data: xxxxxxxx
+Memory Address: 000002ec | Data: xxxxxxxx
+Memory Address: 000002f0 | Data: xxxxxxxx
+Memory Address: 000002f4 | Data: xxxxxxxx
+Memory Address: 000002f8 | Data: xxxxxxxx
+Memory Address: 000002fc | Data: xxxxxxxx
+Memory Address: 00000300 | Data: xxxxxxxx
+Memory Address: 00000304 | Data: xxxxxxxx
+Memory Address: 00000308 | Data: xxxxxxxx
+Memory Address: 0000030c | Data: xxxxxxxx
+Memory Address: 00000310 | Data: xxxxxxxx
+Memory Address: 00000314 | Data: xxxxxxxx
+Memory Address: 00000318 | Data: xxxxxxxx
+Memory Address: 0000031c | Data: xxxxxxxx
+Memory Address: 00000320 | Data: xxxxxxxx
+Memory Address: 00000324 | Data: xxxxxxxx
+Memory Address: 00000328 | Data: xxxxxxxx
+Memory Address: 0000032c | Data: xxxxxxxx
+Memory Address: 00000330 | Data: xxxxxxxx
+Memory Address: 00000334 | Data: xxxxxxxx
+Memory Address: 00000338 | Data: xxxxxxxx
+Memory Address: 0000033c | Data: xxxxxxxx
+Memory Address: 00000340 | Data: xxxxxxxx
+Memory Address: 00000344 | Data: xxxxxxxx
+Memory Address: 00000348 | Data: xxxxxxxx
+Memory Address: 0000034c | Data: xxxxxxxx
+Memory Address: 00000350 | Data: xxxxxxxx
+Memory Address: 00000354 | Data: xxxxxxxx
+Memory Address: 00000358 | Data: xxxxxxxx
+Memory Address: 0000035c | Data: xxxxxxxx
+Memory Address: 00000360 | Data: xxxxxxxx
+Memory Address: 00000364 | Data: xxxxxxxx
+Memory Address: 00000368 | Data: xxxxxxxx
+Memory Address: 0000036c | Data: xxxxxxxx
+Memory Address: 00000370 | Data: xxxxxxxx
+Memory Address: 00000374 | Data: xxxxxxxx
+Memory Address: 00000378 | Data: xxxxxxxx
+Memory Address: 0000037c | Data: xxxxxxxx
+Memory Address: 00000380 | Data: xxxxxxxx
+Memory Address: 00000384 | Data: xxxxxxxx
+Memory Address: 00000388 | Data: xxxxxxxx
+Memory Address: 0000038c | Data: xxxxxxxx
+Memory Address: 00000390 | Data: xxxxxxxx
+Memory Address: 00000394 | Data: xxxxxxxx
+Memory Address: 00000398 | Data: xxxxxxxx
+Memory Address: 0000039c | Data: xxxxxxxx
+Memory Address: 000003a0 | Data: xxxxxxxx
+Memory Address: 000003a4 | Data: xxxxxxxx
+Memory Address: 000003a8 | Data: xxxxxxxx
+Memory Address: 000003ac | Data: xxxxxxxx
+Memory Address: 000003b0 | Data: xxxxxxxx
+Memory Address: 000003b4 | Data: xxxxxxxx
+Memory Address: 000003b8 | Data: xxxxxxxx
+Memory Address: 000003bc | Data: xxxxxxxx
+Memory Address: 000003c0 | Data: xxxxxxxx
+Memory Address: 000003c4 | Data: xxxxxxxx
+Memory Address: 000003c8 | Data: xxxxxxxx
+Memory Address: 000003cc | Data: xxxxxxxx
+Memory Address: 000003d0 | Data: xxxxxxxx
+Memory Address: 000003d4 | Data: xxxxxxxx
+Memory Address: 000003d8 | Data: xxxxxxxx
+Memory Address: 000003dc | Data: xxxxxxxx
+Memory Address: 000003e0 | Data: xxxxxxxx
+Memory Address: 000003e4 | Data: xxxxxxxx
+Memory Address: 000003e8 | Data: xxxxxxxx
+Memory Address: 000003ec | Data: xxxxxxxx
+Memory Address: 000003f0 | Data: xxxxxxxx
+Memory Address: 000003f4 | Data: xxxxxxxx
+Memory Address: 000003f8 | Data: xxxxxxxx
+Memory Address: 000003fc | Data: xxxxxxxx
+Memory Address: 00000400 | Data: xxxxxxxx
+Memory Address: 00000404 | Data: xxxxxxxx
+Memory Address: 00000408 | Data: xxxxxxxx
+Memory Address: 0000040c | Data: xxxxxxxx
+Memory Address: 00000410 | Data: xxxxxxxx
+Memory Address: 00000414 | Data: xxxxxxxx
+Memory Address: 00000418 | Data: xxxxxxxx
+Memory Address: 0000041c | Data: xxxxxxxx
+Memory Address: 00000420 | Data: xxxxxxxx
+Memory Address: 00000424 | Data: xxxxxxxx
+Memory Address: 00000428 | Data: xxxxxxxx
+Memory Address: 0000042c | Data: xxxxxxxx
+Memory Address: 00000430 | Data: xxxxxxxx
+Memory Address: 00000434 | Data: xxxxxxxx
+Memory Address: 00000438 | Data: xxxxxxxx
+Memory Address: 0000043c | Data: xxxxxxxx
+Memory Address: 00000440 | Data: xxxxxxxx
+Memory Address: 00000444 | Data: xxxxxxxx
+Memory Address: 00000448 | Data: xxxxxxxx
+Memory Address: 0000044c | Data: xxxxxxxx
+Memory Address: 00000450 | Data: xxxxxxxx
+Memory Address: 00000454 | Data: xxxxxxxx
+Memory Address: 00000458 | Data: xxxxxxxx
+Memory Address: 0000045c | Data: xxxxxxxx
+Memory Address: 00000460 | Data: xxxxxxxx
+Memory Address: 00000464 | Data: xxxxxxxx
+Memory Address: 00000468 | Data: xxxxxxxx
+Memory Address: 0000046c | Data: xxxxxxxx
+Memory Address: 00000470 | Data: xxxxxxxx
+Memory Address: 00000474 | Data: xxxxxxxx
+Memory Address: 00000478 | Data: xxxxxxxx
+Memory Address: 0000047c | Data: xxxxxxxx
+Memory Address: 00000480 | Data: xxxxxxxx
+Memory Address: 00000484 | Data: xxxxxxxx
+Memory Address: 00000488 | Data: xxxxxxxx
+Memory Address: 0000048c | Data: xxxxxxxx
+Memory Address: 00000490 | Data: xxxxxxxx
+Memory Address: 00000494 | Data: xxxxxxxx
+Memory Address: 00000498 | Data: xxxxxxxx
+Memory Address: 0000049c | Data: xxxxxxxx
+Memory Address: 000004a0 | Data: xxxxxxxx
+Memory Address: 000004a4 | Data: xxxxxxxx
+Memory Address: 000004a8 | Data: xxxxxxxx
+Memory Address: 000004ac | Data: xxxxxxxx
+Memory Address: 000004b0 | Data: xxxxxxxx
+Memory Address: 000004b4 | Data: xxxxxxxx
+Memory Address: 000004b8 | Data: xxxxxxxx
+Memory Address: 000004bc | Data: xxxxxxxx
+Memory Address: 000004c0 | Data: xxxxxxxx
+Memory Address: 000004c4 | Data: xxxxxxxx
+Memory Address: 000004c8 | Data: xxxxxxxx
+Memory Address: 000004cc | Data: xxxxxxxx
+Memory Address: 000004d0 | Data: xxxxxxxx
+Memory Address: 000004d4 | Data: xxxxxxxx
+Memory Address: 000004d8 | Data: xxxxxxxx
+Memory Address: 000004dc | Data: xxxxxxxx
+Memory Address: 000004e0 | Data: xxxxxxxx
+Memory Address: 000004e4 | Data: xxxxxxxx
+Memory Address: 000004e8 | Data: xxxxxxxx
+Memory Address: 000004ec | Data: xxxxxxxx
+Memory Address: 000004f0 | Data: xxxxxxxx
+Memory Address: 000004f4 | Data: xxxxxxxx
+Memory Address: 000004f8 | Data: xxxxxxxx
+Memory Address: 000004fc | Data: xxxxxxxx
+Memory Address: 00000500 | Data: xxxxxxxx
+Memory Address: 00000504 | Data: xxxxxxxx
+Memory Address: 00000508 | Data: xxxxxxxx
+Memory Address: 0000050c | Data: xxxxxxxx
+Memory Address: 00000510 | Data: xxxxxxxx
+Memory Address: 00000514 | Data: xxxxxxxx
+Memory Address: 00000518 | Data: xxxxxxxx
+Memory Address: 0000051c | Data: xxxxxxxx
+Memory Address: 00000520 | Data: xxxxxxxx
+Memory Address: 00000524 | Data: xxxxxxxx
+Memory Address: 00000528 | Data: xxxxxxxx
+Memory Address: 0000052c | Data: xxxxxxxx
+Memory Address: 00000530 | Data: xxxxxxxx
+Memory Address: 00000534 | Data: xxxxxxxx
+Memory Address: 00000538 | Data: xxxxxxxx
+Memory Address: 0000053c | Data: xxxxxxxx
+Memory Address: 00000540 | Data: xxxxxxxx
+Memory Address: 00000544 | Data: xxxxxxxx
+Memory Address: 00000548 | Data: xxxxxxxx
+Memory Address: 0000054c | Data: xxxxxxxx
+Memory Address: 00000550 | Data: xxxxxxxx
+Memory Address: 00000554 | Data: xxxxxxxx
+Memory Address: 00000558 | Data: xxxxxxxx
+Memory Address: 0000055c | Data: xxxxxxxx
+Memory Address: 00000560 | Data: xxxxxxxx
+Memory Address: 00000564 | Data: xxxxxxxx
+Memory Address: 00000568 | Data: xxxxxxxx
+Memory Address: 0000056c | Data: xxxxxxxx
+Memory Address: 00000570 | Data: xxxxxxxx
+Memory Address: 00000574 | Data: xxxxxxxx
+Memory Address: 00000578 | Data: xxxxxxxx
+Memory Address: 0000057c | Data: xxxxxxxx
+Memory Address: 00000580 | Data: xxxxxxxx
+Memory Address: 00000584 | Data: xxxxxxxx
+Memory Address: 00000588 | Data: xxxxxxxx
+Memory Address: 0000058c | Data: xxxxxxxx
+Memory Address: 00000590 | Data: xxxxxxxx
+Memory Address: 00000594 | Data: xxxxxxxx
+Memory Address: 00000598 | Data: xxxxxxxx
+Memory Address: 0000059c | Data: xxxxxxxx
+Memory Address: 000005a0 | Data: xxxxxxxx
+Memory Address: 000005a4 | Data: xxxxxxxx
+Memory Address: 000005a8 | Data: xxxxxxxx
+Memory Address: 000005ac | Data: xxxxxxxx
+Memory Address: 000005b0 | Data: xxxxxxxx
+Memory Address: 000005b4 | Data: xxxxxxxx
+Memory Address: 000005b8 | Data: xxxxxxxx
+Memory Address: 000005bc | Data: xxxxxxxx
+Memory Address: 000005c0 | Data: xxxxxxxx
+Memory Address: 000005c4 | Data: xxxxxxxx
+Memory Address: 000005c8 | Data: xxxxxxxx
+Memory Address: 000005cc | Data: abcdef01
+Memory Address: 000005d0 | Data: xxxxxxxx
+Memory Address: 000005d4 | Data: xxxxxxxx
+Memory Address: 000005d8 | Data: xxxxxxxx
+Memory Address: 000005dc | Data: xxxxxxxx
+Memory Address: 000005e0 | Data: xxxxxxxx
+Memory Address: 000005e4 | Data: xxxxxxxx
+Memory Address: 000005e8 | Data: xxxxxxxx
+Memory Address: 000005ec | Data: xxxxxxxx
+Memory Address: 000005f0 | Data: xxxxxxxx
+Memory Address: 000005f4 | Data: xxxxxxxx
+Memory Address: 000005f8 | Data: xxxxxxxx
+Memory Address: 000005fc | Data: xxxxxxxx
+Memory Address: 00000600 | Data: xxxxxxxx
+Memory Address: 00000604 | Data: xxxxxxxx
+Memory Address: 00000608 | Data: xxxxxxxx
+Memory Address: 0000060c | Data: xxxxxxxx
+Memory Address: 00000610 | Data: xxxxxxxx
+Memory Address: 00000614 | Data: xxxxxxxx
+Memory Address: 00000618 | Data: xxxxxxxx
+Memory Address: 0000061c | Data: xxxxxxxx
+Memory Address: 00000620 | Data: xxxxxxxx
+Memory Address: 00000624 | Data: xxxxxxxx
+Memory Address: 00000628 | Data: xxxxxxxx
+Memory Address: 0000062c | Data: xxxxxxxx
+Memory Address: 00000630 | Data: xxxxxxxx
+Memory Address: 00000634 | Data: xxxxxxxx
+Memory Address: 00000638 | Data: xxxxxxxx
+Memory Address: 0000063c | Data: xxxxxxxx
+Memory Address: 00000640 | Data: xxxxxxxx
+Memory Address: 00000644 | Data: xxxxxxxx
+Memory Address: 00000648 | Data: xxxxxxxx
+Memory Address: 0000064c | Data: xxxxxxxx
+Memory Address: 00000650 | Data: xxxxxxxx
+Memory Address: 00000654 | Data: xxxxxxxx
+Memory Address: 00000658 | Data: xxxxxxxx
+Memory Address: 0000065c | Data: xxxxxxxx
+Memory Address: 00000660 | Data: xxxxxxxx
+Memory Address: 00000664 | Data: xxxxxxxx
+Memory Address: 00000668 | Data: xxxxxxxx
+Memory Address: 0000066c | Data: xxxxxxxx
+Memory Address: 00000670 | Data: xxxxxxxx
+Memory Address: 00000674 | Data: xxxxxxxx
+Memory Address: 00000678 | Data: xxxxxxxx
+Memory Address: 0000067c | Data: xxxxxxxx
+Memory Address: 00000680 | Data: xxxxxxxx
+Memory Address: 00000684 | Data: xxxxxxxx
+Memory Address: 00000688 | Data: xxxxxxxx
+Memory Address: 0000068c | Data: xxxxxxxx
+Memory Address: 00000690 | Data: xxxxxxxx
+Memory Address: 00000694 | Data: xxxxxxxx
+Memory Address: 00000698 | Data: xxxxxxxx
+Memory Address: 0000069c | Data: xxxxxxxx
+Memory Address: 000006a0 | Data: xxxxxxxx
+Memory Address: 000006a4 | Data: xxxxxxxx
+Memory Address: 000006a8 | Data: xxxxxxxx
+Memory Address: 000006ac | Data: xxxxxxxx
+Memory Address: 000006b0 | Data: xxxxxxxx
+Memory Address: 000006b4 | Data: xxxxxxxx
+Memory Address: 000006b8 | Data: xxxxxxxx
+Memory Address: 000006bc | Data: xxxxxxxx
+Memory Address: 000006c0 | Data: xxxxxxxx
+Memory Address: 000006c4 | Data: xxxxxxxx
+Memory Address: 000006c8 | Data: xxxxxxxx
+Memory Address: 000006cc | Data: xxxxxxxx
+Memory Address: 000006d0 | Data: xxxxxxxx
+Memory Address: 000006d4 | Data: xxxxxxxx
+Memory Address: 000006d8 | Data: xxxxxxxx
+Memory Address: 000006dc | Data: xxxxxxxx
+Memory Address: 000006e0 | Data: xxxxxxxx
+Memory Address: 000006e4 | Data: xxxxxxxx
+Memory Address: 000006e8 | Data: xxxxxxxx
+Memory Address: 000006ec | Data: xxxxxxxx
+Memory Address: 000006f0 | Data: xxxxxxxx
+Memory Address: 000006f4 | Data: xxxxxxxx
+Memory Address: 000006f8 | Data: xxxxxxxx
+Memory Address: 000006fc | Data: xxxxxxxx
+Memory Address: 00000700 | Data: xxxxxxxx
+Memory Address: 00000704 | Data: xxxxxxxx
+Memory Address: 00000708 | Data: xxxxxxxx
+Memory Address: 0000070c | Data: xxxxxxxx
+Memory Address: 00000710 | Data: xxxxxxxx
+Memory Address: 00000714 | Data: xxxxxxxx
+Memory Address: 00000718 | Data: xxxxxxxx
+Memory Address: 0000071c | Data: xxxxxxxx
+Memory Address: 00000720 | Data: xxxxxxxx
+Memory Address: 00000724 | Data: xxxxxxxx
+Memory Address: 00000728 | Data: xxxxxxxx
+Memory Address: 0000072c | Data: xxxxxxxx
+Memory Address: 00000730 | Data: xxxxxxxx
+Memory Address: 00000734 | Data: xxxxxxxx
+Memory Address: 00000738 | Data: xxxxxxxx
+Memory Address: 0000073c | Data: xxxxxxxx
+Memory Address: 00000740 | Data: xxxxxxxx
+Memory Address: 00000744 | Data: xxxxxxxx
+Memory Address: 00000748 | Data: xxxxxxxx
+Memory Address: 0000074c | Data: xxxxxxxx
+Memory Address: 00000750 | Data: xxxxxxxx
+Memory Address: 00000754 | Data: xxxxxxxx
+Memory Address: 00000758 | Data: xxxxxxxx
+Memory Address: 0000075c | Data: xxxxxxxx
+Memory Address: 00000760 | Data: xxxxxxxx
+Memory Address: 00000764 | Data: xxxxxxxx
+Memory Address: 00000768 | Data: xxxxxxxx
+Memory Address: 0000076c | Data: xxxxxxxx
+Memory Address: 00000770 | Data: xxxxxxxx
+Memory Address: 00000774 | Data: xxxxxxxx
+Memory Address: 00000778 | Data: xxxxxxxx
+Memory Address: 0000077c | Data: xxxxxxxx
+Memory Address: 00000780 | Data: xxxxxxxx
+Memory Address: 00000784 | Data: xxxxxxxx
+Memory Address: 00000788 | Data: xxxxxxxx
+Memory Address: 0000078c | Data: xxxxxxxx
+Memory Address: 00000790 | Data: xxxxxxxx
+Memory Address: 00000794 | Data: xxxxxxxx
+Memory Address: 00000798 | Data: xxxxxxxx
+Memory Address: 0000079c | Data: xxxxxxxx
+Memory Address: 000007a0 | Data: xxxxxxxx
+Memory Address: 000007a4 | Data: xxxxxxxx
+Memory Address: 000007a8 | Data: xxxxxxxx
+Memory Address: 000007ac | Data: xxxxxxxx
+Memory Address: 000007b0 | Data: xxxxxxxx
+Memory Address: 000007b4 | Data: xxxxxxxx
+Memory Address: 000007b8 | Data: xxxxxxxx
+Memory Address: 000007bc | Data: xxxxxxxx
+Memory Address: 000007c0 | Data: xxxxxxxx
+Memory Address: 000007c4 | Data: xxxxxxxx
+Memory Address: 000007c8 | Data: xxxxxxxx
+Memory Address: 000007cc | Data: xxxxxxxx
+Memory Address: 000007d0 | Data: xxxxxxxx
+Memory Address: 000007d4 | Data: xxxxxxxx
+Memory Address: 000007d8 | Data: xxxxxxxx
+Memory Address: 000007dc | Data: xxxxxxxx
+Memory Address: 000007e0 | Data: xxxxxxxx
+Memory Address: 000007e4 | Data: xxxxxxxx
+Memory Address: 000007e8 | Data: xxxxxxxx
+Memory Address: 000007ec | Data: xxxxxxxx
+Memory Address: 000007f0 | Data: xxxxxxxx
+Memory Address: 000007f4 | Data: xxxxxxxx
+Memory Address: 000007f8 | Data: xxxxxxxx
+Memory Address: 000007fc | Data: xxxxxxxx
+Memory Address: 00000800 | Data: xxxxxxxx
+Memory Address: 00000804 | Data: xxxxxxxx
+Memory Address: 00000808 | Data: xxxxxxxx
+Memory Address: 0000080c | Data: xxxxxxxx
+Memory Address: 00000810 | Data: xxxxxxxx
+Memory Address: 00000814 | Data: xxxxxxxx
+Memory Address: 00000818 | Data: xxxxxxxx
+Memory Address: 0000081c | Data: xxxxxxxx
+Memory Address: 00000820 | Data: xxxxxxxx
+Memory Address: 00000824 | Data: xxxxxxxx
+Memory Address: 00000828 | Data: xxxxxxxx
+Memory Address: 0000082c | Data: xxxxxxxx
+Memory Address: 00000830 | Data: xxxxxxxx
+Memory Address: 00000834 | Data: xxxxxxxx
+Memory Address: 00000838 | Data: xxxxxxxx
+Memory Address: 0000083c | Data: xxxxxxxx
+Memory Address: 00000840 | Data: xxxxxxxx
+Memory Address: 00000844 | Data: xxxxxxxx
+Memory Address: 00000848 | Data: xxxxxxxx
+Memory Address: 0000084c | Data: xxxxxxxx
+Memory Address: 00000850 | Data: xxxxxxxx
+Memory Address: 00000854 | Data: xxxxxxxx
+Memory Address: 00000858 | Data: xxxxxxxx
+Memory Address: 0000085c | Data: xxxxxxxx
+Memory Address: 00000860 | Data: xxxxxxxx
+Memory Address: 00000864 | Data: xxxxxxxx
+Memory Address: 00000868 | Data: xxxxxxxx
+Memory Address: 0000086c | Data: xxxxxxxx
+Memory Address: 00000870 | Data: xxxxxxxx
+Memory Address: 00000874 | Data: xxxxxxxx
+Memory Address: 00000878 | Data: xxxxxxxx
+Memory Address: 0000087c | Data: xxxxxxxx
+Memory Address: 00000880 | Data: xxxxxxxx
+Memory Address: 00000884 | Data: xxxxxxxx
+Memory Address: 00000888 | Data: xxxxxxxx
+Memory Address: 0000088c | Data: xxxxxxxx
+Memory Address: 00000890 | Data: xxxxxxxx
+Memory Address: 00000894 | Data: xxxxxxxx
+Memory Address: 00000898 | Data: xxxxxxxx
+Memory Address: 0000089c | Data: xxxxxxxx
+Memory Address: 000008a0 | Data: xxxxxxxx
+Memory Address: 000008a4 | Data: xxxxxxxx
+Memory Address: 000008a8 | Data: xxxxxxxx
+Memory Address: 000008ac | Data: xxxxxxxx
+Memory Address: 000008b0 | Data: xxxxxxxx
+Memory Address: 000008b4 | Data: xxxxxxxx
+Memory Address: 000008b8 | Data: xxxxxxxx
+Memory Address: 000008bc | Data: xxxxxxxx
+Memory Address: 000008c0 | Data: xxxxxxxx
+Memory Address: 000008c4 | Data: xxxxxxxx
+Memory Address: 000008c8 | Data: xxxxxxxx
+Memory Address: 000008cc | Data: xxxxxxxx
+Memory Address: 000008d0 | Data: xxxxxxxx
+Memory Address: 000008d4 | Data: xxxxxxxx
+Memory Address: 000008d8 | Data: xxxxxxxx
+Memory Address: 000008dc | Data: xxxxxxxx
+Memory Address: 000008e0 | Data: xxxxxxxx
+Memory Address: 000008e4 | Data: xxxxxxxx
+Memory Address: 000008e8 | Data: xxxxxxxx
+Memory Address: 000008ec | Data: xxxxxxxx
+Memory Address: 000008f0 | Data: xxxxxxxx
+Memory Address: 000008f4 | Data: xxxxxxxx
+Memory Address: 000008f8 | Data: xxxxxxxx
+Memory Address: 000008fc | Data: xxxxxxxx
+Memory Address: 00000900 | Data: xxxxxxxx
+Memory Address: 00000904 | Data: xxxxxxxx
+Memory Address: 00000908 | Data: xxxxxxxx
+Memory Address: 0000090c | Data: xxxxxxxx
+Memory Address: 00000910 | Data: xxxxxxxx
+Memory Address: 00000914 | Data: xxxxxxxx
+Memory Address: 00000918 | Data: xxxxxxxx
+Memory Address: 0000091c | Data: xxxxxxxx
+Memory Address: 00000920 | Data: xxxxxxxx
+Memory Address: 00000924 | Data: xxxxxxxx
+Memory Address: 00000928 | Data: xxxxxxxx
+Memory Address: 0000092c | Data: xxxxxxxx
+Memory Address: 00000930 | Data: xxxxxxxx
+Memory Address: 00000934 | Data: xxxxxxxx
+Memory Address: 00000938 | Data: xxxxxxxx
+Memory Address: 0000093c | Data: xxxxxxxx
+Memory Address: 00000940 | Data: xxxxxxxx
+Memory Address: 00000944 | Data: xxxxxxxx
+Memory Address: 00000948 | Data: xxxxxxxx
+Memory Address: 0000094c | Data: xxxxxxxx
+Memory Address: 00000950 | Data: xxxxxxxx
+Memory Address: 00000954 | Data: xxxxxxxx
+Memory Address: 00000958 | Data: xxxxxxxx
+Memory Address: 0000095c | Data: xxxxxxxx
+Memory Address: 00000960 | Data: xxxxxxxx
+Memory Address: 00000964 | Data: xxxxxxxx
+Memory Address: 00000968 | Data: xxxxxxxx
+Memory Address: 0000096c | Data: xxxxxxxx
+Memory Address: 00000970 | Data: xxxxxxxx
+Memory Address: 00000974 | Data: xxxxxxxx
+Memory Address: 00000978 | Data: xxxxxxxx
+Memory Address: 0000097c | Data: xxxxxxxx
+Memory Address: 00000980 | Data: xxxxxxxx
+Memory Address: 00000984 | Data: xxxxxxxx
+Memory Address: 00000988 | Data: xxxxxxxx
+Memory Address: 0000098c | Data: xxxxxxxx
+Memory Address: 00000990 | Data: xxxxxxxx
+Memory Address: 00000994 | Data: xxxxxxxx
+Memory Address: 00000998 | Data: xxxxxxxx
+Memory Address: 0000099c | Data: xxxxxxxx
+Memory Address: 000009a0 | Data: xxxxxxxx
+Memory Address: 000009a4 | Data: xxxxxxxx
+Memory Address: 000009a8 | Data: xxxxxxxx
+Memory Address: 000009ac | Data: xxxxxxxx
+Memory Address: 000009b0 | Data: xxxxxxxx
+Memory Address: 000009b4 | Data: xxxxxxxx
+Memory Address: 000009b8 | Data: xxxxxxxx
+Memory Address: 000009bc | Data: xxxxxxxx
+Memory Address: 000009c0 | Data: xxxxxxxx
+Memory Address: 000009c4 | Data: xxxxxxxx
+Memory Address: 000009c8 | Data: xxxxxxxx
+Memory Address: 000009cc | Data: xxxxxxxx
+Memory Address: 000009d0 | Data: xxxxxxxx
+Memory Address: 000009d4 | Data: xxxxxxxx
+Memory Address: 000009d8 | Data: xxxxxxxx
+Memory Address: 000009dc | Data: xxxxxxxx
+Memory Address: 000009e0 | Data: xxxxxxxx
+Memory Address: 000009e4 | Data: xxxxxxxx
+Memory Address: 000009e8 | Data: xxxxxxxx
+Memory Address: 000009ec | Data: xxxxxxxx
+Memory Address: 000009f0 | Data: xxxxxxxx
+Memory Address: 000009f4 | Data: xxxxxxxx
+Memory Address: 000009f8 | Data: xxxxxxxx
+Memory Address: 000009fc | Data: xxxxxxxx
+Memory Address: 00000a00 | Data: xxxxxxxx
+Memory Address: 00000a04 | Data: xxxxxxxx
+Memory Address: 00000a08 | Data: xxxxxxxx
+Memory Address: 00000a0c | Data: xxxxxxxx
+Memory Address: 00000a10 | Data: xxxxxxxx
+Memory Address: 00000a14 | Data: xxxxxxxx
+Memory Address: 00000a18 | Data: xxxxxxxx
+Memory Address: 00000a1c | Data: xxxxxxxx
+Memory Address: 00000a20 | Data: xxxxxxxx
+Memory Address: 00000a24 | Data: xxxxxxxx
+Memory Address: 00000a28 | Data: xxxxxxxx
+Memory Address: 00000a2c | Data: xxxxxxxx
+Memory Address: 00000a30 | Data: xxxxxxxx
+Memory Address: 00000a34 | Data: xxxxxxxx
+Memory Address: 00000a38 | Data: xxxxxxxx
+Memory Address: 00000a3c | Data: xxxxxxxx
+Memory Address: 00000a40 | Data: xxxxxxxx
+Memory Address: 00000a44 | Data: xxxxxxxx
+Memory Address: 00000a48 | Data: xxxxxxxx
+Memory Address: 00000a4c | Data: xxxxxxxx
+Memory Address: 00000a50 | Data: xxxxxxxx
+Memory Address: 00000a54 | Data: xxxxxxxx
+Memory Address: 00000a58 | Data: xxxxxxxx
+Memory Address: 00000a5c | Data: xxxxxxxx
+Memory Address: 00000a60 | Data: xxxxxxxx
+Memory Address: 00000a64 | Data: xxxxxxxx
+Memory Address: 00000a68 | Data: xxxxxxxx
+Memory Address: 00000a6c | Data: xxxxxxxx
+Memory Address: 00000a70 | Data: xxxxxxxx
+Memory Address: 00000a74 | Data: xxxxxxxx
+Memory Address: 00000a78 | Data: xxxxxxxx
+Memory Address: 00000a7c | Data: xxxxxxxx
+Memory Address: 00000a80 | Data: xxxxxxxx
+Memory Address: 00000a84 | Data: xxxxxxxx
+Memory Address: 00000a88 | Data: xxxxxxxx
+Memory Address: 00000a8c | Data: xxxxxxxx
+Memory Address: 00000a90 | Data: xxxxxxxx
+Memory Address: 00000a94 | Data: xxxxxxxx
+Memory Address: 00000a98 | Data: xxxxxxxx
+Memory Address: 00000a9c | Data: xxxxxxxx
+Memory Address: 00000aa0 | Data: xxxxxxxx
+Memory Address: 00000aa4 | Data: xxxxxxxx
+Memory Address: 00000aa8 | Data: xxxxxxxx
+Memory Address: 00000aac | Data: xxxxxxxx
+Memory Address: 00000ab0 | Data: xxxxxxxx
+Memory Address: 00000ab4 | Data: xxxxxxxx
+Memory Address: 00000ab8 | Data: xxxxxxxx
+Memory Address: 00000abc | Data: xxxxxxxx
+Memory Address: 00000ac0 | Data: xxxxxxxx
+Memory Address: 00000ac4 | Data: xxxxxxxx
+Memory Address: 00000ac8 | Data: xxxxxxxx
+Memory Address: 00000acc | Data: xxxxxxxx
+Memory Address: 00000ad0 | Data: xxxxxxxx
+Memory Address: 00000ad4 | Data: xxxxxxxx
+Memory Address: 00000ad8 | Data: xxxxxxxx
+Memory Address: 00000adc | Data: xxxxxxxx
+Memory Address: 00000ae0 | Data: xxxxxxxx
+Memory Address: 00000ae4 | Data: xxxxxxxx
+Memory Address: 00000ae8 | Data: xxxxxxxx
+Memory Address: 00000aec | Data: xxxxxxxx
+Memory Address: 00000af0 | Data: xxxxxxxx
+Memory Address: 00000af4 | Data: xxxxxxxx
+Memory Address: 00000af8 | Data: xxxxxxxx
+Memory Address: 00000afc | Data: xxxxxxxx
+Memory Address: 00000b00 | Data: xxxxxxxx
+Memory Address: 00000b04 | Data: xxxxxxxx
+Memory Address: 00000b08 | Data: xxxxxxxx
+Memory Address: 00000b0c | Data: xxxxxxxx
+Memory Address: 00000b10 | Data: xxxxxxxx
+Memory Address: 00000b14 | Data: xxxxxxxx
+Memory Address: 00000b18 | Data: xxxxxxxx
+Memory Address: 00000b1c | Data: xxxxxxxx
+Memory Address: 00000b20 | Data: xxxxxxxx
+Memory Address: 00000b24 | Data: xxxxxxxx
+Memory Address: 00000b28 | Data: xxxxxxxx
+Memory Address: 00000b2c | Data: xxxxxxxx
+Memory Address: 00000b30 | Data: xxxxxxxx
+Memory Address: 00000b34 | Data: xxxxxxxx
+Memory Address: 00000b38 | Data: xxxxxxxx
+Memory Address: 00000b3c | Data: xxxxxxxx
+Memory Address: 00000b40 | Data: xxxxxxxx
+Memory Address: 00000b44 | Data: xxxxxxxx
+Memory Address: 00000b48 | Data: xxxxxxxx
+Memory Address: 00000b4c | Data: xxxxxxxx
+Memory Address: 00000b50 | Data: xxxxxxxx
+Memory Address: 00000b54 | Data: xxxxxxxx
+Memory Address: 00000b58 | Data: xxxxxxxx
+Memory Address: 00000b5c | Data: xxxxxxxx
+Memory Address: 00000b60 | Data: xxxxxxxx
+Memory Address: 00000b64 | Data: xxxxxxxx
+Memory Address: 00000b68 | Data: xxxxxxxx
+Memory Address: 00000b6c | Data: xxxxxxxx
+Memory Address: 00000b70 | Data: xxxxxxxx
+Memory Address: 00000b74 | Data: xxxxxxxx
+Memory Address: 00000b78 | Data: xxxxxxxx
+Memory Address: 00000b7c | Data: xxxxxxxx
+Memory Address: 00000b80 | Data: xxxxxxxx
+Memory Address: 00000b84 | Data: xxxxxxxx
+Memory Address: 00000b88 | Data: xxxxxxxx
+Memory Address: 00000b8c | Data: xxxxxxxx
+Memory Address: 00000b90 | Data: xxxxxxxx
+Memory Address: 00000b94 | Data: xxxxxxxx
+Memory Address: 00000b98 | Data: xxxxxxxx
+Memory Address: 00000b9c | Data: xxxxxxxx
+Memory Address: 00000ba0 | Data: xxxxxxxx
+Memory Address: 00000ba4 | Data: xxxxxxxx
+Memory Address: 00000ba8 | Data: xxxxxxxx
+Memory Address: 00000bac | Data: xxxxxxxx
+Memory Address: 00000bb0 | Data: xxxxxxxx
+Memory Address: 00000bb4 | Data: xxxxxxxx
+Memory Address: 00000bb8 | Data: xxxxxxxx
+Memory Address: 00000bbc | Data: xxxxxxxx
+Memory Address: 00000bc0 | Data: xxxxxxxx
+Memory Address: 00000bc4 | Data: xxxxxxxx
+Memory Address: 00000bc8 | Data: xxxxxxxx
+Memory Address: 00000bcc | Data: xxxxxxxx
+Memory Address: 00000bd0 | Data: xxxxxxxx
+Memory Address: 00000bd4 | Data: xxxxxxxx
+Memory Address: 00000bd8 | Data: xxxxxxxx
+Memory Address: 00000bdc | Data: xxxxxxxx
+Memory Address: 00000be0 | Data: xxxxxxxx
+Memory Address: 00000be4 | Data: xxxxxxxx
+Memory Address: 00000be8 | Data: xxxxxxxx
+Memory Address: 00000bec | Data: xxxxxxxx
+Memory Address: 00000bf0 | Data: xxxxxxxx
+Memory Address: 00000bf4 | Data: xxxxxxxx
+Memory Address: 00000bf8 | Data: xxxxxxxx
+Memory Address: 00000bfc | Data: xxxxxxxx
+Memory Address: 00000c00 | Data: xxxxxxxx
+Memory Address: 00000c04 | Data: xxxxxxxx
+Memory Address: 00000c08 | Data: xxxxxxxx
+Memory Address: 00000c0c | Data: xxxxxxxx
+Memory Address: 00000c10 | Data: xxxxxxxx
+Memory Address: 00000c14 | Data: xxxxxxxx
+Memory Address: 00000c18 | Data: xxxxxxxx
+Memory Address: 00000c1c | Data: xxxxxxxx
+Memory Address: 00000c20 | Data: xxxxxxxx
+Memory Address: 00000c24 | Data: xxxxxxxx
+Memory Address: 00000c28 | Data: xxxxxxxx
+Memory Address: 00000c2c | Data: xxxxxxxx
+Memory Address: 00000c30 | Data: xxxxxxxx
+Memory Address: 00000c34 | Data: xxxxxxxx
+Memory Address: 00000c38 | Data: xxxxxxxx
+Memory Address: 00000c3c | Data: xxxxxxxx
+Memory Address: 00000c40 | Data: xxxxxxxx
+Memory Address: 00000c44 | Data: xxxxxxxx
+Memory Address: 00000c48 | Data: xxxxxxxx
+Memory Address: 00000c4c | Data: xxxxxxxx
+Memory Address: 00000c50 | Data: xxxxxxxx
+Memory Address: 00000c54 | Data: xxxxxxxx
+Memory Address: 00000c58 | Data: xxxxxxxx
+Memory Address: 00000c5c | Data: xxxxxxxx
+Memory Address: 00000c60 | Data: xxxxxxxx
+Memory Address: 00000c64 | Data: xxxxxxxx
+Memory Address: 00000c68 | Data: xxxxxxxx
+Memory Address: 00000c6c | Data: xxxxxxxx
+Memory Address: 00000c70 | Data: xxxxxxxx
+Memory Address: 00000c74 | Data: xxxxxxxx
+Memory Address: 00000c78 | Data: xxxxxxxx
+Memory Address: 00000c7c | Data: xxxxxxxx
+Memory Address: 00000c80 | Data: xxxxxxxx
+Memory Address: 00000c84 | Data: xxxxxxxx
+Memory Address: 00000c88 | Data: xxxxxxxx
+Memory Address: 00000c8c | Data: xxxxxxxx
+Memory Address: 00000c90 | Data: xxxxxxxx
+Memory Address: 00000c94 | Data: xxxxxxxx
+Memory Address: 00000c98 | Data: xxxxxxxx
+Memory Address: 00000c9c | Data: xxxxxxxx
+Memory Address: 00000ca0 | Data: xxxxxxxx
+Memory Address: 00000ca4 | Data: xxxxxxxx
+Memory Address: 00000ca8 | Data: xxxxxxxx
+Memory Address: 00000cac | Data: xxxxxxxx
+Memory Address: 00000cb0 | Data: xxxxxxxx
+Memory Address: 00000cb4 | Data: xxxxxxxx
+Memory Address: 00000cb8 | Data: xxxxxxxx
+Memory Address: 00000cbc | Data: xxxxxxxx
+Memory Address: 00000cc0 | Data: xxxxxxxx
+Memory Address: 00000cc4 | Data: xxxxxxxx
+Memory Address: 00000cc8 | Data: xxxxxxxx
+Memory Address: 00000ccc | Data: xxxxxxxx
+Memory Address: 00000cd0 | Data: xxxxxxxx
+Memory Address: 00000cd4 | Data: xxxxxxxx
+Memory Address: 00000cd8 | Data: xxxxxxxx
+Memory Address: 00000cdc | Data: xxxxxxxx
+Memory Address: 00000ce0 | Data: xxxxxxxx
+Memory Address: 00000ce4 | Data: xxxxxxxx
+Memory Address: 00000ce8 | Data: xxxxxxxx
+Memory Address: 00000cec | Data: xxxxxxxx
+Memory Address: 00000cf0 | Data: xxxxxxxx
+Memory Address: 00000cf4 | Data: xxxxxxxx
+Memory Address: 00000cf8 | Data: xxxxxxxx
+Memory Address: 00000cfc | Data: xxxxxxxx
+Memory Address: 00000d00 | Data: xxxxxxxx
+Memory Address: 00000d04 | Data: xxxxxxxx
+Memory Address: 00000d08 | Data: xxxxxxxx
+Memory Address: 00000d0c | Data: xxxxxxxx
+Memory Address: 00000d10 | Data: xxxxxxxx
+Memory Address: 00000d14 | Data: xxxxxxxx
+Memory Address: 00000d18 | Data: xxxxxxxx
+Memory Address: 00000d1c | Data: xxxxxxxx
+Memory Address: 00000d20 | Data: xxxxxxxx
+Memory Address: 00000d24 | Data: xxxxxxxx
+Memory Address: 00000d28 | Data: xxxxxxxx
+Memory Address: 00000d2c | Data: xxxxxxxx
+Memory Address: 00000d30 | Data: xxxxxxxx
+Memory Address: 00000d34 | Data: xxxxxxxx
+Memory Address: 00000d38 | Data: xxxxxxxx
+Memory Address: 00000d3c | Data: xxxxxxxx
+Memory Address: 00000d40 | Data: xxxxxxxx
+Memory Address: 00000d44 | Data: xxxxxxxx
+Memory Address: 00000d48 | Data: xxxxxxxx
+Memory Address: 00000d4c | Data: xxxxxxxx
+Memory Address: 00000d50 | Data: xxxxxxxx
+Memory Address: 00000d54 | Data: xxxxxxxx
+Memory Address: 00000d58 | Data: xxxxxxxx
+Memory Address: 00000d5c | Data: xxxxxxxx
+Memory Address: 00000d60 | Data: xxxxxxxx
+Memory Address: 00000d64 | Data: xxxxxxxx
+Memory Address: 00000d68 | Data: xxxxxxxx
+Memory Address: 00000d6c | Data: xxxxxxxx
+Memory Address: 00000d70 | Data: xxxxxxxx
+Memory Address: 00000d74 | Data: xxxxxxxx
+Memory Address: 00000d78 | Data: xxxxxxxx
+Memory Address: 00000d7c | Data: xxxxxxxx
+Memory Address: 00000d80 | Data: xxxxxxxx
+Memory Address: 00000d84 | Data: xxxxxxxx
+Memory Address: 00000d88 | Data: xxxxxxxx
+Memory Address: 00000d8c | Data: xxxxxxxx
+Memory Address: 00000d90 | Data: xxxxxxxx
+Memory Address: 00000d94 | Data: xxxxxxxx
+Memory Address: 00000d98 | Data: xxxxxxxx
+Memory Address: 00000d9c | Data: xxxxxxxx
+Memory Address: 00000da0 | Data: xxxxxxxx
+Memory Address: 00000da4 | Data: xxxxxxxx
+Memory Address: 00000da8 | Data: xxxxxxxx
+Memory Address: 00000dac | Data: xxxxxxxx
+Memory Address: 00000db0 | Data: xxxxxxxx
+Memory Address: 00000db4 | Data: xxxxxxxx
+Memory Address: 00000db8 | Data: xxxxxxxx
+Memory Address: 00000dbc | Data: xxxxxxxx
+Memory Address: 00000dc0 | Data: xxxxxxxx
+Memory Address: 00000dc4 | Data: xxxxxxxx
+Memory Address: 00000dc8 | Data: xxxxxxxx
+Memory Address: 00000dcc | Data: xxxxxxxx
+Memory Address: 00000dd0 | Data: xxxxxxxx
+Memory Address: 00000dd4 | Data: xxxxxxxx
+Memory Address: 00000dd8 | Data: xxxxxxxx
+Memory Address: 00000ddc | Data: xxxxxxxx
+Memory Address: 00000de0 | Data: xxxxxxxx
+Memory Address: 00000de4 | Data: xxxxxxxx
+Memory Address: 00000de8 | Data: xxxxxxxx
+Memory Address: 00000dec | Data: xxxxxxxx
+Memory Address: 00000df0 | Data: xxxxxxxx
+Memory Address: 00000df4 | Data: xxxxxxxx
+Memory Address: 00000df8 | Data: xxxxxxxx
+Memory Address: 00000dfc | Data: xxxxxxxx
+Memory Address: 00000e00 | Data: xxxxxxxx
+Memory Address: 00000e04 | Data: xxxxxxxx
+Memory Address: 00000e08 | Data: xxxxxxxx
+Memory Address: 00000e0c | Data: xxxxxxxx
+Memory Address: 00000e10 | Data: xxxxxxxx
+Memory Address: 00000e14 | Data: xxxxxxxx
+Memory Address: 00000e18 | Data: xxxxxxxx
+Memory Address: 00000e1c | Data: xxxxxxxx
+Memory Address: 00000e20 | Data: xxxxxxxx
+Memory Address: 00000e24 | Data: xxxxxxxx
+Memory Address: 00000e28 | Data: xxxxxxxx
+Memory Address: 00000e2c | Data: xxxxxxxx
+Memory Address: 00000e30 | Data: xxxxxxxx
+Memory Address: 00000e34 | Data: xxxxxxxx
+Memory Address: 00000e38 | Data: xxxxxxxx
+Memory Address: 00000e3c | Data: xxxxxxxx
+Memory Address: 00000e40 | Data: xxxxxxxx
+Memory Address: 00000e44 | Data: xxxxxxxx
+Memory Address: 00000e48 | Data: xxxxxxxx
+Memory Address: 00000e4c | Data: xxxxxxxx
+Memory Address: 00000e50 | Data: xxxxxxxx
+Memory Address: 00000e54 | Data: xxxxxxxx
+Memory Address: 00000e58 | Data: xxxxxxxx
+Memory Address: 00000e5c | Data: xxxxxxxx
+Memory Address: 00000e60 | Data: xxxxxxxx
+Memory Address: 00000e64 | Data: xxxxxxxx
+Memory Address: 00000e68 | Data: xxxxxxxx
+Memory Address: 00000e6c | Data: xxxxxxxx
+Memory Address: 00000e70 | Data: xxxxxxxx
+Memory Address: 00000e74 | Data: xxxxxxxx
+Memory Address: 00000e78 | Data: xxxxxxxx
+Memory Address: 00000e7c | Data: xxxxxxxx
+Memory Address: 00000e80 | Data: xxxxxxxx
+Memory Address: 00000e84 | Data: xxxxxxxx
+Memory Address: 00000e88 | Data: xxxxxxxx
+Memory Address: 00000e8c | Data: xxxxxxxx
+Memory Address: 00000e90 | Data: xxxxxxxx
+Memory Address: 00000e94 | Data: xxxxxxxx
+Memory Address: 00000e98 | Data: xxxxxxxx
+Memory Address: 00000e9c | Data: xxxxxxxx
+Memory Address: 00000ea0 | Data: xxxxxxxx
+Memory Address: 00000ea4 | Data: xxxxxxxx
+Memory Address: 00000ea8 | Data: xxxxxxxx
+Memory Address: 00000eac | Data: xxxxxxxx
+Memory Address: 00000eb0 | Data: xxxxxxxx
+Memory Address: 00000eb4 | Data: xxxxxxxx
+Memory Address: 00000eb8 | Data: xxxxxxxx
+Memory Address: 00000ebc | Data: xxxxxxxx
+Memory Address: 00000ec0 | Data: xxxxxxxx
+Memory Address: 00000ec4 | Data: xxxxxxxx
+Memory Address: 00000ec8 | Data: xxxxxxxx
+Memory Address: 00000ecc | Data: xxxxxxxx
+Memory Address: 00000ed0 | Data: xxxxxxxx
+Memory Address: 00000ed4 | Data: xxxxxxxx
+Memory Address: 00000ed8 | Data: xxxxxxxx
+Memory Address: 00000edc | Data: xxxxxxxx
+Memory Address: 00000ee0 | Data: xxxxxxxx
+Memory Address: 00000ee4 | Data: xxxxxxxx
+Memory Address: 00000ee8 | Data: xxxxxxxx
+Memory Address: 00000eec | Data: xxxxxxxx
+Memory Address: 00000ef0 | Data: xxxxxxxx
+Memory Address: 00000ef4 | Data: xxxxxxxx
+Memory Address: 00000ef8 | Data: xxxxxxxx
+Memory Address: 00000efc | Data: xxxxxxxx
+Memory Address: 00000f00 | Data: xxxxxxxx
+Memory Address: 00000f04 | Data: xxxxxxxx
+Memory Address: 00000f08 | Data: xxxxxxxx
+Memory Address: 00000f0c | Data: xxxxxxxx
+Memory Address: 00000f10 | Data: xxxxxxxx
+Memory Address: 00000f14 | Data: xxxxxxxx
+Memory Address: 00000f18 | Data: xxxxxxxx
+Memory Address: 00000f1c | Data: xxxxxxxx
+Memory Address: 00000f20 | Data: xxxxxxxx
+Memory Address: 00000f24 | Data: xxxxxxxx
+Memory Address: 00000f28 | Data: xxxxxxxx
+Memory Address: 00000f2c | Data: xxxxxxxx
+Memory Address: 00000f30 | Data: xxxxxxxx
+Memory Address: 00000f34 | Data: xxxxxxxx
+Memory Address: 00000f38 | Data: xxxxxxxx
+Memory Address: 00000f3c | Data: xxxxxxxx
+Memory Address: 00000f40 | Data: xxxxxxxx
+Memory Address: 00000f44 | Data: xxxxxxxx
+Memory Address: 00000f48 | Data: xxxxxxxx
+Memory Address: 00000f4c | Data: xxxxxxxx
+Memory Address: 00000f50 | Data: xxxxxxxx
+Memory Address: 00000f54 | Data: xxxxxxxx
+Memory Address: 00000f58 | Data: xxxxxxxx
+Memory Address: 00000f5c | Data: xxxxxxxx
+Memory Address: 00000f60 | Data: xxxxxxxx
+Memory Address: 00000f64 | Data: xxxxxxxx
+Memory Address: 00000f68 | Data: xxxxxxxx
+Memory Address: 00000f6c | Data: xxxxxxxx
+Memory Address: 00000f70 | Data: xxxxxxxx
+Memory Address: 00000f74 | Data: xxxxxxxx
+Memory Address: 00000f78 | Data: xxxxxxxx
+Memory Address: 00000f7c | Data: xxxxxxxx
+Memory Address: 00000f80 | Data: xxxxxxxx
+Memory Address: 00000f84 | Data: xxxxxxxx
+Memory Address: 00000f88 | Data: xxxxxxxx
+Memory Address: 00000f8c | Data: xxxxxxxx
+Memory Address: 00000f90 | Data: xxxxxxxx
+Memory Address: 00000f94 | Data: xxxxxxxx
+Memory Address: 00000f98 | Data: xxxxxxxx
+Memory Address: 00000f9c | Data: xxxxxxxx
+Memory Address: 00000fa0 | Data: xxxxxxxx
+Memory Address: 00000fa4 | Data: xxxxxxxx
+Memory Address: 00000fa8 | Data: xxxxxxxx
+Memory Address: 00000fac | Data: xxxxxxxx
+Memory Address: 00000fb0 | Data: xxxxxxxx
+Memory Address: 00000fb4 | Data: xxxxxxxx
+Memory Address: 00000fb8 | Data: xxxxxxxx
+Memory Address: 00000fbc | Data: xxxxxxxx
+Memory Address: 00000fc0 | Data: xxxxxxxx
+Memory Address: 00000fc4 | Data: xxxxxxxx
+Memory Address: 00000fc8 | Data: xxxxxxxx
+Memory Address: 00000fcc | Data: xxxxxxxx
+Memory Address: 00000fd0 | Data: xxxxxxxx
+Memory Address: 00000fd4 | Data: xxxxxxxx
+Memory Address: 00000fd8 | Data: xxxxxxxx
+Memory Address: 00000fdc | Data: xxxxxxxx
+Memory Address: 00000fe0 | Data: xxxxxxxx
+Memory Address: 00000fe4 | Data: xxxxxxxx
+Memory Address: 00000fe8 | Data: xxxxxxxx
+Memory Address: 00000fec | Data: xxxxxxxx
+Memory Address: 00000ff0 | Data: xxxxxxxx
+Memory Address: 00000ff4 | Data: xxxxxxxx
+Memory Address: 00000ff8 | Data: 00000000
+Memory Address: 00000ffc | Data: xxxxxxxx
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Integer_Datapath_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/dMem_Lab4.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim/IntReg_Lab4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Integer_Datapath_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Integer_Datapath_1/Integer_Datapath_1.srcs/sources_1/imports/Computer_Architecture/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/Computer_Architecture/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8918032dffad4cc4aa7ffc79a171a8ad --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Integer_Datapath_TB_behav xil_defaultlib.Integer_Datapath_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Integer_Datapath_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Integer_Datapath_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Integer_Datapath_TB_behav -key {Behavioral:sim_1:Functional:Integer_Datapath_TB} -tclbatch {Integer_Datapath_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Integer_Datapath_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ ( 1 )  -  I n i t i a l  C o n t e n t s   o f   R e g i s t e r s
+Time =   36.0 ps | Register [          0] = 00000000
+Time =   46.0 ps | Register [          1] = 12345678
+Time =   56.0 ps | Register [          2] = 89abcdef
+Time =   66.0 ps | Register [          3] = a5a5a5a5
+Time =   76.0 ps | Register [          4] = 5a5a5a5a
+Time =   86.0 ps | Register [          5] = 2468ace0
+Time =   96.0 ps | Register [          6] = 13579bdf
+Time =  106.0 ps | Register [          7] = 0f0f0f0f
+Time =  116.0 ps | Register [          8] = f0f0f0f0
+Time =  126.0 ps | Register [          9] = 00000009
+Time =  136.0 ps | Register [         10] = 0000000a
+Time =  146.0 ps | Register [         11] = 0000000b
+Time =  156.0 ps | Register [         12] = 0000000c
+Time =  166.0 ps | Register [         13] = 0000000d
+Time =  176.0 ps | Register [         14] = fffffff8
+Time =  186.0 ps | Register [         15] = 000075cc
+ (2) - F i n a l  C o n t e n t s  o f  M e m o r y 
+ 
+Time =  376.0 ps | Register [          0] = 00000000
+Time =  386.0 ps | Register [          1] = ffffffff
+Time =  396.0 ps | Register [          2] = 00000007
+Time =  406.0 ps | Register [          3] = 2d2d2d2d
+Time =  416.0 ps | Register [          4] = 5a5a5a5a
+Time =  426.0 ps | Register [          5] = fffff147
+Time =  436.0 ps | Register [          6] = 00000004
+Time =  446.0 ps | Register [          7] = 0f0f0f0f
+Time =  456.0 ps | Register [          8] = f0f0f0f0
+Time =  466.0 ps | Register [          9] = 00000009
+Time =  476.0 ps | Register [         10] = 0000000a
+Time =  486.0 ps | Register [         11] = 0000000b
+Time =  496.0 ps | Register [         12] = 0000000c
+Time =  506.0 ps | Register [         13] = 0000000d
+Time =  516.0 ps | Register [         14] = fffffff8
+Time =  526.0 ps | Register [         15] = 000075cc
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Integer_Datapath_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 901.527 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed

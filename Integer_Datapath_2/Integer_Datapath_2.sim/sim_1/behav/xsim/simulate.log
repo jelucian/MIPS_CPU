@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Time resolution is 1 ps
- ( 1 )  -  I n i t i a l   C o n t e n t s   o f   M e m o r y
+ ( 1 )  -  I n i t i a l  C o n t e n t s   o f   R e g i s t e r s
 Time =   36.0 ps | Register [          0] = 00000000
 Time =   46.0 ps | Register [          1] = 12345678
 Time =   56.0 ps | Register [          2] = 89abcdef
@@ -17,3 +17,22 @@ Time =  156.0 ps | Register [         12] = 0000000c
 Time =  166.0 ps | Register [         13] = 0000000d
 Time =  176.0 ps | Register [         14] = fffffff8
 Time =  186.0 ps | Register [         15] = 000075cc
+ (2) - F i n a l  C o n t e n t s  o f  M e m o r y 
+ 
+Time =  376.0 ps | Register [          0] = 00000000
+Time =  386.0 ps | Register [          1] = ffffffff
+Time =  396.0 ps | Register [          2] = 00000007
+Time =  406.0 ps | Register [          3] = 2d2d2d2d
+Time =  416.0 ps | Register [          4] = 48d159c0
+Time =  426.0 ps | Register [          5] = fffff147
+Time =  436.0 ps | Register [          6] = 00000004
+Time =  446.0 ps | Register [          7] = 0f0f0f0f
+Time =  456.0 ps | Register [          8] = f0f0f0f0
+Time =  466.0 ps | Register [          9] = 00000009
+Time =  476.0 ps | Register [         10] = 0000000a
+Time =  486.0 ps | Register [         11] = 0000000b
+Time =  496.0 ps | Register [         12] = 0000000c
+Time =  506.0 ps | Register [         13] = 0000000d
+Time =  516.0 ps | Register [         14] = fffffff8
+Time =  526.0 ps | Register [         15] = 000075cc
+$finish called at time : 526 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sim_1/new/Integer_Datapath_TB.v" Line 269
