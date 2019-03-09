@@ -27,7 +27,7 @@ module CPU_IU(clk, reset, im_cs, im_wr, im_rd, pc_ld, pc_inc, ir_ld, PC_in,
 
     //instruction mem
     //module Data_Memory(clk, cs, wr, rd, Address, D_In, D_Out);
-    Data_Memory IM(.clk(clk), .cs(im_cs), .wr(im_wr), .rd(im_rd),
+    Memory IM(.clk(clk), .cs(im_cs), .wr(im_wr), .rd(im_rd),
                    .Address(PC_out), .D_In(32'h0), .D_Out(IM_out) );
     
     //module reg32(clk, reset, ld, D, Q);

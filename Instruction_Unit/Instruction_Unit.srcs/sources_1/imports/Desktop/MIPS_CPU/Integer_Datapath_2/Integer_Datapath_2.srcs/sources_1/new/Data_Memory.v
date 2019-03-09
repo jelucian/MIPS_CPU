@@ -2,14 +2,14 @@
 /********************************************************************************
  *
  * Author:   Jesus Luciano & Rosswell Tiongco
- * Filename: Data_Memory.v
+ * Filename: Memory.v
  * Date:     2/25/2019
  * Version:  1.0
  * 
  * Notes:    4096x8 Byte Addressable Memory
  *
  *******************************************************************************/
-module Data_Memory(clk, cs, wr, rd, Address, D_In, D_Out);
+module Memory(clk, cs, wr, rd, Address, D_In, D_Out);
     
     input         clk, cs, wr, rd;
     input  [31:0] Address, D_In;
