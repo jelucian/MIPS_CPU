@@ -82,3 +82,9 @@ close_sim
 launch_simulation
 source CPU_EU_TB.tcl
 close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
