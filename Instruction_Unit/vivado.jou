@@ -11,3 +11,52 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+close_design
+synth_design -rtl -name rtl_1
+close_design
+launch_simulation
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source CPU_EU_TB.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl

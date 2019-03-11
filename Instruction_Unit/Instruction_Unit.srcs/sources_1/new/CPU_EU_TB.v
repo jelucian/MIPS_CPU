@@ -19,7 +19,8 @@ module CPU_EU_TB();
     wire [31:0] PC_out, IR_out, SE_16;
     
     //IDP
-    reg D_En, DA_sel, T_Sel, HILO_ld, Y_Sel;
+    reg D_En, DA_sel, T_Sel, HILO_ld;
+    reg [2:0] Y_Sel;
     wire C, V, N, Z;
     
     wire [31:0] IDP_ALU_OUT, IDP_D_OUT;
@@ -28,10 +29,12 @@ module CPU_EU_TB();
     reg dm_cs, dm_rd, dm_wr;
     wire [31:0] MEM_out;
 
+    integer i;
+    
     //Module Instantiation
     //Instruction Unit
     CPU_IU uut(.clk(clk), .reset(reset), .im_cs(im_cs), .im_wr(im_wr), 
-               .im_wr(im_wr), .pc_ld(pc_ld), .pc_inc(pc_inc), .ir_ld(ir_ld),
+               .pc_ld(pc_ld), .pc_inc(pc_inc), .ir_ld(ir_ld),
                .PC_in(IDP_ALU_OUT), .PC_out(PC_out), .IR_out(IR_out),
                .SE_16(SE_16) );
 
@@ -65,8 +68,57 @@ module CPU_EU_TB();
         $readmemh("dMem_Lab5.mem", Data_Memory.M);
         $readmemb("iMem_Lab5.mem", uut.IM.M);
         
-        //Control word default to zeros
+        $display(" ");
+        $display("R e g f i l e   I n i t i a l   C o n t e n t s ");
+        $display(" ");
+        Reg_Dump;
         
+        $display(" ");
+        $display("Instruction Memory Contents");
+        $display(" ");
+        iMem_Dump;
+        
+        //*******************************************************************/
+        //a)$r1 <- $r3 | $r4 (logical)
+        @(negedge clk)//IR<-iM[PC], PC <- PC+4
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RS <- $r3, RT <-$r4
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_1_1_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//ALU_Out <- RS($r3) | RT($r4)
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//$r1 <- ALU_Out(r3 | r4)
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_1_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b1_0_0_0_010;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk);
+        //*******************************************************************/
+        /*
         @(negedge clk)//RTL
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
@@ -76,12 +128,401 @@ module CPU_EU_TB();
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
         
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;   
+        //*******************************************************************
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;   
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;   
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//RTL
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        */
+        
+        $display(" ");
+        $display("R e g f i l e   F i n a l   C o n t e n t s");
+        Reg_Dump;
+        $finish;
+    
+                
     end
-    task Reg_Dump(); 
+    task iMem_Dump();
     begin
-        
+        for(i = 0; i <= 64; i = i+4)
+        begin
+            $display("iMem = %h %h %h %h",
+            uut.IM.M[i],uut.IM.M[i+1],uut.IM.M[i+2],uut.IM.M[i+3]);
+        end
+    end
+    endtask
+    
+    task Reg_Dump();//display contents of register file   
+    begin
+        for(i = 0; i < 32; i = i + 1)
+        begin
+            $display("Register [%h] = %h",i[4:0],IDP.REG_FILE.reg32[i]);
+        end
     end
     endtask
  

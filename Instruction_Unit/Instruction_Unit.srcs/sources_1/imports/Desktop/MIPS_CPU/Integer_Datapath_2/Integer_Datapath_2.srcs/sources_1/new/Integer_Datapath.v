@@ -47,7 +47,7 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     assign DA_mux = (DA_sel) ? T_Addr : D_Addr;
     
     //T-MUX
-    assign T_MUX = (T_Sel) ? REG_FILE_T : DT;    
+    assign T_MUX = (T_Sel) ? DT : REG_FILE_T;    
     
     //Y-MUX
     assign ALU_OUT = (Y_Sel == 3'b100) ? HI_out      :
@@ -81,6 +81,6 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     //module regfile32(clk, reset, S, T, D, S_Addr, T_Addr, D_Addr, D_En);
     regfile32 REG_FILE(.clk(clk), .reset(reset), .S(REG_FILE_S),
                        .T(REG_FILE_T), .D(ALU_OUT), .S_Addr(S_Addr),
-                       .T_Addr(T_Addr),.D_Addr(D_Addr), .D_En(D_En) );
+                       .T_Addr(T_Addr),.D_Addr(DA_mux), .D_En(D_En) );
                                 
 endmodule
