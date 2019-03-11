@@ -59,11 +59,11 @@ iMem = xx xx xx xx
 R e g f i l e   F i n a l   C o n t e n t s
 Register [00] = 00000000
 Register [01] = ffffffff
-Register [02] = 89abcdef
-Register [03] = a5a5a5a5
-Register [04] = 5a5a5a5a
-Register [05] = 2468ace0
-Register [06] = 13579bdf
+Register [02] = 00000007
+Register [03] = 2d2d2d2d
+Register [04] = 48d159c0
+Register [05] = fffff147
+Register [06] = 00000004
 Register [07] = 0f0f0f0f
 Register [08] = f0f0f0f0
 Register [09] = 00000009
@@ -89,4 +89,4 @@ Register [1c] = xxxxxxxx
 Register [1d] = xxxxxxxx
 Register [1e] = xxxxxxxx
 Register [1f] = xxxxxxxx
-$finish called at time : 70 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 506
+$finish called at time : 260 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 567

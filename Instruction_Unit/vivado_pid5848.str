@@ -4259,3 +4259,252 @@ selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, 
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 63 seconds
+selectCodeEditor("CPU_EU_TB.v", 586, 252); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 161, 433); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 215, 436); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CPU_EU_TB.v", 139, 508); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 154, 481); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 157, 489); // ce (w, ck)
+// Elapsed time: 222 seconds
+selectCodeEditor("CPU_EU_TB.v", 222, 498); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("CPU_EU_TB.v", 284, 505); // ce (w, ck)
+// Elapsed time: 50 seconds
+selectCodeEditor("CPU_EU_TB.v", 393, 485, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CPU_EU_TB.v", 336, 480); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 285, 259); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 339, 260); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Integer_Datapath.v", 430, 327); // ce (w, ck)
+// Elapsed time: 152 seconds
+selectCodeEditor("Integer_Datapath.v", 327, 274); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU_EU_TB.v", 1); // k (j, ck)
+selectCodeEditor("CPU_EU_TB.v", 140, 322); // ce (w, ck)
+// Elapsed time: 34 seconds
+selectCodeEditor("CPU_EU_TB.v", 681, 574); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 513, 374); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 399, 392); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 383, 514); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("CPU_EU_TB.v", 104, 239); // ce (w, ck)
+// Elapsed time: 38 seconds
+selectCodeEditor("CPU_EU_TB.v", 270, 83); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 125 MB. Current time: 3/10/19 10:26:33 PM PDT
+// Elapsed time: 1400 seconds
+selectCodeEditor("CPU_EU_TB.v", 419, 308); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 144, 461); // ce (w, ck)
+// Elapsed time: 367 seconds
+selectCodeEditor("CPU_EU_TB.v", 289, 263); // ce (w, ck)
+// Elapsed time: 133 seconds
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 234, 455); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 274, 516); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 268, 431); // ce (w, ck)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 99, 404); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CPU_EU_TB.v", 270, 493); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 273, 497); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 283, 504); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+// Elapsed time: 41 seconds
+selectCodeEditor("CPU_EU_TB.v", 103, 588); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 273, 604); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 243, 477); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 261, 474); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 350, 474); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 124 MB. Current time: 3/10/19 10:56:33 PM PDT
+// Elapsed time: 275 seconds
+selectCodeEditor("CPU_EU_TB.v", 286, 414); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 242, 388); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 243, 518); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 240, 588); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 257, 588); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CPU_EU_TB.v", 459, 584); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 459, 584); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 467, 578); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("CPU_EU_TB.v", 275, 386); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 242, 581); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("CPU_EU_TB.v", 247, 455); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 242, 454); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 709, 116, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+// Elapsed time: 36 seconds
+selectCodeEditor("CPU_EU_TB.v", 277, 653); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 277, 387); // ce (w, ck)
+typeControlKey((HResource) null, "CPU_EU_TB.v", 'v'); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("CPU_EU_TB.v", 101, 166); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 111, 255); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 168, 164); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 265, 388); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("CPU_EU_TB.v", 229, 442); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 624, 496); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CPU_EU_TB.v", 618, 429); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 594, 505); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 429, 545); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 365, 485); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 159, 292); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 151, 370); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 549, 367); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("CPU_EU_TB.v", 335, 476); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 274, 388); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 268, 395); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 661, 411); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 585, 464); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 427, 529); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 280, 522); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 267, 501); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 245, 496); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 562, 608); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("CPU_EU_TB.v", 423, 469); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 591, 402); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 580, 460); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 576, 486); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 558, 472); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 555, 528); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 420, 105); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 434, 125); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 627, 120); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("CPU_EU_TB.v", 431, 196); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 624, 192); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 545, 257); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 561, 256); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 446, 265); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 620, 252); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 561, 514); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("CPU_EU_TB.v", 404, 251); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 383, 229); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 637, 233); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("CPU_EU_TB.v", 557, 238); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 545, 436); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("CPU_EU_TB.v", 614, 299); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 564, 361); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 407, 297); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 396, 297); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 586, 369); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 572, 441); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 558, 434); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CPU_EU_TB.v", 615, 302); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 577, 304); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 557, 360); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 559, 370); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 625, 299); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 555, 360); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 330, 501); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CPU_EU_TB.v", 81, 451); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CPU_EU_TB.v", 788, 361); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 785, 477); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 787, 121); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 787, 99); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 782, 83); // ce (w, ck)
+selectCodeEditor("CPU_EU_TB.v", 670, 457); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 129 MB. Current time: 3/10/19 11:08:50 PM PDT
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source CPU_EU_TB.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 3071.738 ; gain = 0.000 
+// 'd' command handler elapsed time: 6 seconds
+dismissDialog("Run Simulation"); // e (ck)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - CPU_EU_TB", "DesignTask.SIMULATION");
+// A (ck): Confirm Close: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // g (Q, A): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Confirm Close"); // A (ck)

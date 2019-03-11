@@ -3112,3 +3112,833 @@ $finish called at time : 70 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/I
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_EU_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/iMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/dMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/IntReg_Lab5.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_EU_TB_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c731a10fb9f4461ba038dcc614b8253e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_EU_TB_behav xil_defaultlib.CPU_EU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source CPU_EU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+R e g f i l e   I n i t i a l   C o n t e n t s 
+ 
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+ 
+Instruction Memory Contents
+ 
+iMem = 4X 64 0X xx
+iMem = 2X 2e 1X xx
+iMem = 6X X4 1X xx
+iMem = 7X X5 2X xx
+iMem = fX ee xx xx
+iMem = 0X xx 3X xx
+iMem = 0X xx 2X xx
+iMem = fX Xx ff fb
+iMem = 0X xx 4X xx
+iMem = 0X xx 3X xx
+iMem = 1X ec 00 00
+iMem = 5X 0b 5X xx
+iMem = 2X 0a 5X xx
+iMem = 1X 4b 4X xx
+iMem = 1X cc 00 00
+iMem = xx xx xx xx
+iMem = xx xx xx xx
+ 
+R e g f i l e   F i n a l   C o n t e n t s
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+$finish called at time : 70 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 506
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_EU_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/iMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/dMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/IntReg_Lab5.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_EU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_IU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32_inc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_EU_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c731a10fb9f4461ba038dcc614b8253e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_EU_TB_behav xil_defaultlib.CPU_EU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32_inc
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.CPU_IU
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.CPU_EU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_EU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source CPU_EU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+R e g f i l e   I n i t i a l   C o n t e n t s 
+ 
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+ 
+Instruction Memory Contents
+ 
+iMem = 4X 64 0X xx
+iMem = 2X 2e 1X xx
+iMem = 6X X4 1X xx
+iMem = 7X X5 2X xx
+iMem = fX ee xx xx
+iMem = 0X xx 3X xx
+iMem = 0X xx 2X xx
+iMem = fX Xx ff fb
+iMem = 0X xx 4X xx
+iMem = 0X xx 3X xx
+iMem = 1X ec 00 00
+iMem = 5X 0b 5X xx
+iMem = 2X 0a 5X xx
+iMem = 1X 4b 4X xx
+iMem = 1X cc 00 00
+iMem = xx xx xx xx
+iMem = xx xx xx xx
+ 
+R e g f i l e   F i n a l   C o n t e n t s
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+$finish called at time : 30 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 507
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_EU_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/iMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/dMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/IntReg_Lab5.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_EU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_IU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32_inc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_EU_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c731a10fb9f4461ba038dcc614b8253e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_EU_TB_behav xil_defaultlib.CPU_EU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32_inc
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.CPU_IU
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.CPU_EU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_EU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source CPU_EU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+R e g f i l e   I n i t i a l   C o n t e n t s 
+ 
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+ 
+Instruction Memory Contents
+ 
+iMem = 4X 64 0X xx
+iMem = 2X 2e 1X xx
+iMem = 6X X4 1X xx
+iMem = 7X X5 2X xx
+iMem = fX ee xx xx
+iMem = 0X xx 3X xx
+iMem = 0X xx 2X xx
+iMem = fX Xx ff fb
+iMem = 0X xx 4X xx
+iMem = 0X xx 3X xx
+iMem = 1X ec 00 00
+iMem = 5X 0b 5X xx
+iMem = 2X 0a 5X xx
+iMem = 1X 4b 4X xx
+iMem = 1X cc 00 00
+iMem = xx xx xx xx
+iMem = xx xx xx xx
+ 
+R e g f i l e   F i n a l   C o n t e n t s
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+$finish called at time : 40 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 508
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_EU_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/iMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/dMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/IntReg_Lab5.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_EU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_IU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32_inc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_EU_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c731a10fb9f4461ba038dcc614b8253e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_EU_TB_behav xil_defaultlib.CPU_EU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32_inc
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.CPU_IU
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.CPU_EU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_EU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source CPU_EU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+R e g f i l e   I n i t i a l   C o n t e n t s 
+ 
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+ 
+Instruction Memory Contents
+ 
+iMem = 4X 64 0X xx
+iMem = 2X 2e 1X xx
+iMem = 6X X4 1X xx
+iMem = 7X X5 2X xx
+iMem = fX ee xx xx
+iMem = 0X xx 3X xx
+iMem = 0X xx 2X xx
+iMem = fX Xx ff fb
+iMem = 0X xx 4X xx
+iMem = 0X xx 3X xx
+iMem = 1X ec 00 00
+iMem = 5X 0b 5X xx
+iMem = 2X 0a 5X xx
+iMem = 1X 4b 4X xx
+iMem = 1X cc 00 00
+iMem = xx xx xx xx
+iMem = xx xx xx xx
+ 
+R e g f i l e   F i n a l   C o n t e n t s
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+$finish called at time : 40 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 508
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_EU_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/iMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/dMem_Lab5.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/IntReg_Lab5.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_EU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_IU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DIV_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Integer_Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MPY_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPY_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/Computer_Architecture/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/imports/new/reg32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg32_inc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_EU_TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto c731a10fb9f4461ba038dcc614b8253e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_EU_TB_behav xil_defaultlib.CPU_EU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg32_inc
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.reg32
+Compiling module xil_defaultlib.CPU_IU
+Compiling module xil_defaultlib.MIPS_32
+Compiling module xil_defaultlib.DIV_32
+Compiling module xil_defaultlib.MPY_32
+Compiling module xil_defaultlib.alu_32
+Compiling module xil_defaultlib.regfile32
+Compiling module xil_defaultlib.Integer_Datapath
+Compiling module xil_defaultlib.CPU_EU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_EU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_EU_TB_behav -key {Behavioral:sim_1:Functional:CPU_EU_TB} -tclbatch {CPU_EU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source CPU_EU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ 
+R e g f i l e   I n i t i a l   C o n t e n t s 
+ 
+Register [00] = 00000000
+Register [01] = 12345678
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+ 
+Instruction Memory Contents
+ 
+iMem = 4X 64 0X xx
+iMem = 2X 2e 1X xx
+iMem = 6X X4 1X xx
+iMem = 7X X5 2X xx
+iMem = fX ee xx xx
+iMem = 0X xx 3X xx
+iMem = 0X xx 2X xx
+iMem = fX Xx ff fb
+iMem = 0X xx 4X xx
+iMem = 0X xx 3X xx
+iMem = 1X ec 00 00
+iMem = 5X 0b 5X xx
+iMem = 2X 0a 5X xx
+iMem = 1X 4b 4X xx
+iMem = 1X cc 00 00
+iMem = xx xx xx xx
+iMem = xx xx xx xx
+ 
+R e g f i l e   F i n a l   C o n t e n t s
+Register [00] = 00000000
+Register [01] = ffffffff
+Register [02] = 89abcdef
+Register [03] = a5a5a5a5
+Register [04] = 5a5a5a5a
+Register [05] = 2468ace0
+Register [06] = 13579bdf
+Register [07] = 0f0f0f0f
+Register [08] = f0f0f0f0
+Register [09] = 00000009
+Register [0a] = 0000000a
+Register [0b] = 0000000b
+Register [0c] = 0000000c
+Register [0d] = 0000000d
+Register [0e] = fffffff8
+Register [0f] = 000075cc
+Register [10] = xxxxxxxx
+Register [11] = xxxxxxxx
+Register [12] = xxxxxxxx
+Register [13] = xxxxxxxx
+Register [14] = xxxxxxxx
+Register [15] = xxxxxxxx
+Register [16] = xxxxxxxx
+Register [17] = xxxxxxxx
+Register [18] = xxxxxxxx
+Register [19] = xxxxxxxx
+Register [1a] = xxxxxxxx
+Register [1b] = xxxxxxxx
+Register [1c] = xxxxxxxx
+Register [1d] = xxxxxxxx
+Register [1e] = xxxxxxxx
+Register [1f] = xxxxxxxx
+$finish called at time : 70 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_EU_TB.v" Line 506
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_EU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3071.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
