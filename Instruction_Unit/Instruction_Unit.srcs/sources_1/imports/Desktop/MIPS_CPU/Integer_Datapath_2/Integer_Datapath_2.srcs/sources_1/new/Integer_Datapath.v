@@ -23,9 +23,10 @@
  *
  *******************************************************************************/
 module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
-                        DT, T_Sel, C, V, N, Z, DY, PC_in, Y_Sel, ALU_OUT, D_OUT);
+                        DT, T_Sel, C, V, N, Z, DY, PC_in, Y_Sel, ALU_OUT, D_OUT,
+                        DA_sel);
     
-    input        clk, reset, HILO_ld, D_En, T_Sel;
+    input        clk, reset, HILO_ld, D_En, T_Sel,DA_sel;
     input [2:0]  Y_Sel;
     input [4:0]  S_Addr, FS, D_Addr, T_Addr;
     input [31:0] DT, DY, PC_in;
@@ -34,10 +35,16 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     output      [31:0] D_OUT;
     output wire [31:0] ALU_OUT;
     
+    wire [ 4:0] DA_mux;
     
     wire [31:0] REG_FILE_S, REG_FILE_T, T_MUX,
                 Y_hi, Y_lo, HI_out, LO_out,
                 RS_out, RT_out, ALU_reg_out, D_in_out;
+                
+    //DA-mux for Regfile Write Address
+    //Selects between rd and rt as source for write address
+    //1 = rt, 0 = rd
+    assign DA_mux = (DA_sel) ? T_Addr : D_Addr;
     
     //T-MUX
     assign T_MUX = (T_Sel) ? REG_FILE_T : DT;    

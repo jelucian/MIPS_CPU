@@ -41,7 +41,8 @@ module CPU_EU_TB();
                          .D_Addr(IR_out[15:11]), .T_Addr(IR_out[20:16]), 
                          .DT(SE_16), .T_Sel(T_Sel), .C(C), .V(V), .N(N), .Z(Z),
                          .DY(MEM_out), .PC_in(PC_out), .Y_Sel(Y_Sel), 
-                         .ALU_OUT(IDP_ALU_OUT), .D_OUT(IDP_D_OUT) );
+                         .ALU_OUT(IDP_ALU_OUT), .D_OUT(IDP_D_OUT),
+                         .DA_sel(DA_sel) );
     //Data Memory 
     Memory Data_Memory(.clk(clk), .cs(dm_cs), .wr(dm_wr), .rd(dm_rd),
                        .Address(IDP_ALU_OUT), .D_In(IDP_D_OUT),
@@ -58,6 +59,11 @@ module CPU_EU_TB();
         reset = 1;
         @(negedge clk)
         reset = 0;
+        
+        //initialize memories
+        $readmemh("IntReg_Lab5.mem", IDP.REG_FILE.reg32);
+        $readmemh("dMem_Lab5.mem", Data_Memory.M);
+        $readmemb("iMem_Lab5.mem", uut.IM.M);
         
         //Control word default to zeros
         
