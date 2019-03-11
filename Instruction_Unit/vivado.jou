@@ -60,3 +60,25 @@ source CPU_EU_TB.tcl
 close_sim
 launch_simulation
 source CPU_EU_TB.tcl
+close_design
+synth_design -rtl -name rtl_1
+close_design
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
+launch_simulation
+source CPU_EU_TB.tcl
+close_sim
