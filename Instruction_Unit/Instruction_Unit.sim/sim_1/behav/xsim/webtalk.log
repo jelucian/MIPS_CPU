@@ -2,8 +2,8 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Mar 10 21:00:22 2019
-# Process ID: 1476
+# Start of session at: Mon Mar 11 22:59:02 2019
+# Process ID: 7496
 # Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/xsim.dir/CPU_EU_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Instruction_Unit/Instruction_Unit.sim/sim_1/behav/xsim/webtalk.log
@@ -11,4 +11,4 @@
 #-----------------------------------------------------------
 source C:/Users/Jesus -notrace
 couldn't read file "C:/Users/Jesus": no such file or directory
-INFO: [Common 17-206] Exiting Webtalk at Sun Mar 10 21:00:22 2019...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 11 22:59:02 2019...

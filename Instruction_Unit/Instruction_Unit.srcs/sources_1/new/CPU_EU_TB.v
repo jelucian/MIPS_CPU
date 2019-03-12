@@ -6,10 +6,9 @@
  * Date:     3/5/2019
  * Version:  1.0
  * 
- * Notes:    
- *
- *
- *
+ * Notes:    Testbench that instantiates Instruction Unit, Integer Datapath and
+ *           Data Memory and uses control words to guide data from instruction
+ *           memory, to the register file, to data memory
  *
  *******************************************************************************/
 module CPU_EU_TB();
@@ -55,6 +54,9 @@ module CPU_EU_TB();
     always #5 clk = ~clk;
     
     initial begin
+        $timeformat(-9, 1, " ps", 9);    //Display time in nanoseconds
+
+    
         //assert and deassert reset
         clk = 0;
         reset = 0;
@@ -72,11 +74,6 @@ module CPU_EU_TB();
         $display("R e g f i l e   I n i t i a l   C o n t e n t s ");
         $display(" ");
         Reg_Dump;
-        
-        $display(" ");
-        $display("Instruction Memory Contents");
-        $display(" ");
-        iMem_Dump;
         
         //*******************************************************************/
         //a)$r1 <- $r3 | $r4 (logical)
@@ -311,7 +308,7 @@ module CPU_EU_TB();
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
         //Datapath Control
-            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_1_0_000;
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
@@ -361,7 +358,7 @@ module CPU_EU_TB();
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
         //*******************************************************************/
-        //$r12 <- M[$r15 + 0]
+        //g)$r12 <- M[$r15 + 0]
         @(negedge clk)//IR <- iM[PC], PC <- PC + 4
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
@@ -371,7 +368,16 @@ module CPU_EU_TB();
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-        @(negedge clk)//RS <- $zero, RT <- M[$r15]
+        @(negedge clk)//RS <- $r15, RT <- IR[15:0]
+        //Instruction Unit Control
+            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
+        
+        //Datapath Control
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_1_0_000;
+        
+        //Data Memory Control
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+        @(negedge clk)//ALU_Out <- RS($r15) + RT(IR[15:0])
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
@@ -379,8 +385,8 @@ module CPU_EU_TB();
             {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
         
         //Data Memory Control
-            {dm_cs, dm_rd, dm_wr} = 3'b1_1_0;    
-        @(negedge clk)//ALU_Out <- RS($zero) + RT(r15)
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+        @(negedge clk)//D_in <- M[r15 + IR[15:0]]
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
@@ -388,27 +394,18 @@ module CPU_EU_TB();
             {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_010;
         
         //Data Memory Control
-            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-        @(negedge clk)//D_in <= ALU_OUT($zero + r15)
-        //Instruction Unit Control
-            {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
-        
-        //Datapath Control
-            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_001;
-        
-        //Data Memory Control
-            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
+            {dm_cs, dm_rd, dm_wr} = 3'b1_1_0;    
         @(negedge clk)//$r12 <- D_in
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
         //Datapath Control
-            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b1_0_0_0_000;
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b1_1_0_0_001;
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
         //*******************************************************************/
-        //$r11 <- $r0 NOR $r11
+        //h)$r11 <- $r0 NOR $r11
         @(negedge clk)//IR <- iM[PC], PC <- PC + 4
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
@@ -446,7 +443,7 @@ module CPU_EU_TB();
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
         //*******************************************************************/
-        //$r10 <- $r0 - $r10
+        //i)$r10 <- $r0 - $r10
         @(negedge clk)//IR <- iM[PC], PC <- PC + 4
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
@@ -465,7 +462,7 @@ module CPU_EU_TB();
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-        @(negedge clk)//ALU_Out <- RS(0) - RT(r10)
+        @(negedge clk)//ALU_Out <- RS($r0) - RT(r10)
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
@@ -474,7 +471,7 @@ module CPU_EU_TB();
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
-        @(negedge clk)//$r10 <- ALU_Out(r0 - r10)
+        @(negedge clk)//$r10 <- ALU_Out($r0 - r10)
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
@@ -484,7 +481,7 @@ module CPU_EU_TB();
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
         //*******************************************************************/
-        //$r9 <- $r10 + $r11
+        //j)$r9 <- $r10 + $r11
         @(negedge clk)//IR <- iM[PC], PC <- PC + 4
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
@@ -522,7 +519,7 @@ module CPU_EU_TB();
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;        
         //*******************************************************************/
-        //M[$r14 + 0] <- $r12
+        //k)M[$r14 + 0] <- $r12
         @(negedge clk)//IR <- iM[PC], PC <- PC + 4
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_1_1_1_1_0;
@@ -532,16 +529,16 @@ module CPU_EU_TB();
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-        @(negedge clk)//RT <- $r12
+        @(negedge clk)//RS <- $r14, RT <- IR[15:0]
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
         //Datapath Control
-            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_0_0_000;
+            {D_En, DA_sel, T_Sel, HILO_ld, Y_Sel} = 7'b0_0_1_0_000;
         
         //Data Memory Control
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;    
-        @(negedge clk)//ALU_Out <- RT(r12)
+        @(negedge clk)//ALU_Out <- RT(r14 + IR[15:0]), RT <- $r12
         //Instruction Unit Control
             {pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr} = 6'b0_0_0_0_0_0;
         
@@ -564,25 +561,30 @@ module CPU_EU_TB();
         $display(" ");
         $display("R e g f i l e   F i n a l   C o n t e n t s");
         Reg_Dump;
+        
+        $display(" ");
+        $display("d M e m o r y   F i n a l   C o n t e n t s");
+        dMem_Dump;
         $finish;
     
                 
     end
-    task iMem_Dump();
+    task dMem_Dump();
     begin
-        for(i = 0; i <= 64; i = i+4)
-        begin
-            $display("iMem = %h %h %h %h",
-            uut.IM.M[i],uut.IM.M[i+1],uut.IM.M[i+2],uut.IM.M[i+3]);
-        end
+            #10
+            $display("Time = %t | dMem [%h] = %h %h %h %h", $time, 12'hff8,
+            Data_Memory.M[12'hff8],Data_Memory.M[12'hff9],
+            Data_Memory.M[12'hffa],Data_Memory.M[12'hffb]);
     end
     endtask
     
     task Reg_Dump();//display contents of register file   
     begin
-        for(i = 0; i < 32; i = i + 1)
+        for(i = 0; i < 16; i = i + 1)
         begin
-            $display("Register [%h] = %h",i[4:0],IDP.REG_FILE.reg32[i]);
+            #10
+            $display("Time = %t | Register [%h] = %h",
+                      $time,i[3:0],IDP.REG_FILE.reg32[i]);
         end
     end
     endtask

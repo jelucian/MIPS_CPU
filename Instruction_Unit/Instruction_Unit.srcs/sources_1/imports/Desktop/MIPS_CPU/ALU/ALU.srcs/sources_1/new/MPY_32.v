@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 /********************************************************************************
  *
- * Author:   Jesus Luciano
+ * Author:   Jesus Luciano and Rosswell Tiongco
  * Filename: MPY_32.v
  * Date:     1/22/2019
  * Version:  1.0
