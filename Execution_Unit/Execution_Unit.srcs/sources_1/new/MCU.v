@@ -12,20 +12,25 @@
  *
  *******************************************************************************
  *  Control Word Format
- *
- *  {pc_sel, pc_ld, pc_in, ir_ld} = 5'b00_0_0_0; 
+ *  @(negedge sys_clk)
+ *  {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
  *  {im_cs, im_rd, im_wr} = 3'b0_0_0;
  *  {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
  *  {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
  *
  *******************************************************************************/
-module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
-    input sys_clk, reset, intr;
-    input c, n, z, v;
+module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
+           ir_ld, im_cs, im_rd, im_wr, D_En, DA_sel, T_sel, HILO_ld, Y_sel,
+           dm_cs, dm_rd, dm_wr, FS);
+           
+    input        sys_clk, reset, intr, c, n, z, v;
     input [31:0] IR;
-    output int_ack;
-    
-    reg int_ack;
+    //control signals as outputs
+    output reg       pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr, D_En, T_sel, 
+                     HILO_ld, dm_cs, dm_rd, dm_wr, int_ack;
+    output reg [1:0] pc_sel, DA_sel;
+    output reg [2:0] Y_sel;
+    output reg [4:0] FS;
     
     //state assignments
     parameter 
@@ -43,7 +48,12 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
     always @ (posedge sys_clk, posedge reset) 
       if(reset)
           begin
-            //control word
+            //reset state control word
+            @(negedge sys_clk)
+            {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+            {im_cs, im_rd, im_wr} = 3'b0_0_0;
+            {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+            {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
             state = RESET;//next state is RESET state
           end
       else
@@ -52,18 +62,33 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
             if(int_ack == 0 & intr == 1)
               begin//new interrupt pending
                 //control word to "deassert" everyting
+                @(negedge sys_clk)
+                {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                 state = INTR_1;
               end
             else
               begin//no pending interrupt
                 if(int_ack == 1 & intr == 0) int_ack = 1'b0;
                 //IR <- iM[PC]; PC <- PC + 4
+                @(negedge sys_clk)
+                {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                 state = DECODE;
               end
             
           RESET:
             begin
-                // $sp <- ALU_OUT(32'h3FC)
+                //$sp <- ALU_Out
+                @(negedge sys_clk)
+                {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                 state = FETCH;
             end
         
@@ -72,7 +97,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
                 @(negedge sys_clk)
                 if( IR[31:26] == 6'h00)//R-Type Instruction
                   begin//RS <- $rs; RT <- $rt
-                    //control word
+                    @(negedge sys_clk)
+                    {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                    {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                    {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                    {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                     case(IR[5:0])//function code
                       6'h0D  : state = BREAK;
                       6'h20  : state = ADD;
@@ -81,7 +110,12 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
                   end//end of R-Type format
                 else
                   begin//I or J type format
-                    //control word
+                    //RS <- $rs; RT <- DT(se_16)
+                    @(negedge sys_clk)
+                    {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                    {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                    {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                    {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                     case(IR[31:26])
                       6'h0D  : state = ORI;
                       6'h0F  : state = LUI;
@@ -94,47 +128,87 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
           ADD:
             begin
               //ALU_OUT <- RS($rs) + RT($rt)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = WB_alu;
             end
         
           ORI:
             begin
               //ALU_OUT <- RS($rs) | {16'h0, RT[15:0]}
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = WB_imm;
             end
+            
           LUI:
             begin
               //ALU_OUT <- {RT[15:0], 16'h0}
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = WB_imm;
             end
         
           SW:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16), RT <- $rt
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = WB_mem;
             end
         
           WB_alu:
             begin
               //R[rd] <- ALU_OUT
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = FETCH;
             end
         
           WB_imm:
             begin
               //R[rt] <- ALU_OUT
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = FETCH;
             end
         
           WB_mem:
             begin
-              //M[ ALU_OUT($rs+se_16) ] <- RT($rt)
+              //M[ ALU_OUT($rs + se_16) ] <- RT($rt)
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = FETCH;
             end
         
           BREAK:
             begin
               $display("BREAK INSTRUCTION FETCHED %t", $time);
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               $display("R e g i s t e r s   A f t e r   B r e a k");
               $display(" ");
               //Dump_Registers
@@ -150,6 +224,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
           ILLEGAL_OP:
             begin
               $display("ILLEGAL OPCODE FETCH %t", $time);
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               //Dump_Registers;
               //Dump_PC_and_IR;
             end
@@ -158,6 +237,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
             begin
               //PC gets address of interrupt vector, PC saved in $ra
               //ALU_OUT <- 0x3FC, R[$ra] <- PC
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = INTR_2;
             end
         
@@ -165,6 +249,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
             begin
               //Read Address of ISR into D_In
               //D_in <- dMem( [ALU_OUT(0x3FC)]
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = INTR_3;
             end
         
@@ -172,6 +261,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack);
             begin
               //Relead PC with Address of ISR; ack the intr; goto FETCH
               //PC <- D_in( dMem[0x3FC] ), int_ack <- 1
+              @(negedge sys_clk)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = FETCH;
             end
         
