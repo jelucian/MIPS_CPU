@@ -62,7 +62,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             @(negedge sys_clk)
             {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
             {im_cs, im_rd, im_wr} = 3'b0_0_0;
-            {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sp_init_;
+            {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
             state = RESET;//next state is RESET state
           end
@@ -84,9 +84,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 if(int_ack == 1 & intr == 0) int_ack = 1'b0;
                 //IR <- iM[PC]; PC <- PC + 4
                 @(negedge sys_clk)
-                {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+                {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_1_1; 
                 {im_cs, im_rd, im_wr} = 3'b0_0_0;
-                {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
+                {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
                 {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                 state = DECODE;
               end
@@ -209,7 +209,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = 5'h0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_0_1;
               state = FETCH;
             end
@@ -265,7 +265,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = 5'h0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0;
               state = INTR_3;
             end
@@ -277,7 +277,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_001; FS = 5'h0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_001; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
               state = FETCH;
               int_ack = 1;

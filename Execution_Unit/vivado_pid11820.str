@@ -386,3 +386,58 @@ typeControlKey(null, null, 'z');
 typeControlKey(null, null, 'z');
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
+// Elapsed time: 132 seconds
+selectCodeEditor("MCU.v", 453, 203); // cl (w, cp)
+// Elapsed time: 24 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "fetch"); // l (aT, cp)
+// Elapsed time: 41 seconds
+selectCodeEditor("MCU.v", 510, 315); // cl (w, cp)
+selectCodeEditor("MCU.v", 468, 303); // cl (w, cp)
+selectCodeEditor("MCU.v", 496, 303); // cl (w, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  2160 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 51 MB. Current time: 3/15/19, 5:43:32 AM PDT
+// Elapsed time: 897 seconds
+selectCodeEditor("MCU.v", 629, 271); // cl (w, cp)
+// Elapsed time: 49 seconds
+selectCodeEditor("MCU.v", 219, 240); // cl (w, cp)
+selectCodeEditor("MCU.v", 326, 249); // cl (w, cp)
+selectCodeEditor("MCU.v", 836, 251); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+selectCodeEditor("MCU.v", 344, 261); // cl (w, cp)
+// Elapsed time: 175 seconds
+selectCodeEditor("MCU.v", 1033, 314); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 55 seconds
+selectCodeEditor("MCU.v", 475, 258); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("MCU.v", 1149, 398); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("MCU.v", 505, 303); // cl (w, cp)
+selectCodeEditor("MCU.v", 489, 355); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("MCU.v", 403, 431); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 343, 247); // cl (w, cp)
+// Elapsed time: 49 seconds
+selectCodeEditor("MCU.v", 834, 237); // cl (w, cp)
+// Elapsed time: 61 seconds
+selectCodeEditor("MCU.v", 698, 289); // cl (w, cp)
+// Elapsed time: 115 seconds
+selectCodeEditor("MCU.v", 923, 287); // cl (w, cp)
+// Elapsed time: 120 seconds
+selectCodeEditor("MCU.v", 1061, 314); // cl (w, cp)
+// Elapsed time: 141 seconds
+selectCodeEditor("MCU.v", 1063, 398); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("MCU.v", 391, 407); // cl (w, cp)
+selectCodeEditor("MCU.v", 957, 308); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 749, 254); // cl (w, cp)
+selectCodeEditor("MCU.v", 532, 268); // cl (w, cp)
