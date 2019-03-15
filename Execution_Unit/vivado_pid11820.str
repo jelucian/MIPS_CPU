@@ -1,0 +1,388 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 11820
+License: Customer
+
+Current time: 	Fri Mar 15 04:09:05 PDT 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 198 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Rosswell
+User home directory: C:/Users/Rosswell
+User working directory: C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Rosswell/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Rosswell/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Rosswell/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/vivado.log
+Vivado journal file location: 	C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/vivado.jou
+Engine tmp dir: 	C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/.Xil/Vivado-11820-ROSSWELL-ACER
+
+Xilinx Environment Variables
+----------------------------
+NO_XILINX_DATA_LICENSE: HIDDEN
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 474 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  2914 ms.
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HMemoryUtils.trashcanNow. Engine heap size: 474 MB. GUI used memory: 48 MB. Current time: 3/15/19, 4:09:07 AM PDT
+// aL (cp): Older Project Version: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+dismissDialog("Older Project Version"); // aL (cp)
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // x (w, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/Execution_Unit.xpr");
+// aL (cp): Older Project Version: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aL)
+// Opening Vivado Project: C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/Execution_Unit.xpr. Version: Vivado v2018.2 
+// bx (cp):  Open Project : addNotify
+dismissDialog("Older Project Version"); // aL (cp)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/Execution_Unit.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit/Execution_Unit.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-230] Project 'Execution_Unit.xpr' upgraded for this version of Vivado. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 67 MB (+67487kb) [00:02:23]
+// [Engine Memory]: 525 MB (+399292kb) [00:02:23]
+// [GUI Memory]: 92 MB (+23216kb) [00:02:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  4449 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 540 MB. GUI used memory: 52 MB. Current time: 3/15/19, 4:10:48 AM PDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 653.477 ; gain = 77.129 
+// Project name: Execution_Unit; location: C:/Users/Rosswell/Documents/_440/MIPS_CPU/Execution_Unit; part: xc7a100tcsg324-1
+// 'i' command handler elapsed time: 20 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 108 MB (+11282kb) [00:02:32]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (MCU.v) elapsed time: 0.3s
+// Elapsed time: 153 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MCU (MCU.v)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MCU (MCU.v)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// [Engine Memory]: 561 MB (+10356kb) [00:05:02]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MCU (MCU.v)]", 3, false); // B (D, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 53 MB. Current time: 3/15/19, 4:13:24 AM PDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MCU (MCU.v)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("MCU.v", 214, 521); // cl (w, cp)
+selectCodeEditor("MCU.v", 241, 485); // cl (w, cp)
+selectCodeEditor("MCU.v", 256, 458); // cl (w, cp)
+selectCodeEditor("MCU.v", 317, 433); // cl (w, cp)
+selectCodeEditor("MCU.v", 360, 406); // cl (w, cp)
+selectCodeEditor("MCU.v", 433, 362); // cl (w, cp)
+selectCodeEditor("MCU.v", 469, 337); // cl (w, cp)
+selectCodeEditor("MCU.v", 528, 310); // cl (w, cp)
+selectCodeEditor("MCU.v", 577, 284); // cl (w, cp)
+selectCodeEditor("MCU.v", 616, 263); // cl (w, cp)
+selectCodeEditor("MCU.v", 678, 227); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 326, 210); // cl (w, cp)
+selectCodeEditor("MCU.v", 355, 187); // cl (w, cp)
+// Elapsed time: 81 seconds
+selectCodeEditor("MCU.v", 335, 159); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 237, 194); // cl (w, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+// Elapsed time: 37 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+// Elapsed time: 106 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+// Elapsed time: 478 seconds
+selectCodeEditor("MCU.v", 564, 359); // cl (w, cp)
+typeControlKey((HResource) null, "MCU.v", 'v'); // cl (w, cp)
+selectCodeEditor("MCU.v", 66, 263, true, false, false, false, false); // cl (w, cp) - Shift Key
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1170 ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 283 seconds
+selectCodeEditor("MCU.v", 212, 170); // cl (w, cp)
+// Elapsed time: 44 seconds
+selectCodeEditor("MCU.v", 370, 161); // cl (w, cp)
+// Elapsed time: 37 seconds
+selectCodeEditor("MCU.v", 68, 254); // cl (w, cp)
+selectCodeEditor("MCU.v", 757, 402, true, false, false, false, false); // cl (w, cp) - Shift Key
+typeControlKey((HResource) null, "MCU.v", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MCU.v", 757, 402); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 56 seconds
+selectCodeEditor("MCU.v", 397, 47); // cl (w, cp)
+// Elapsed time: 86 seconds
+selectCodeEditor("MCU.v", 34, 326); // cl (w, cp)
+selectCodeEditor("MCU.v", 34, 326, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 185, 189); // cl (w, cp)
+selectCodeEditor("MCU.v", 214, 317); // cl (w, cp)
+selectCodeEditor("MCU.v", 195, 77); // cl (w, cp)
+// Elapsed time: 189 seconds
+selectCodeEditor("MCU.v", 559, 201); // cl (w, cp)
+// Elapsed time: 123 seconds
+selectCodeEditor("MCU.v", 269, 261); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 139, 255); // cl (w, cp)
+selectCodeEditor("MCU.v", 118, 262); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("MCU.v", 169, 228); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("MCU.v", 251, 371); // cl (w, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // l (aT, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 612, 462); // cl (w, cp)
+// Elapsed time: 34 seconds
+selectCodeEditor("MCU.v", 685, 367); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 54 MB. Current time: 3/15/19, 4:43:30 AM PDT
+// Elapsed time: 56 seconds
+selectCodeEditor("MCU.v", 154, 177); // cl (w, cp)
+// Elapsed time: 29 seconds
+selectCodeEditor("MCU.v", 302, 317); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 612, 232); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 479, 285); // cl (w, cp)
+selectCodeEditor("MCU.v", 637, 286, true, false, false, false, false); // cl (w, cp) - Shift Key
+// Elapsed time: 44 seconds
+selectCodeEditor("MCU.v", 305, 262); // cl (w, cp)
+selectCodeEditor("MCU.v", 567, 227); // cl (w, cp)
+selectCodeEditor("MCU.v", 540, 254); // cl (w, cp)
+selectCodeEditor("MCU.v", 485, 254); // cl (w, cp)
+selectCodeEditor("MCU.v", 437, 253); // cl (w, cp)
+selectCodeEditor("MCU.v", 654, 290); // cl (w, cp)
+// Elapsed time: 65 seconds
+selectCodeEditor("MCU.v", 205, 294); // cl (w, cp)
+selectCodeEditor("MCU.v", 543, 284); // cl (w, cp)
+// Elapsed time: 62 seconds
+selectCodeEditor("MCU.v", 349, 285); // cl (w, cp)
+selectCodeEditor("MCU.v", 589, 287); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("MCU.v", 601, 280); // cl (w, cp)
+// [GUI Memory]: 113 MB (+286kb) [00:42:57]
+// Elapsed time: 304 seconds
+selectCodeEditor("MCU.v", 1032, 353); // cl (w, cp)
+// Elapsed time: 143 seconds
+selectCodeEditor("MCU.v", 621, 444); // cl (w, cp)
+// Elapsed time: 87 seconds
+selectCodeEditor("MCU.v", 1050, 339); // cl (w, cp)
+// Elapsed time: 208 seconds
+selectCodeEditor("MCU.v", 537, 347); // cl (w, cp)
+// Elapsed time: 21 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "int_a", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "int_a"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "int_a"); // l (aT, cp)
+selectCodeEditor("MCU.v", 208, 498); // cl (w, cp)
+selectCodeEditor("MCU.v", 376, 494, true, false, false, false, false); // cl (w, cp) - Shift Key
+typeControlKey((HResource) null, "MCU.v", 'c'); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 449, 404); // cl (w, cp)
+typeControlKey((HResource) null, "MCU.v", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 37 seconds
+selectCodeEditor("MCU.v", 781, 251); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 352, 255); // cl (w, cp)
+selectCodeEditor("MCU.v", 784, 248); // cl (w, cp)
+// Elapsed time: 75 seconds
+selectCodeEditor("MCU.v", 986, 302); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 57 seconds
+selectCodeEditor("MCU.v", 320, 211); // cl (w, cp)
+// Elapsed time: 279 seconds
+selectCodeEditor("MCU.v", 966, 372); // cl (w, cp)
+// Elapsed time: 47 seconds
+selectCodeEditor("MCU.v", 963, 287); // cl (w, cp)
+selectCodeEditor("MCU.v", 973, 340); // cl (w, cp)
+// Elapsed time: 39 seconds
+selectCodeEditor("MCU.v", 489, 208); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 360, 306); // cl (w, cp)
+// Elapsed time: 36 seconds
+selectCodeEditor("MCU.v", 434, 244); // cl (w, cp)
+selectCodeEditor("MCU.v", 1069, 283); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+selectCodeEditor("MCU.v", 799, 310); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 295, 390); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 469, 131); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 50 MB. Current time: 3/15/19, 5:13:30 AM PDT
+selectCodeEditor("MCU.v", 810, 248); // cl (w, cp)
+// Elapsed time: 55 seconds
+selectCodeEditor("MCU.v", 844, 261); // cl (w, cp)
+// Elapsed time: 51 seconds
+selectCodeEditor("MCU.v", 848, 254); // cl (w, cp)
+selectCodeEditor("MCU.v", 1071, 252); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("MCU.v", 283, 284); // cl (w, cp)
+selectCodeEditor("MCU.v", 297, 200); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("MCU.v", 377, 187); // cl (w, cp)
+// Elapsed time: 80 seconds
+selectCodeEditor("MCU.v", 1059, 318); // cl (w, cp)
+// Elapsed time: 80 seconds
+selectCodeEditor("MCU.v", 813, 500); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 46 seconds
+selectCodeEditor("MCU.v", 821, 182); // cl (w, cp)
+// Elapsed time: 43 seconds
+selectCodeEditor("MCU.v", 218, 294); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("MCU.v", 924, 353); // cl (w, cp)
+selectCodeEditor("MCU.v", 949, 405); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 1057, 258); // cl (w, cp)
+// Elapsed time: 41 seconds
+selectCodeEditor("MCU.v", 519, 324); // cl (w, cp)
+// Elapsed time: 77 seconds
+selectCodeEditor("MCU.v", 1066, 183); // cl (w, cp)
+// Elapsed time: 88 seconds
+selectCodeEditor("MCU.v", 591, 408); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 953, 380); // cl (w, cp)
+// Elapsed time: 28 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 11 seconds
+selectCodeEditor("MCU.v", 270, 187); // cl (w, cp)
+// Elapsed time: 80 seconds
+selectCodeEditor("MCU.v", 292, 238); // cl (w, cp)
+selectCodeEditor("MCU.v", 672, 221); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 849, 350); // cl (w, cp)
+// Elapsed time: 67 seconds
+selectCodeEditor("MCU.v", 507, 252); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 1069, 343); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 565, 429); // cl (w, cp)
+// Elapsed time: 60 seconds
+selectCodeEditor("MCU.v", 953, 348); // cl (w, cp)
+selectCodeEditor("MCU.v", 584, 373); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("MCU.v", 284, 419); // cl (w, cp)
+// Elapsed time: 28 seconds
+selectCodeEditor("MCU.v", 446, 404); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("MCU.v", 964, 349); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("MCU.v", 724, 287); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("MCU.v", 378, 333); // cl (w, cp)
+selectCodeEditor("MCU.v", 337, 370); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MCU.v", 397, 345); // cl (w, cp)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aL, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 534, 246); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 931, 408, true, false, false, false, false); // cl (w, cp) - Shift Key
+selectCodeEditor("MCU.v", 959, 409, true, false, false, false, false); // cl (w, cp) - Shift Key
+selectCodeEditor("MCU.v", 227, 339); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
