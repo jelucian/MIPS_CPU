@@ -68,23 +68,24 @@ module Execution_Unit_TB();
         clk = 0;
         reset = 0;
         intr = 0;
+  
+        
+        //initialize Data and Instruction Memory
+        $readmemh("dMem_Lab6.mem", Data_Memory.M);
+        $readmemh("iMem_Lab6.mem", Instruction_Unit.IM.M);
         
         @(negedge clk);
         reset = 1;
         @(negedge clk);
         reset = 0;
         
-        //initialize Data and Instruction Memory
-        $readmemh("dMem_Lab6.mem", Data_Memory.M);
-        $readmemh("iMem_Lab6.mem", Instruction_Unit.IM.M);
-        
-        
-        for(i = 0; i < 150; i = i + 1)
+        for(i = 0; i < 200; i = i + 1)
         begin
             @(negedge clk);
-            $display("T = %t | IR_out: %h", $time, Instruction_Unit.IR_out);
+            //$display("T = %t | IR_out: %h", $time, Instruction_Unit.IR_out);
         end
         Dump_Reg;
+        Dump_dMem;
         $finish;
         //@(negedge clk);
         //Dump_Reg;
@@ -106,9 +107,9 @@ module Execution_Unit_TB();
     //Display Memory Contents - 0x3FC
     task Dump_dMem;
     begin
-        i = 32'h3FC;
+        i = 32'h3F0;
         $display(" ");
-        $display("dMem[%h] = 0x%h%h%h%h",i[5:0],
+        $display("dMem[%h] = 0x%h%h%h%h",i[11:0],
             Data_Memory.M[i  ], Data_Memory.M[i+1], 
             Data_Memory.M[i+2], Data_Memory.M[i+3]); 
         
