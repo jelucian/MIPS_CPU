@@ -1,0 +1,308 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+T =   30.0 ps | IR_out: 00000000
+T =   30.0 ps | State = RESET  | Next State = FETCH
+T =   40.0 ps | IR_out: 00000000
+T =   40.0 ps | State = FETCH  | Next State = DECODE
+T =   50.0 ps | IR_out: 3c011234
+T =   60.0 ps | IR_out: 34215678
+T =   60.0 ps | State = DECODE | Next State = I/J-Type
+T =   70.0 ps | IR_out: 34215678
+T =   70.0 ps | State = ORI    | Next State = WB_imm
+T =   80.0 ps | IR_out: 34215678
+T =   80.0 ps | State = WB_imm | Next State = FETCH
+T =   90.0 ps | IR_out: 34215678
+T =   90.0 ps | State = FETCH  | Next State = DECODE
+T =  100.0 ps | IR_out: 3c028765
+T =  110.0 ps | IR_out: 34424321
+T =  110.0 ps | State = DECODE | Next State = I/J-Type
+T =  120.0 ps | IR_out: 34424321
+T =  120.0 ps | State = ORI    | Next State = WB_imm
+T =  130.0 ps | IR_out: 34424321
+T =  130.0 ps | State = WB_imm | Next State = FETCH
+T =  140.0 ps | IR_out: 34424321
+T =  140.0 ps | State = FETCH  | Next State = DECODE
+T =  150.0 ps | IR_out: 3c03abcd
+T =  160.0 ps | IR_out: 3463ef01
+T =  160.0 ps | State = DECODE | Next State = I/J-Type
+T =  170.0 ps | IR_out: 3463ef01
+T =  170.0 ps | State = ORI    | Next State = WB_imm
+T =  180.0 ps | IR_out: 3463ef01
+T =  180.0 ps | State = WB_imm | Next State = FETCH
+T =  190.0 ps | IR_out: 3463ef01
+T =  190.0 ps | State = FETCH  | Next State = DECODE
+T =  200.0 ps | IR_out: 3c0401fe
+T =  210.0 ps | IR_out: 3484dcba
+T =  210.0 ps | State = DECODE | Next State = I/J-Type
+T =  220.0 ps | IR_out: 3484dcba
+T =  220.0 ps | State = ORI    | Next State = WB_imm
+T =  230.0 ps | IR_out: 3484dcba
+T =  230.0 ps | State = WB_imm | Next State = FETCH
+T =  240.0 ps | IR_out: 3484dcba
+T =  240.0 ps | State = FETCH  | Next State = DECODE
+T =  250.0 ps | IR_out: 3c055a5a
+T =  260.0 ps | IR_out: 34a55a5a
+T =  260.0 ps | State = DECODE | Next State = I/J-Type
+T =  270.0 ps | IR_out: 34a55a5a
+T =  270.0 ps | State = ORI    | Next State = WB_imm
+T =  280.0 ps | IR_out: 34a55a5a
+T =  280.0 ps | State = WB_imm | Next State = FETCH
+T =  290.0 ps | IR_out: 34a55a5a
+T =  290.0 ps | State = FETCH  | Next State = DECODE
+T =  300.0 ps | IR_out: 3c06ffff
+T =  310.0 ps | IR_out: 34c6ffff
+T =  310.0 ps | State = DECODE | Next State = I/J-Type
+T =  320.0 ps | IR_out: 34c6ffff
+T =  320.0 ps | State = ORI    | Next State = WB_imm
+T =  330.0 ps | IR_out: 34c6ffff
+T =  330.0 ps | State = WB_imm | Next State = FETCH
+T =  340.0 ps | IR_out: 34c6ffff
+T =  340.0 ps | State = FETCH  | Next State = DECODE
+T =  350.0 ps | IR_out: 3c07ffff
+T =  360.0 ps | IR_out: 34e7ff00
+T =  360.0 ps | State = DECODE | Next State = I/J-Type
+T =  370.0 ps | IR_out: 34e7ff00
+T =  370.0 ps | State = ORI    | Next State = WB_imm
+T =  380.0 ps | IR_out: 34e7ff00
+T =  380.0 ps | State = WB_imm | Next State = FETCH
+T =  390.0 ps | IR_out: 34e7ff00
+T =  390.0 ps | State = FETCH  | Next State = DECODE
+T =  400.0 ps | IR_out: 00c74020
+T =  410.0 ps | IR_out: 00c84820
+T =  410.0 ps | State = DECODE | Next State = R-Type
+T =  420.0 ps | IR_out: 00c84820
+T =  420.0 ps | State = ADD    | Next State = WB_alu
+T =  430.0 ps | IR_out: 00c84820
+T =  430.0 ps | State = WB_alu | Next State = FETCH
+T =  440.0 ps | IR_out: 00c84820
+T =  440.0 ps | State = FETCH  | Next State = DECODE
+T =  450.0 ps | IR_out: 00c95020
+T =  460.0 ps | IR_out: 00ca5820
+T =  460.0 ps | State = DECODE | Next State = R-Type
+T =  470.0 ps | IR_out: 00ca5820
+T =  470.0 ps | State = ADD    | Next State = WB_alu
+T =  480.0 ps | IR_out: 00ca5820
+T =  480.0 ps | State = WB_alu | Next State = FETCH
+T =  490.0 ps | IR_out: 00ca5820
+T =  490.0 ps | State = FETCH  | Next State = DECODE
+T =  500.0 ps | IR_out: 00cb6020
+T =  510.0 ps | IR_out: 00cc6820
+T =  510.0 ps | State = DECODE | Next State = R-Type
+T =  520.0 ps | IR_out: 00cc6820
+T =  520.0 ps | State = ADD    | Next State = WB_alu
+T =  530.0 ps | IR_out: 00cc6820
+T =  530.0 ps | State = WB_alu | Next State = FETCH
+T =  540.0 ps | IR_out: 00cc6820
+T =  540.0 ps | State = FETCH  | Next State = DECODE
+T =  550.0 ps | IR_out: 00cd7020
+T =  560.0 ps | IR_out: 00ce7820
+T =  560.0 ps | State = DECODE | Next State = R-Type
+T =  570.0 ps | IR_out: 00ce7820
+T =  570.0 ps | State = ADD    | Next State = WB_alu
+T =  580.0 ps | IR_out: 00ce7820
+T =  580.0 ps | State = WB_alu | Next State = FETCH
+T =  590.0 ps | IR_out: 00ce7820
+T =  590.0 ps | State = FETCH  | Next State = DECODE
+T =  600.0 ps | IR_out: 3c071001
+T =  610.0 ps | IR_out: 34e703f0
+T =  610.0 ps | State = DECODE | Next State = I/J-Type
+T =  620.0 ps | IR_out: 34e703f0
+T =  620.0 ps | State = ORI    | Next State = WB_imm
+T =  630.0 ps | IR_out: 34e703f0
+T =  630.0 ps | State = WB_imm | Next State = FETCH
+T =  640.0 ps | IR_out: 34e703f0
+T =  640.0 ps | State = FETCH  | Next State = DECODE
+T =  650.0 ps | IR_out: acef0000
+T =  660.0 ps | IR_out: 0000000d
+T =  660.0 ps | State = DECODE | Next State = I/J-Type
+ILLEGAL OPCODE FETCH  665.0 ps
+T =  670.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  675.0 ps
+T =  680.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  685.0 ps
+T =  690.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  695.0 ps
+T =  700.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  705.0 ps
+T =  710.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  715.0 ps
+T =  720.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  725.0 ps
+T =  730.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  735.0 ps
+T =  740.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  745.0 ps
+T =  750.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  755.0 ps
+T =  760.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  765.0 ps
+T =  770.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  775.0 ps
+T =  780.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  785.0 ps
+T =  790.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  795.0 ps
+T =  800.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  805.0 ps
+T =  810.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  815.0 ps
+T =  820.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  825.0 ps
+T =  830.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  835.0 ps
+T =  840.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  845.0 ps
+T =  850.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  855.0 ps
+T =  860.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  865.0 ps
+T =  870.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  875.0 ps
+T =  880.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  885.0 ps
+T =  890.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  895.0 ps
+T =  900.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  905.0 ps
+T =  910.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  915.0 ps
+T =  920.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  925.0 ps
+T =  930.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  935.0 ps
+T =  940.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  945.0 ps
+T =  950.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  955.0 ps
+T =  960.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  965.0 ps
+T =  970.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  975.0 ps
+T =  980.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  985.0 ps
+T =  990.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH  995.0 ps
+T = 1000.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1005.0 ps
+T = 1010.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1015.0 ps
+T = 1020.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1025.0 ps
+T = 1030.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1035.0 ps
+T = 1040.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1045.0 ps
+T = 1050.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1055.0 ps
+T = 1060.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1065.0 ps
+T = 1070.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1075.0 ps
+T = 1080.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1085.0 ps
+T = 1090.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1095.0 ps
+T = 1100.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1105.0 ps
+T = 1110.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1115.0 ps
+T = 1120.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1125.0 ps
+T = 1130.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1135.0 ps
+T = 1140.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1145.0 ps
+T = 1150.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1155.0 ps
+T = 1160.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1165.0 ps
+T = 1170.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1175.0 ps
+T = 1180.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1185.0 ps
+T = 1190.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1195.0 ps
+T = 1200.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1205.0 ps
+T = 1210.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1215.0 ps
+T = 1220.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1225.0 ps
+T = 1230.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1235.0 ps
+T = 1240.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1245.0 ps
+T = 1250.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1255.0 ps
+T = 1260.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1265.0 ps
+T = 1270.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1275.0 ps
+T = 1280.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1285.0 ps
+T = 1290.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1295.0 ps
+T = 1300.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1305.0 ps
+T = 1310.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1315.0 ps
+T = 1320.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1325.0 ps
+T = 1330.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1335.0 ps
+T = 1340.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1345.0 ps
+T = 1350.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1355.0 ps
+T = 1360.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1365.0 ps
+T = 1370.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1375.0 ps
+T = 1380.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1385.0 ps
+T = 1390.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1395.0 ps
+T = 1400.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1405.0 ps
+T = 1410.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1415.0 ps
+T = 1420.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1425.0 ps
+T = 1430.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1435.0 ps
+T = 1440.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1445.0 ps
+T = 1450.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1455.0 ps
+T = 1460.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1465.0 ps
+T = 1470.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1475.0 ps
+T = 1480.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1485.0 ps
+T = 1490.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1495.0 ps
+T = 1500.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1505.0 ps
+T = 1510.0 ps | IR_out: 0000000d
+ILLEGAL OPCODE FETCH 1515.0 ps
+T = 1520.0 ps | IR_out: 0000000d
+ 
+D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e
+R[ 0] = 00000000
+R[ 1] = xxxxXXXX
+R[ 2] = xxxxXXXX
+R[ 3] = xxxxXfxX
+R[ 4] = xxxxXXXX
+R[ 5] = xxxxXXXX
+R[ 6] = xxxxffff
+R[ 7] = xxxxfffx
+R[ 8] = xxxxxxxx
+R[ 9] = xxxxxxxx
+R[10] = xxxxxxxx
+R[11] = xxxxxxxx
+R[12] = xxxxxxxx
+R[13] = xxxxxxxx
+R[14] = xxxxxxxx
+R[15] = xxxxxxxx
+$finish called at time : 1520 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit/Execution_Unit.srcs/sim_1/new/Execution_Unit_TB.v" Line 88
