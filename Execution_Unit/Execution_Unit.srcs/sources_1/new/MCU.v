@@ -21,11 +21,12 @@
  *  {im_cs, im_rd, im_wr} = 3'b0_0_0;
  *  {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
  *  {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+ *  {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
  *
  *******************************************************************************/
 module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
            ir_ld, im_cs, im_rd, im_wr, D_En, DA_sel, T_sel, HILO_ld, Y_sel,
-           dm_cs, dm_rd, dm_wr, FS);
+           dm_cs, dm_rd, dm_wr, FS, S_Addr, T_Addr, D_Addr);
            
     input        sys_clk, reset, intr, c, n, z, v;
     input [31:0] IR;
@@ -34,7 +35,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                      HILO_ld, dm_cs, dm_rd, dm_wr, int_ack;
     output reg [1:0] pc_sel, DA_sel;
     output reg [2:0] Y_sel;
-    output reg [4:0] FS;
+    output reg [4:0] FS, S_Addr, T_Addr, D_Addr;
+    
+    integer i;
     
     //state assignments
     parameter 
@@ -59,9 +62,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
     reg [8:0] state;
     
     //Control Unit Finite State Machine
-    always @ (posedge sys_clk, posedge reset)begin 
-      //$display("T = %t | State = TEST   | Next State = TEST  | PC = %h | IR = %h",
-        //      $time, CPU_IU.PC_out, CPU_IU.IR_out);
+    always @ (posedge sys_clk, posedge reset)
       if(reset)
           begin
             //reset state control word
@@ -70,12 +71,13 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             {im_cs, im_rd, im_wr} = 3'b0_0_0;
             {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+            {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
             state = RESET;//next state is RESET state
           end
       else
         case(state)
           FETCH:
-            /*if(int_ack == 0 & intr == 1)
+            if(int_ack == 0 & intr == 1)
               begin//new interrupt pending
                 //control word to "deassert" everyting
                 @(negedge sys_clk)
@@ -84,20 +86,18 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
                 {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
                 state = INTR_1;
-                $display("T = %t | State = FETCH  | Next State = INTR_1", $time);
               end
-            else*/
+            else
               begin//no pending interrupt
-                //if(int_ack == 1 & intr == 0) int_ack = 1'b0;
+                if(int_ack == 1 & intr == 0) int_ack = 1'b0;
                 //IR <- iM[PC]; PC <- PC + 4
                 @(negedge sys_clk);
                 {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_1_1; 
                 {im_cs, im_rd, im_wr} = 3'b1_1_0;
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
                 {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+                {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
                 state = DECODE;
-                $display("T = %t | State = FETCH  | Next State = DECODE | PC = %h | IR = %h",
-                         $time, CPU_IU.PC_out, CPU_IU.IR_out);
               end
             
           RESET:
@@ -110,10 +110,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 {im_cs, im_rd, im_wr} = 3'b0_0_0;
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_11_0_0_010; FS = no_op_;
                 {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+                {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
                 state = FETCH;
                 int_ack = 0;
-                $display("T = %t | State = RESET  | Next State = FETCH | PC = %h | IR = %h",
-                          $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           DECODE:
@@ -121,35 +120,31 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 @(negedge sys_clk);
                 if( IR[31:26] == 6'h00)//R-Type Instruction
                   begin//RS <- $rs; RT <- $rt
-                    //@(negedge sys_clk)
                     {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
                     {im_cs, im_rd, im_wr} = 3'b0_0_0;
                     {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
                     {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+                    {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
                     case(IR[5:0])//function code
                       6'h0D  : state = BREAK; 
                       6'h20  : state = ADD;
                       default: state = ILLEGAL_OP;  
                     endcase
-                    $display("T = %t | State = DECODE | Next State = R-Type | PC = %h | IR = %h",
-                             $time, CPU_IU.PC_out, CPU_IU.IR_out);
                   end//end of R-Type format
                 else
                   begin//I or J type format
                     //RS <- $rs; RT <- DT(se_16)
-                    //@(negedge sys_clk)
                     {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
                     {im_cs, im_rd, im_wr} = 3'b0_0_0;
                     {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_1_0_000; FS = no_op_;
                     {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+                    {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
                     case(IR[31:26])
                       6'h0D  : state = ORI;
                       6'h0F  : state = LUI;
                       6'h2B  : state =  SW;
                       default: state = ILLEGAL_OP;
                     endcase
-                    $display("T = %t | State = DECODE | Next State = I/J-Type | PC = %h | IR = %h",
-                             $time, CPU_IU.PC_out, CPU_IU.IR_out);
                   end//end of I or J format
             end//end of DECODE
     
@@ -161,9 +156,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = WB_alu;
-              $display("T = %t | State = ADD    | Next State = WB_alu | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           ORI:
@@ -174,9 +168,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = ori_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = WB_imm;
-              $display("T = %t | State = ORI    | Next State = WB_imm | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
             
           LUI:
@@ -187,9 +180,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = lui_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = WB_imm;
-              $display("T = %t | State = LUI    | Next State = WB_imm | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           SW:
@@ -200,9 +192,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = WB_mem;
-              $display("T = %t | State = SW     | Next State = WB_mem | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           WB_alu:
@@ -213,9 +204,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = FETCH;
-              $display("T = %t | State = WB_alu | Next State = FETCH | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           WB_imm:
@@ -226,9 +216,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_01_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = FETCH;
-              $display("T = %t | State = WB_imm | Next State = FETCH | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           WB_mem:
@@ -239,9 +228,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_0_1;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = FETCH;
-              $display("T = %t | State = WB_mem | Next State = FETCH | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           BREAK:
@@ -252,28 +240,24 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-              $display("R e g i s t e r s   A f t e r   B r e a k");
               $display(" ");
-              //Dump_Registers
+              Dump_Reg;
               $display(" ");
-              //$display("time = %t M[3F0] = %h", $time,
-                //        {Execution_Unit_TB.dMem.M[12'h3F0],
-                //         Execution_Unit_TB.dMem.M[12'h3F1],
-                //         Execution_Unit_TB.dMem.M[12'h3F2],
-                //         Execution_Unit_TB.dMem.M[12'h3F3]} );
-              //$finish;
+              $display("D a t a   M e m o r y   a f t e r   B r e a k");
+              Dump_dMem;
+              $display(" ");
+              $finish;
             end
         
           ILLEGAL_OP:
             begin
-              $display("ILLEGAL OPCODE FETCH %t | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
               @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
-              //Dump_Registers;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
+              Dump_Reg;
               //Dump_PC_and_IR;
             end
         
@@ -286,6 +270,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = INTR_2;
             end
         
@@ -298,6 +283,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = INTR_3;
             end
         
@@ -310,11 +296,34 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_001; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
+              {S_Addr, T_Addr, D_Addr} = { IR[26:21], IR[20:16], IR[15:11] };
               state = FETCH;
               int_ack = 1;
             end
         
         endcase//end of FSM
-     end
 
-endmodule;
+    //Dumps Contents of Register File
+    task Dump_Reg;
+    begin
+        $display(" ");
+        $display("D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e");
+        for(i = 0; i < 16; i = i + 1) 
+        begin
+            $display("R[%d] = %h",i[5:0], Integer_Datapath.REG_FILE.reg32[i]);
+        end
+    end
+    endtask
+    //Display Memory Contents - 0x3FC
+    task Dump_dMem;
+    begin
+        i = 32'h3F0;
+        $display(" ");
+        $display("dMem[%h] = 0x%h%h%h%h",i[11:0],
+            Data_Memory.M[i  ], Data_Memory.M[i+1], 
+            Data_Memory.M[i+2], Data_Memory.M[i+3] ); 
+        
+    end
+    endtask
+
+endmodule
