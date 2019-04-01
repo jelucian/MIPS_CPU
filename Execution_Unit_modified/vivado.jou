@@ -81,3 +81,9 @@ close_sim
 launch_simulation
 source MIPS_CPU_TB01.tcl
 close_sim
+launch_simulation
+source MIPS_CPU_TB01.tcl
+close_sim
+launch_simulation
+source MIPS_CPU_TB01.tcl
+close_sim

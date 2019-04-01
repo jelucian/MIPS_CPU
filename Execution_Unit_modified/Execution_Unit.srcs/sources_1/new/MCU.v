@@ -84,7 +84,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             @(negedge sys_clk)
             {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
             {im_cs, im_rd, im_wr} = 3'b0_0_0;
-            {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+            {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sp_init_;
             {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;
             {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
             state = RESET; {IE, N, Z, V, C} = {IE, N, Z, V, C};
@@ -1002,8 +1002,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
         for(i = 0; i < 16; i = i + 1) 
         begin
             $display("R [ %d ]   =   %h    |   R [ %d ]   =   %h",
-                     i[5:0]     , Integer_Datapath.REG_FILE.reg32[i   ],
-                     i[5:0] + 16, Integer_Datapath.REG_FILE.reg32[i+16]);
+                     i[5:0]        , Integer_Datapath.REG_FILE.reg32[i   ],
+                     i[5:0] + 5'd16, Integer_Datapath.REG_FILE.reg32[i+16]);
         end
       end
     endtask
