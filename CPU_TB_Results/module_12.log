@@ -1,0 +1,159 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+T =   30.0 ps | State = RESET  | Next State = FETCH  | PC = 00000000 | IR = 00000000
+T =   40.0 ps | State = FETCH  | Next State = DECODE | PC = 00000000 | IR = 00000000
+T =   50.0 ps | State = DECODE | Next State =I/J-Type| PC = 00000004 | IR = 3c0f1001
+T =   61.0 ps | State = LUI    | Next State = WB_imm | PC = 00000004 | IR = 3c0f1001
+T =   70.0 ps | State = WB_imm | Next State = FETCH  | PC = 00000004 | IR = 3c0f1001
+T =   80.0 ps | State = FETCH  | Next State = DECODE | PC = 00000004 | IR = 3c0f1001
+T =   90.0 ps | State = DECODE | Next State =I/J-Type| PC = 00000008 | IR = 35ef00c0
+T =  101.0 ps | State = ORI    | Next State = WB_imm | PC = 00000008 | IR = 35ef00c0
+T =  110.0 ps | State = WB_imm | Next State = FETCH  | PC = 00000008 | IR = 35ef00c0
+T =  120.0 ps | State = FETCH  | Next State = DECODE | PC = 00000008 | IR = 35ef00c0
+T =  130.0 ps | State = DECODE | Next State =I/J-Type| PC = 0000000c | IR = 2001ff8a
+T =  141.0 ps | State = ADDI   | Next State = WB_imm | PC = 0000000c | IR = 2001ff8a
+T =  150.0 ps | State = WB_imm | Next State = FETCH  | PC = 0000000c | IR = 2001ff8a
+T =  160.0 ps | State = FETCH  | Next State = DECODE | PC = 0000000c | IR = 2001ff8a
+T =  170.0 ps | State = DECODE | Next State =I/J-Type| PC = 00000010 | IR = 2002008a
+T =  181.0 ps | State = ADDI   | Next State = WB_imm | PC = 00000010 | IR = 2002008a
+T =  190.0 ps | State = WB_imm | Next State = FETCH  | PC = 00000010 | IR = 2002008a
+T =  200.0 ps | State = FETCH  | Next State = DECODE | PC = 00000010 | IR = 2002008a
+T =  210.0 ps | State = DECODE | Next State =I/J-Type| PC = 00000014 | IR = 0c100008
+T =  220.0 ps | State = JAL    | Next State = FETCH  | PC = 00000014 | IR = 0c100008
+T =  230.0 ps | State = FETCH  | Next State = DECODE | PC = 00400020 | IR = 0c100008
+T =  240.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400024 | IR = 18200002
+T =  251.0 ps | State = BLEZ_1 | Next State = BLEZ_2 | PC = 00400024 | IR = 18200002
+T =  260.0 ps | State = BLEZ_2 | Next State = FETCH  | PC = 00400024 | IR = 18200002
+T =  270.0 ps | State = FETCH  | Next State = DECODE | PC = 0040002c | IR = 18200002
+T =  280.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400030 | IR = 200300c0
+T =  291.0 ps | State = ADDI   | Next State = WB_imm | PC = 00400030 | IR = 200300c0
+T =  300.0 ps | State = WB_imm | Next State = FETCH  | PC = 00400030 | IR = 200300c0
+T =  310.0 ps | State = FETCH  | Next State = DECODE | PC = 00400030 | IR = 200300c0
+T =  320.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400034 | IR = ade30000
+T =  330.0 ps | State = SW     | Next State = WB_mem | PC = 00400034 | IR = ade30000
+T =  340.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400034 | IR = ade30000
+T =  350.0 ps | State = FETCH  | Next State = DECODE | PC = 00400034 | IR = ade30000
+T =  360.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400038 | IR = 18400003
+T =  371.0 ps | State = BLEZ_1 | Next State = BLEZ_2 | PC = 00400038 | IR = 18400003
+T =  380.0 ps | State = BLEZ_2 | Next State = FETCH  | PC = 00400038 | IR = 18400003
+T =  390.0 ps | State = FETCH  | Next State = DECODE | PC = 00400038 | IR = 18400003
+T =  400.0 ps | State = DECODE | Next State =I/J-Type| PC = 0040003c | IR = 200400c4
+T =  411.0 ps | State = ADDI   | Next State = WB_imm | PC = 0040003c | IR = 200400c4
+T =  420.0 ps | State = WB_imm | Next State = FETCH  | PC = 0040003c | IR = 200400c4
+T =  430.0 ps | State = FETCH  | Next State = DECODE | PC = 0040003c | IR = 200400c4
+T =  440.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400040 | IR = ade40004
+T =  450.0 ps | State = SW     | Next State = WB_mem | PC = 00400040 | IR = ade40004
+T =  460.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400040 | IR = ade40004
+T =  470.0 ps | State = FETCH  | Next State = DECODE | PC = 00400040 | IR = ade40004
+T =  480.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400044 | IR = 08100013
+T =  490.0 ps | State = J      | Next State = FETCH  | PC = 00400044 | IR = 08100013
+T =  500.0 ps | State = FETCH  | Next State = DECODE | PC = 0040004c | IR = 08100013
+T =  510.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400050 | IR = 18000002
+T =  521.0 ps | State = BLEZ_1 | Next State = BLEZ_2 | PC = 00400050 | IR = 18000002
+T =  530.0 ps | State = BLEZ_2 | Next State = FETCH  | PC = 00400050 | IR = 18000002
+T =  540.0 ps | State = FETCH  | Next State = DECODE | PC = 00400058 | IR = 18000002
+T =  550.0 ps | State = DECODE | Next State =I/J-Type| PC = 0040005c | IR = 200500c8
+T =  561.0 ps | State = ADDI   | Next State = WB_imm | PC = 0040005c | IR = 200500c8
+T =  570.0 ps | State = WB_imm | Next State = FETCH  | PC = 0040005c | IR = 200500c8
+T =  580.0 ps | State = FETCH  | Next State = DECODE | PC = 0040005c | IR = 200500c8
+T =  590.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400060 | IR = ade50008
+T =  600.0 ps | State = SW     | Next State = WB_mem | PC = 00400060 | IR = ade50008
+T =  610.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400060 | IR = ade50008
+T =  620.0 ps | State = FETCH  | Next State = DECODE | PC = 00400060 | IR = ade50008
+T =  630.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400064 | IR = 1c400002
+T =  641.0 ps | State = BGTZ_1 | Next State = BGTZ_2 | PC = 00400064 | IR = 1c400002
+T =  650.0 ps | State = BGTZ_2 | Next State = FETCH  | PC = 00400064 | IR = 1c400002
+T =  660.0 ps | State = FETCH  | Next State = DECODE | PC = 0040006c | IR = 1c400002
+T =  670.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400070 | IR = 200600cc
+T =  681.0 ps | State = ADDI   | Next State = WB_imm | PC = 00400070 | IR = 200600cc
+T =  690.0 ps | State = WB_imm | Next State = FETCH  | PC = 00400070 | IR = 200600cc
+T =  700.0 ps | State = FETCH  | Next State = DECODE | PC = 00400070 | IR = 200600cc
+T =  710.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400074 | IR = ade6000c
+T =  720.0 ps | State = SW     | Next State = WB_mem | PC = 00400074 | IR = ade6000c
+T =  730.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400074 | IR = ade6000c
+T =  740.0 ps | State = FETCH  | Next State = DECODE | PC = 00400074 | IR = ade6000c
+T =  750.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400078 | IR = 1c200003
+T =  761.0 ps | State = BGTZ_1 | Next State = BGTZ_2 | PC = 00400078 | IR = 1c200003
+T =  770.0 ps | State = BGTZ_2 | Next State = FETCH  | PC = 00400078 | IR = 1c200003
+T =  780.0 ps | State = FETCH  | Next State = DECODE | PC = 00400078 | IR = 1c200003
+T =  790.0 ps | State = DECODE | Next State =I/J-Type| PC = 0040007c | IR = 200700d0
+T =  801.0 ps | State = ADDI   | Next State = WB_imm | PC = 0040007c | IR = 200700d0
+T =  810.0 ps | State = WB_imm | Next State = FETCH  | PC = 0040007c | IR = 200700d0
+T =  820.0 ps | State = FETCH  | Next State = DECODE | PC = 0040007c | IR = 200700d0
+T =  830.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400080 | IR = ade70010
+T =  840.0 ps | State = SW     | Next State = WB_mem | PC = 00400080 | IR = ade70010
+T =  850.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400080 | IR = ade70010
+T =  860.0 ps | State = FETCH  | Next State = DECODE | PC = 00400080 | IR = ade70010
+T =  870.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400084 | IR = 08100023
+T =  880.0 ps | State = J      | Next State = FETCH  | PC = 00400084 | IR = 08100023
+T =  890.0 ps | State = FETCH  | Next State = DECODE | PC = 0040008c | IR = 08100023
+T =  900.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400090 | IR = 1c200003
+T =  911.0 ps | State = BGTZ_1 | Next State = BGTZ_2 | PC = 00400090 | IR = 1c200003
+T =  920.0 ps | State = BGTZ_2 | Next State = FETCH  | PC = 00400090 | IR = 1c200003
+T =  930.0 ps | State = FETCH  | Next State = DECODE | PC = 00400090 | IR = 1c200003
+T =  940.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400094 | IR = 200800d4
+T =  951.0 ps | State = ADDI   | Next State = WB_imm | PC = 00400094 | IR = 200800d4
+T =  960.0 ps | State = WB_imm | Next State = FETCH  | PC = 00400094 | IR = 200800d4
+T =  970.0 ps | State = FETCH  | Next State = DECODE | PC = 00400094 | IR = 200800d4
+T =  980.0 ps | State = DECODE | Next State =I/J-Type| PC = 00400098 | IR = ade80014
+T =  990.0 ps | State = SW     | Next State = WB_mem | PC = 00400098 | IR = ade80014
+T = 1000.0 ps | State = WB_mem | Next State = FETCH  | PC = 00400098 | IR = ade80014
+T = 1010.0 ps | State = FETCH  | Next State = DECODE | PC = 00400098 | IR = ade80014
+T = 1020.0 ps | State = DECODE | Next State =I/J-Type| PC = 0040009c | IR = 08100029
+T = 1030.0 ps | State = J      | Next State = FETCH  | PC = 0040009c | IR = 08100029
+T = 1040.0 ps | State = FETCH  | Next State = DECODE | PC = 004000a4 | IR = 08100029
+T = 1050.0 ps | State = DECODE | Next State =I/J-Type| PC = 004000a8 | IR = 200e0000
+T = 1061.0 ps | State = ADDI   | Next State = WB_imm | PC = 004000a8 | IR = 200e0000
+T = 1070.0 ps | State = WB_imm | Next State = FETCH  | PC = 004000a8 | IR = 200e0000
+T = 1080.0 ps | State = FETCH  | Next State = DECODE | PC = 004000a8 | IR = 200e0000
+T = 1090.0 ps | State = DECODE | Next State = R-Type | PC = 004000ac | IR = 03e00008
+T = 1100.0 ps | State = JR_1   | Next State = JR_2   | PC = 004000ac | IR = 03e00008
+T = 1110.0 ps | State = JR_2   | Next State = FETCH  | PC = 004000ac | IR = 03e00008
+T = 1120.0 ps | State = FETCH  | Next State = DECODE | PC = 00000014 | IR = 03e00008
+T = 1130.0 ps | State = DECODE | Next State =I/J-Type| PC = 00000018 | IR = ade10018
+T = 1140.0 ps | State = SW     | Next State = WB_mem | PC = 00000018 | IR = ade10018
+T = 1150.0 ps | State = WB_mem | Next State = FETCH  | PC = 00000018 | IR = ade10018
+T = 1160.0 ps | State = FETCH  | Next State = DECODE | PC = 00000018 | IR = ade10018
+T = 1170.0 ps | State = DECODE | Next State =I/J-Type| PC = 0000001c | IR = ade2001c
+T = 1180.0 ps | State = SW     | Next State = WB_mem | PC = 0000001c | IR = ade2001c
+T = 1190.0 ps | State = WB_mem | Next State = FETCH  | PC = 0000001c | IR = ade2001c
+T = 1200.0 ps | State = FETCH  | Next State = DECODE | PC = 0000001c | IR = ade2001c
+T = 1210.0 ps | State = DECODE | Next State = R-Type | PC = 00000020 | IR = 0000000d
+BREAK INSTRUCTION FETCHED 1215.0 ps
+ 
+D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e
+R [  0 ]   =   00000000    |   R [         16 ]   =   xxxxxxxx
+R [  1 ]   =   ffffff8a    |   R [         17 ]   =   xxxxxxxx
+R [  2 ]   =   0000008a    |   R [         18 ]   =   xxxxxxxx
+R [  3 ]   =   000000c0    |   R [         19 ]   =   xxxxxxxx
+R [  4 ]   =   000000c4    |   R [         20 ]   =   xxxxxxxx
+R [  5 ]   =   000000c8    |   R [         21 ]   =   xxxxxxxx
+R [  6 ]   =   000000cc    |   R [         22 ]   =   xxxxxxxx
+R [  7 ]   =   000000d0    |   R [         23 ]   =   xxxxxxxx
+R [  8 ]   =   000000d4    |   R [         24 ]   =   xxxxxxxx
+R [  9 ]   =   xxxxxxxx    |   R [         25 ]   =   xxxxxxxx
+R [ 10 ]   =   xxxxxxxx    |   R [         26 ]   =   xxxxxxxx
+R [ 11 ]   =   xxxxxxxx    |   R [         27 ]   =   xxxxxxxx
+R [ 12 ]   =   xxxxxxxx    |   R [         28 ]   =   xxxxxxxx
+R [ 13 ]   =   xxxxxxxx    |   R [         29 ]   =   00000000
+R [ 14 ]   =   00000000    |   R [         30 ]   =   xxxxxxxx
+R [ 15 ]   =   100100c0    |   R [         31 ]   =   00000014
+ 
+D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y
+d M e m [ 0c0 ]   =   0x000000c0
+d M e m [ 0c4 ]   =   0x000000c4
+d M e m [ 0c8 ]   =   0x000000c8
+d M e m [ 0cc ]   =   0x000000cc
+d M e m [ 0d0 ]   =   0x000000d0
+d M e m [ 0d4 ]   =   0x000000d4
+d M e m [ 0d8 ]   =   0xffffff8a
+d M e m [ 0dc ]   =   0x0000008a
+d M e m [ 0e0 ]   =   0xxxxxxxxx
+d M e m [ 0e4 ]   =   0xxxxxxxxx
+d M e m [ 0e8 ]   =   0xxxxxxxxx
+d M e m [ 0ec ]   =   0xxxxxxxxx
+d M e m [ 0f0 ]   =   0xxxxxxxxx
+d M e m [ 0f4 ]   =   0xxxxxxxxx
+d M e m [ 0f8 ]   =   0xxxxxxxxx
+d M e m [ 0fc ]   =   0xxxxxxxxx
+$finish called at time : 1220 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified/Execution_Unit.srcs/sources_1/new/MCU.v" Line 929

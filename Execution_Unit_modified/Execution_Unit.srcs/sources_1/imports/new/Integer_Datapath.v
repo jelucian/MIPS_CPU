@@ -31,13 +31,13 @@
  *******************************************************************************/
 module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                         DT, T_Sel, C, V, N, Z, DY, PC_in, Y_Sel, ALU_OUT, D_OUT,
-                        DA_Sel);
+                        DA_Sel, shamt);
     
     input         clk, reset, HILO_ld, D_En, T_Sel;
     input [ 1:0]  DA_Sel;
     input [ 2:0]  Y_Sel;
-    input [ 4:0]  S_Addr, FS, D_Addr, T_Addr;
-    input [31:0] DT, DY, PC_in;
+    input [ 4:0]  S_Addr, FS, D_Addr, T_Addr, shamt;
+    input [31:0]  DT, DY, PC_in;
    
     output             C, V, N, Z;
     output      [31:0] D_OUT;
@@ -87,7 +87,7 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     //module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo);
     alu_32 ALU(.S(RS_out), .T(D_OUT), .FS(FS),
                .C(C), .V(V), .N(N), .Z(Z),
-               .Y_hi(Y_hi), .Y_lo(Y_lo) );
+               .Y_hi(Y_hi), .Y_lo(Y_lo), .shamt(shamt) );
 
     //module regfile32(clk, reset, S, T, D, S_Addr, T_Addr, D_Addr, D_En);
     regfile32 REG_FILE(.clk(clk), .reset(reset), .S(REG_FILE_S),

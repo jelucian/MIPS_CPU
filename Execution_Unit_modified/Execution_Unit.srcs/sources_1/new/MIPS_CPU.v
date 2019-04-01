@@ -18,7 +18,7 @@ module MIPS_CPU(clk, reset, intr, inta);
     wire        c, n, z, v, HILO_ld, D_En, T_Sel;
     wire [ 1:0] DA_Sel;
     wire [ 2:0] Y_Sel;    
-    wire [ 4:0] FS, S_Addr, T_Addr, D_Addr;
+    wire [ 4:0] FS, S_Addr, T_Addr, D_Addr, shamt;
     wire [31:0] ALU_OUT, IDP_D_OUT;
 
     //IU wires
@@ -42,7 +42,7 @@ module MIPS_CPU(clk, reset, intr, inta);
     .pc_inc(pc_inc), .ir_ld(ir_ld), .im_cs(im_cs), .im_rd(im_rd), .im_wr(im_wr),
     .D_En(D_En), .DA_sel(DA_Sel), .T_sel(T_Sel), .HILO_ld(HILO_ld), 
     .Y_sel(Y_Sel), .dm_cs(dm_cs), .dm_rd(dm_rd), .dm_wr(dm_wr), .FS(FS),
-    .S_Addr(S_Addr), .T_Addr(T_Addr), .D_Addr(D_Addr) );
+    .S_Addr(S_Addr), .T_Addr(T_Addr), .D_Addr(D_Addr), .shamt(shamt) );
 
     CPU_IU Instruction_Unit(.clk(clk), .reset(reset), .im_cs(im_cs), 
     .im_wr(im_wr), .im_rd(im_rd), .pc_ld(pc_ld), .pc_inc(pc_inc), 
@@ -52,7 +52,8 @@ module MIPS_CPU(clk, reset, intr, inta);
     Integer_Datapath IDP(.clk(clk), .reset(reset), .S_Addr(S_Addr), .FS(FS), 
     .HILO_ld(HILO_ld), .D_En(D_En), .D_Addr(D_Addr), .T_Addr(T_Addr), .DT(SE_16), 
     .T_Sel(T_Sel), .C(c), .V(v), .N(n), .Z(z), .DY(dM_out), .PC_in(PC_out), 
-    .Y_Sel(Y_Sel), .ALU_OUT(ALU_OUT), .D_OUT(IDP_D_OUT), .DA_Sel(DA_Sel) );
+    .Y_Sel(Y_Sel), .ALU_OUT(ALU_OUT), .D_OUT(IDP_D_OUT), .DA_Sel(DA_Sel), 
+    .shamt(shamt) );
 
     Memory Data_Memory(.clk(clk), .cs(dm_cs), .wr(dm_wr), .rd(dm_rd), 
     .Address(ALU_OUT), .D_In(IDP_D_OUT), .D_Out(dM_out) );
