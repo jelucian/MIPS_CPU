@@ -28,7 +28,7 @@ module CPU_IU(clk, reset, im_cs, im_wr, im_rd, pc_ld, pc_inc, ir_ld, PC_in,
     
     //module reg32_inc(clk, reset, ld, inc, D, Q);
     reg32_inc   PC(.clk(clk), .reset(reset), .ld(pc_ld), .inc(pc_inc),
-                 .D(PC_in), .Q(PC_out) );
+                 .D(PC_mux), .Q(PC_out) );
 
     //instruction mem
     //module Data_Memory(clk, cs, wr, rd, Address, D_In, D_Out);

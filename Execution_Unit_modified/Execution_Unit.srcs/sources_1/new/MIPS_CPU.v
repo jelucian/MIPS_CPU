@@ -10,7 +10,6 @@
  *           Data Memory
  *
  *******************************************************************************/
-
 module MIPS_CPU(clk, reset, intr, inta);
     //inputs
     input      clk, reset, intr;
