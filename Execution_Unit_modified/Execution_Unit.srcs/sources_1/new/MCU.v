@@ -4,7 +4,7 @@
  * Author:   Jesus Luciano & Rosswell Tiongco
  * Filename: MCU.v
  * Date:     3/9/2019
- * Version:  1.0
+ * Version:  1.1
  * 
  * Notes:    MIPS Control Unit is a Moore FSM that outputs all control signals
  *           to the Datapath, Instruction and Memory Modules
@@ -13,6 +13,8 @@
  *       1.0 Module contains states for FETCH, RESET, DECODE, ADD, ORI, LUI, 
  *           SW, WB_alu, WB_imm, WB_mem, BREAK, ILLEGAL_OP, INTR_1, INTR_2
  *           INTR_3
+ *
+ *       1.1 Module modified with more states.
  *
  *******************************************************************************
  *  Control Word Format

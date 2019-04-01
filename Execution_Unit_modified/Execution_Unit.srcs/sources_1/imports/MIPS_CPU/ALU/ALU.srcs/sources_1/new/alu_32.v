@@ -6,17 +6,19 @@
  * Date:     1/22/2019
  * Version:  1.0
  * 
- * Notes:    Arithmetic Logic Unit with two 32-bit inputs and a 5-bit function 
+ * Notes:1.0 Arithmetic Logic Unit with two 32-bit inputs and a 5-bit function 
  *           select input which selects between 28 operations to output to its
  *           2 32-bit outputs as well as 4 status flags, (C) Carry, (V) Overflow
- *           (N) Negative, and (Z) Zero. 
+ *           (N) Negative, and (Z) Zero.
+ *       1.1 Added shift amount input, shamt, as well as instantiating shift 
+ *           module to handle shifts
  *
  *******************************************************************************/
-module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo);
+module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo, shamt);
 
     //delcare inputs
     input  [31:0]  S, T;
-    input  [ 4:0] FS;
+    input  [ 4:0] FS, shamt;
     
     //delcare outputs
     output [31:0] Y_hi, Y_lo;
@@ -25,9 +27,11 @@ module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo);
     //wires for outputs of MIPS_32, MPY_32 and DIV_32 ALUs
     wire [31:0] main_Y_hi, main_Y_lo,
                 div_Y_hi,  div_Y_lo,
-                mpy_Y_hi,  mpy_Y_lo;
+                mpy_Y_hi,  mpy_Y_lo,
+               shft_Y_hi, shft_Y_lo;
     //flag outputs of MIPS_32            
-    wire        main_V,    main_C;
+    wire        main_V,    main_C,
+                shft_V,    shft_C;
     
     //main alu instantiation with explicit port mapping
     MIPS_32 main_alu(.S(S), .T(T), .FS(FS), .V(main_V), .C(main_C),
@@ -41,9 +45,15 @@ module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo);
     //module yields 64 bit output
     MPY_32   mpy_alu(.S(S), .T(T), .Y_hi(mpy_Y_hi), .Y_lo(mpy_Y_lo) );
     
-    //3to1 mux for Y_hi and Y_lo outputs  
+    SHIFT  shift_alu(.T(T), .FS(FS), .shamt(shamt), .V(shft_V), .C(shft_C),
+                     .Y_hi(shft_Y_hi), .Y_lo(shft_Y_lo) );
+
+    //4to1 mux for Y_hi and Y_lo outputs  
     assign {Y_hi,Y_lo} = (FS == 5'h1E) ? { mpy_Y_hi,  mpy_Y_lo} :
                          (FS == 5'h1F) ? { div_Y_hi,  div_Y_lo} :
+                         (FS == 5'h0C  |
+                          FS == 5'h0D  |
+                          FS == 5'h0E) ? {shft_Y_hi, shft_Y_lo} :
                                          {main_Y_hi, main_Y_lo} ;
                                           
     //all status flags controlled by 3to1 mux
@@ -56,7 +66,11 @@ module alu_32(S, T, FS, C, V, N, Z, Y_hi, Y_lo);
                        (FS == 5'h03) ? {main_C, main_V,    1'b0,(Y_lo == 32'h0)} :
                        //subu
                        (FS == 5'h05) ? {main_C, main_V,    1'b0,(Y_lo == 32'h0)} :
-                       //all other cases                                              
+                       //shift cases
+                       (FS == 5'h0C  |
+                        FS == 5'h0D  |
+                        FS == 5'h0E) ? {shft_C, shft_V, Y_lo[31],(Y_lo == 32'h0)}: 
+                        //all other cases                                            
                                        {main_C, main_V, Y_lo[31],(Y_lo == 32'h0)};
     
  

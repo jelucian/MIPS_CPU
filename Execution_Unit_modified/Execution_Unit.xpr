@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit/Execution_Unit.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified/Execution_Unit.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0cf07ebb077d430db6e9f5dc36bea851"/>
@@ -60,10 +60,37 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/new/CPU_IU.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v"/>
+          <Attr Name="ImportTime" Val="1552170167"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/DIV_32.v"/>
           <Attr Name="ImportTime" Val="1548823686"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/Integer_Datapath.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v"/>
+          <Attr Name="ImportTime" Val="1552276280"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/MCU.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/MCU.v"/>
+          <Attr Name="ImportTime" Val="1553035561"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -87,6 +114,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/Memory.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Memory.v"/>
+          <Attr Name="ImportTime" Val="1552179433"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/SHIFT.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/ALU/ALU.srcs/sources_1/new/alu_32.v"/>
@@ -105,6 +148,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/reg32_inc.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v"/>
+          <Attr Name="ImportTime" Val="1551837223"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Register_File/Register_File.srcs/sources_1/new/regfile32.v"/>
@@ -114,40 +166,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/Integer_Datapath.v">
+      <File Path="$PSRCDIR/sources_1/new/MIPS_CPU.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/imports/Desktop/MIPS_CPU/Integer_Datapath_2/Integer_Datapath_2.srcs/sources_1/new/Integer_Datapath.v"/>
-          <Attr Name="ImportTime" Val="1552276280"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/MCU.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/MCU.v"/>
-          <Attr Name="ImportTime" Val="1553035561"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/Memory.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Memory.v"/>
-          <Attr Name="ImportTime" Val="1552179433"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/reg32_inc.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/new/reg32_inc.v"/>
-          <Attr Name="ImportTime" Val="1551837223"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -185,19 +205,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/CPU_IU.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Instruction_Unit/Instruction_Unit.srcs/sources_1/new/CPU_IU.v"/>
-          <Attr Name="ImportTime" Val="1552170167"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Integer_Datapath"/>
+        <Option Name="TopModule" Val="MIPS_CPU"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
