@@ -11,3 +11,12 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.xpr}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/dM_14.mem} w ]
+add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/dM_14.mem}}
+close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/iM_14.mem} w ]
+add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/iM_14.mem}}
+launch_simulation
+source CPU_Test_Module_13.tcl
+run all
+close_sim

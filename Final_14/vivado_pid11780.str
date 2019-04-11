@@ -271,3 +271,314 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
 // Tcl Message: close_sim 
 // Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
 dismissDialog("Confirm Close"); // A (ck)
+// [GUI Memory]: 98 MB (+93kb) [00:14:48]
+// Elapsed time: 93 seconds
+selectCodeEditor("MCU.v", 196, 42); // ce (w, ck)
+// Elapsed time: 275 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "dM_14.mem", 2); // k (j, ck)
+// Elapsed time: 149 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "iM_14.mem", 1); // k (j, ck)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1022 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 46 MB. Current time: 4/10/19 8:18:16 PM PDT
+// Elapsed time: 2288 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 6); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Instruction_Unit : CPU_IU (CPU_IU.v)]", 3); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Instruction_Unit : CPU_IU (CPU_IU.v)]", 3); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v), ALU : alu_32 (alu_32.v)]", 11); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v), ALU : alu_32 (alu_32.v), main_alu : MIPS_32 (MIPS_32.v)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v), ALU : alu_32 (alu_32.v), main_alu : MIPS_32 (MIPS_32.v)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 343 seconds
+selectCodeEditor("MIPS_32.v", 242, 235); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 46 MB. Current time: 4/10/19 8:48:17 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 44 MB. Current time: 4/10/19 9:18:17 PM PDT
+// Elapsed time: 3540 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "iM_14.mem", 1); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("MCU.v", 335, 461); // ce (w, ck)
+selectCodeEditor("MCU.v", 319, 280); // ce (w, ck)
+selectCodeEditor("MCU.v", 318, 279); // ce (w, ck)
+selectCodeEditor("MCU.v", 459, 426); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 337, 451); // ce (w, ck)
+selectCodeEditor("MCU.v", 460, 469); // ce (w, ck)
+// Elapsed time: 43 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reti"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 442, 87); // ce (w, ck)
+selectCodeEditor("MCU.v", 119, 111); // ce (w, ck)
+selectCodeEditor("MCU.v", 428, 91); // ce (w, ck)
+selectCodeEditor("MCU.v", 112, 111); // ce (w, ck)
+selectCodeEditor("MCU.v", 217, 112); // ce (w, ck)
+selectCodeEditor("MCU.v", 314, 110); // ce (w, ck)
+selectCodeEditor("MCU.v", 528, 88); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("MCU.v", 528, 212); // ce (w, ck)
+selectCodeEditor("MCU.v", 580, 234); // ce (w, ck)
+selectCodeEditor("MCU.v", 472, 271); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 557, 213); // ce (w, ck)
+selectCodeEditor("MCU.v", 514, 209); // ce (w, ck)
+selectCodeEditor("MCU.v", 168, 296); // ce (w, ck)
+// Elapsed time: 47 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "intr_1"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 142, 323); // ce (w, ck)
+selectCodeEditor("MCU.v", 93, 272); // ce (w, ck)
+selectCodeEditor("MCU.v", 130, 371); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("MCU.v", 83, 270); // ce (w, ck)
+selectCodeEditor("MCU.v", 138, 519, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 469, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("MCU.v", 4, 391); // ce (w, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 132, 568); // ce (w, ck)
+selectCodeEditor("MCU.v", 126, 539); // ce (w, ck)
+selectCodeEditor("MCU.v", 126, 228); // ce (w, ck)
+selectCodeEditor("MCU.v", 124, 184); // ce (w, ck)
+selectCodeEditor("MCU.v", 278, 451); // ce (w, ck)
+selectCodeEditor("MCU.v", 278, 451, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 278, 451); // ce (w, ck)
+selectCodeEditor("MCU.v", 236, 413); // ce (w, ck)
+selectCodeEditor("MCU.v", 422, 421); // ce (w, ck)
+selectCodeEditor("MCU.v", 392, 423); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("MCU.v", 291, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 258, 508); // ce (w, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("MCU.v", 274, 356); // ce (w, ck)
+selectCodeEditor("MCU.v", 380, 324); // ce (w, ck)
+// Elapsed time: 52 seconds
+selectCodeEditor("MCU.v", 274, 482); // ce (w, ck)
+// Elapsed time: 83 seconds
+selectCodeEditor("MCU.v", 129, 389); // ce (w, ck)
+selectCodeEditor("MCU.v", 207, 372); // ce (w, ck)
+selectCodeEditor("MCU.v", 207, 372, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 207, 372); // ce (w, ck)
+selectCodeEditor("MCU.v", 256, 632); // ce (w, ck)
+selectCodeEditor("MCU.v", 256, 632, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 256, 632); // ce (w, ck)
+selectCodeEditor("MCU.v", 245, 530); // ce (w, ck)
+selectCodeEditor("MCU.v", 245, 530, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 245, 530); // ce (w, ck)
+selectCodeEditor("MCU.v", 248, 481); // ce (w, ck)
+selectCodeEditor("MCU.v", 248, 481, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 248, 481); // ce (w, ck)
+selectCodeEditor("MCU.v", 252, 587); // ce (w, ck)
+selectCodeEditor("MCU.v", 252, 587, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 252, 587); // ce (w, ck)
+selectCodeEditor("MCU.v", 252, 650); // ce (w, ck)
+selectCodeEditor("MCU.v", 252, 650, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 252, 650); // ce (w, ck)
+selectCodeEditor("MCU.v", 250, 642); // ce (w, ck)
+selectCodeEditor("MCU.v", 250, 642, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 250, 642); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 45 MB. Current time: 4/10/19 9:48:18 PM PDT
+selectCodeEditor("MCU.v", 284, 573); // ce (w, ck)
+selectCodeEditor("MCU.v", 232, 289); // ce (w, ck)
+selectCodeEditor("MCU.v", 216, 544); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("MCU.v", 283, 554); // ce (w, ck)
+// Elapsed time: 40 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v), ALU : alu_32 (alu_32.v)]", 11); // B (D, ck)
+selectCodeEditor("MCU.v", 631, 506); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("MCU.v", 313, 389); // ce (w, ck)
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 687, 97); // ce (w, ck)
+selectCodeEditor("MCU.v", 294, 396); // ce (w, ck)
+selectCodeEditor("MCU.v", 290, 397); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("MCU.v", 696, 98); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("MCU.v", 127, 516); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 0, 529, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 104, 455); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 132, 352); // ce (w, ck)
+selectCodeEditor("MCU.v", 130, 334); // ce (w, ck)
+selectCodeEditor("MCU.v", 202, 469); // ce (w, ck)
+selectCodeEditor("MCU.v", 121, 469); // ce (w, ck)
+selectCodeEditor("MCU.v", 183, 486, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("MCU.v", 125, 507); // ce (w, ck)
+// [GUI Memory]: 103 MB (+159kb) [02:16:47]
+selectCodeEditor("MCU.v", 161, 349); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("MCU.v", 282, 494); // ce (w, ck)
+// Elapsed time: 51 seconds
+selectCodeEditor("MCU.v", 804, 430); // ce (w, ck)
+selectCodeEditor("MCU.v", 130, 423); // ce (w, ck)
+selectCodeEditor("MCU.v", 373, 429); // ce (w, ck)
+selectCodeEditor("MCU.v", 866, 431, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("MCU.v", 488, 440); // ce (w, ck)
+selectCodeEditor("MCU.v", 465, 426); // ce (w, ck)
+selectCodeEditor("MCU.v", 268, 549); // ce (w, ck)
+selectCodeEditor("MCU.v", 268, 549, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 268, 549); // ce (w, ck)
+selectCodeEditor("MCU.v", 260, 509); // ce (w, ck)
+selectCodeEditor("MCU.v", 260, 509, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 260, 509); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("MCU.v", 132, 528); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 128, 414); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 112, 470, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 80, 122); // ce (w, ck)
+selectCodeEditor("MCU.v", 125, 324, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 124, 272); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 3, 371, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("MCU.v", 193, 391, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 16 seconds
+selectCodeEditor("MCU.v", 161, 327); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 261, 269, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 218, 408); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 402, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("MCU.v", 4, 404); // ce (w, ck)
+selectCodeEditor("MCU.v", 130, 503); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("MCU.v", 0, 350); // ce (w, ck)
+selectCodeEditor("MCU.v", 124, 488); // ce (w, ck)
+selectCodeEditor("MCU.v", 82, 212, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 78, 227); // ce (w, ck)
+selectCodeEditor("MCU.v", 127, 350); // ce (w, ck)
+selectCodeEditor("MCU.v", 145, 129); // ce (w, ck)
+selectCodeEditor("MCU.v", 144, 128, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 144, 128); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("MCU.v", 123, 664); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 127, 444); // ce (w, ck)
+selectCodeEditor("MCU.v", 117, 534); // ce (w, ck)
+selectCodeEditor("MCU.v", 124, 571); // ce (w, ck)
+selectCodeEditor("MCU.v", 126, 432); // ce (w, ck)
+selectCodeEditor("MCU.v", 126, 406); // ce (w, ck)
+selectCodeEditor("MCU.v", 120, 472); // ce (w, ck)
+selectCodeEditor("MCU.v", 130, 203); // ce (w, ck)
+selectCodeEditor("MCU.v", 125, 429); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 120, 559); // ce (w, ck)
+selectCodeEditor("MCU.v", 143, 330); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("MCU.v", 210, 276); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("MCU.v", 189, 388); // ce (w, ck)
+selectCodeEditor("MCU.v", 189, 388, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 189, 388); // ce (w, ck)
+selectCodeEditor("MCU.v", 156, 368); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 167, 407); // ce (w, ck)
+selectCodeEditor("MCU.v", 166, 406, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 166, 406); // ce (w, ck)
+// Elapsed time: 43 seconds
+selectCodeEditor("MCU.v", 546, 527); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 142, 317); // ce (w, ck)
+selectCodeEditor("MCU.v", 142, 317, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 142, 317); // ce (w, ck)
+selectCodeEditor("MCU.v", 217, 211); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 467); // ce (w, ck)
+selectCodeEditor("MCU.v", 376, 489); // ce (w, ck)
+selectCodeEditor("MCU.v", 549, 486); // ce (w, ck)
+selectCodeEditor("MCU.v", 357, 393); // ce (w, ck)
+selectCodeEditor("MCU.v", 238, 348); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("MCU.v", 160, 333); // ce (w, ck)
+selectCodeEditor("MCU.v", 160, 333, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 160, 333); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 434); // ce (w, ck)
+selectCodeEditor("MCU.v", 374, 449); // ce (w, ck)
+selectCodeEditor("MCU.v", 552, 450); // ce (w, ck)
+selectCodeEditor("MCU.v", 226, 317); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("MCU.v", 127, 310, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 52 seconds
+selectCodeEditor("MCU.v", 221, 486); // ce (w, ck)
+selectCodeEditor("MCU.v", 162, 482); // ce (w, ck)
+selectCodeEditor("MCU.v", 162, 470); // ce (w, ck)
+selectCodeEditor("MCU.v", 162, 470, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 162, 470); // ce (w, ck)
+selectCodeEditor("MCU.v", 217, 572); // ce (w, ck)
+selectCodeEditor("MCU.v", 376, 587); // ce (w, ck)
+selectCodeEditor("MCU.v", 498, 592); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 199, 397); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 44 seconds
+selectCodeEditor("MCU.v", 173, 309); // ce (w, ck)
+selectCodeEditor("MCU.v", 173, 308, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 173, 308); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 230, 32); // ce (w, ck)
+selectCodeEditor("MCU.v", 265, 292); // ce (w, ck)
+selectCodeEditor("MCU.v", 231, 26); // ce (w, ck)
+selectCodeEditor("MCU.v", 263, 291); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 218, 408); // ce (w, ck)
+selectCodeEditor("MCU.v", 377, 430); // ce (w, ck)
+selectCodeEditor("MCU.v", 553, 430); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("MCU.v", 185, 427); // ce (w, ck)
+selectCodeEditor("MCU.v", 185, 442); // ce (w, ck)
+selectCodeEditor("MCU.v", 185, 442, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 185, 442); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 226, 491); // ce (w, ck)
+selectCodeEditor("MCU.v", 372, 509); // ce (w, ck)
+selectCodeEditor("MCU.v", 504, 508); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("MCU.v", 142, 322); // ce (w, ck)
+selectCodeEditor("MCU.v", 275, 329); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 223, 447); // ce (w, ck)
+selectCodeEditor("MCU.v", 375, 469); // ce (w, ck)
+selectCodeEditor("MCU.v", 550, 469); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 374, 549); // ce (w, ck)
+selectCodeEditor("MCU.v", 550, 549); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 488); // ce (w, ck)
+selectCodeEditor("MCU.v", 386, 514); // ce (w, ck)
+selectCodeEditor("MCU.v", 550, 511); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 450); // ce (w, ck)
+selectCodeEditor("MCU.v", 378, 467); // ce (w, ck)
+selectCodeEditor("MCU.v", 554, 471); // ce (w, ck)
+selectCodeEditor("MCU.v", 376, 429); // ce (w, ck)
+selectCodeEditor("MCU.v", 215, 456); // ce (w, ck)
+selectCodeEditor("MCU.v", 223, 474); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 108 MB (+98kb) [02:30:49]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

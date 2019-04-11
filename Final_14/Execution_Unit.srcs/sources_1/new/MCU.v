@@ -64,12 +64,14 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
      SLT   = 22, SLTU  = 23, SRA   = 24, SRL   = 25, SUB   = 26, SUBU  = 27,
      XOR   = 28, ADDI  = 29, ANDI  = 30, BEQ_1 = 31, BLEZ_1= 32, BNE_1 = 33,
      LUI   = 34, LW_1  = 35, ORI   = 36, SLTI  = 37, SLTIU = 38, SW    = 39,
-     XORI  = 40, J     = 41, JAL   = 42,INPUT_1= 43,OUTPUT_1= 44, RETI_1= 45,
-     WB_alu= 50, WB_imm= 51, WB_Din= 52, WB_hi = 53, WB_lo = 54, WB_mem = 55,
-     JR_2  = 60, LW_2  = 61, WB_lw = 62, BEQ_2 = 63, BLEZ_2= 64, BNE_2  = 65,
-     BGTZ_1= 66, BGTZ_2= 67, RETI_2= 68, RETI_3= 69, 
-     INPUT_2=70, WB_INPUT=71,OUTPUT_2=72,
-     INTR_1=501, INTR_2=502, INTR_3=503, INTR_4=504,
+     XORI  = 40, J     = 41, JAL   = 42,INPUT_1= 43,OUTPUT_1=44, RETI_1= 45,
+     WB_alu= 50, WB_imm= 51, WB_Din= 52, WB_hi = 53, WB_lo = 54, WB_mem= 55,
+     JR_2  = 60, LW_2  = 61, WB_lw = 62, BEQ_2 = 63, BLEZ_2= 64, BNE_2 = 65,
+     BGTZ_1= 66, BGTZ_2= 67, RETI_2= 68, RETI_3= 69, RETI_4= 70, RETI_5=71,
+     RETI_6= 72, RETI_7= 73, RETI_8= 74,
+     INPUT_2=80, WB_INPUT=81,OUTPUT_2=82,
+     INTR_1=501, INTR_2=502, INTR_3=503, INTR_4=504, INTR_5=505, INTR_6=506,
+     INTR_7=507, INTR_8=508,
      BREAK =510, ILLEGAL_OP = 511;
      
     parameter    pass_s_ = 5'h00,   pass_t_  = 5'h01,   add_   = 5'h02,
@@ -881,48 +883,6 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end  
           
-          RETI_1:
-            begin
-              //
-             // @(negedge sys_clk)
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
-              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = RETI_2; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = RETI_1 | Next State = RETI_2 | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end
-            
-          RETI_2:
-            begin
-              //
-              //@(negedge sys_clk)
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
-              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = RETI_3; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = RETI_2 | Next State = RETI_3 | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end
-            
-          RETI_3:
-            begin
-              //
-             // @(negedge sys_clk)
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
-              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = RETI_3 | Next State = FETCH  | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end
-          
           WB_alu:
             begin
               //R[rd] <- ALU_OUT
@@ -997,67 +957,212 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               //Dump_PC_and_IR;
               $finish;
             end
-        
+          
+          RETI_1:
+            begin
+              //RS <- $sp
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_2; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_1 | Next State = RETI_2 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+            
+          RETI_2:
+            begin
+              //ALU_OUT <- RS($sp)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_3; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_2 | Next State = RETI_3 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+            
+          RETI_3:
+            begin
+              //D_in <- dMem[ALU_OUT($sp)], RS <- Reg($sp)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_4; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_3 | Next State = RETI_4 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+
+          RETI_4:
+            begin
+              //PC <- D_in, ALU_OUT <- RS($sp) - 4
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_5; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_4 | Next State = RETI_5 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+            
+          RETI_5:
+            begin
+              //Reg($sp) <- ALU_OUT($sp - 4), D_in <- dMem[ALU_OUT($sp - 4)]
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_6; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_5 | Next State = RETI_6 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+            
+          RETI_6:
+            begin
+              //RS <- Reg($sp - 4), Flags <- D_in
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_7; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_6 | Next State = RETI_7 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+                    
+          RETI_7:
+            begin
+              //ALU_OUT <- RS($sp - 4) - 4
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = RETI_8; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_7 | Next State = RETI_8 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+            
+          RETI_8:
+            begin
+              //Reg($sp) <- ALU_OUT ($sp-8)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = RETI_8 | Next State = FETCH  | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+          
           INTR_1:
             begin
-              //PC gets address of interrupt vector, PC saved in $ra
-              //ALU_OUT <- 0x3FC, R[$ra] <- PC
-             // @(negedge sys_clk)
+              //RS <- Reg($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_2; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("D_in: %h | ALU_OUT: %h | dMem_out: %h", IDP.D_in_out, MIPS_CPU.dm_address, dMem.D_Out);
               $display("T = %t | State = INTR_1 | Next State = INTR_2 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
         
           INTR_2:
             begin
-              //ALU_OUT <- 0x3FC
-             // @(negedge sys_clk)
+              //ALU_OUT <- RS($sp) + 4, RT <- PC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_3; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("D_in: %h | ALU_OUT: %h | dMem_out: %h", IDP.D_in_out, MIPS_CPU.dm_address, dMem.D_Out);
               $display("T = %t | State = INTR_2 | Next State = INTR_3 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
-          /*
+          
           INTR_3:
             begin
-              //Read Address of ISR into D_In
-              //D_in <- dMem( [ALU_OUT(0x3FC)]
-             // @(negedge sys_clk)
+              //dMem[ALU_OUT($sp+4)] <- RT(PC), Reg($sp) <- ALU_OUT($sp + 4)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_4; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("D_in: %h | ALU_OUT: %h | dMem_out: %h", IDP.D_in_out, MIPS_CPU.dm_address, dMem.D_Out);
               $display("T = %t | State = INTR_3 | Next State = INTR_4 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end*/
-        
-          INTR_3:
+            end
+            
+          INTR_4:
             begin
-              //Reload PC with Address of ISR; ack the intr; goto FETCH
+              //RS <- Reg($sp+4)
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = sp_init_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = INTR_5; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = INTR_4 | Next State = INTR_5 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+        
+          INTR_5:
+            begin
+              //ALU_OUT <- RS($sp+4) + 4, RT <- flags
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = INTR_6; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = INTR_5 | Next State = INTR_6 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+          
+          INTR_6:
+            begin
+              //dMem[ALU_OUT($sp + 8)] <- RT(flags), Reg($sp) <- ALU_OUT($sp + 8), ALU_OUT <- 0x3FC
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = INTR_7; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = INTR_6 | Next State = INTR_7 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end 
+                       
+          INTR_7:
+            begin
+              //D_in <- dMem[ALU_OUT($sp + 8)]
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
+              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
+              state = INTR_8; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              $display("T = %t | State = INTR_7 | Next State = INTR_8 | PC = %h | IR = %h",
+                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
+            end
+          
+          INTR_8:
+            begin
               //PC <- D_in( dMem[0x3FC] ), int_ack <- 1
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_001; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("D_in: %h | ALU_OUT: %h | dMem_out: %h", IDP.D_in_out, MIPS_CPU.dm_address, dMem.D_Out);
-              $display("T = %t | State = INTR_3 | Next State = FETCH  | PC = %h | IR = %h",
+              $display("T = %t | State = INTR_8 | Next State = FETCH  | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
               int_ack = 1;
             end
