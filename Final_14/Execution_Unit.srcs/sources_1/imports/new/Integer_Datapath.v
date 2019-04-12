@@ -28,26 +28,31 @@
  *           DA_mux
  *
  *       1.3 Added mux to D_in input controlled by io_rd signal that selects
- *           between io_out and dmem_out
+ *           between io_out and dmem_out. Expanded T_MUX to now select between
+ *           the flags, SE_16, T output of the Regfile, and the PC
+ *
+ *       1.4 Added flags input and flags output. S_MUX added that selects between
+ *           the regfile output and the ALU_OUT output
  *
  *******************************************************************************/
 module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                         DT, T_Sel, C, V, N, Z, DY, PC_in, Y_Sel, ALU_OUT, D_OUT,
-                        DA_Sel, shamt, io_rd, io_out, stack);
+                        DA_Sel, shamt, io_rd, io_out, stack, flags_in, flags_out);
     
-    input         clk, reset, HILO_ld, D_En, T_Sel, io_rd, stack;
+    input         clk, reset, HILO_ld, D_En, io_rd, stack;
     input [ 1:0]  DA_Sel;
-    input [ 2:0]  Y_Sel;
-    input [ 4:0]  S_Addr, FS, D_Addr, T_Addr, shamt;
+    input [ 2:0]  Y_Sel, T_Sel;
+    input [ 4:0]  S_Addr, FS, D_Addr, T_Addr, shamt, flags_in;
     input [31:0]  DT, DY, PC_in, io_out;
    
     output             C, V, N, Z;
+    output      [ 4:0] flags_out;
     output      [31:0] D_OUT;
     output wire [31:0] ALU_OUT;
     
     wire [ 4:0] DA_mux, stack_mux;
     
-    wire [31:0] REG_FILE_S, REG_FILE_T, T_MUX,
+    wire [31:0] REG_FILE_S, REG_FILE_T, T_MUX, S_MUX,
                 Y_hi, Y_lo, HI_out, LO_out,
                 RS_out, RT_out, ALU_reg_out, D_in_out;
     
@@ -60,16 +65,23 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                     (DA_Sel == 2'b10) ? 5'h1F ://Reg 31
                     (DA_Sel == 2'b01) ? T_Addr:
                                         D_Addr;//Default
-                    
+    
+    //S-MUX
+    assign S_MUX = (T_Sel[2] == 1'b1) ? ALU_OUT   ://Y_Mux output
+                                        REG_FILE_S;//Regfile
+    
     //T-MUX
-    assign T_MUX = (T_Sel) ? DT : REG_FILE_T;    
+    assign T_MUX = (T_Sel == 3'b011) ? {26'b0, flags_in}://flags_in
+                   (T_Sel == 3'b010) ? PC_in            ://PC
+                   (T_Sel == 3'b001) ? DT               ://SE_16
+                                       REG_FILE_T       ;//Regfile
     
     //Y-MUX
-    assign ALU_OUT = (Y_Sel == 3'b100) ? HI_out      :
-                     (Y_Sel == 3'b011) ? LO_out      :
-                     (Y_Sel == 3'b010) ? ALU_reg_out :
-                     (Y_Sel == 3'b001) ? D_in_out    :
-                                         PC_in       ;
+    assign ALU_OUT = (Y_Sel == 3'b100) ? HI_out      ://HI register
+                     (Y_Sel == 3'b011) ? LO_out      ://Lo register
+                     (Y_Sel == 3'b010) ? ALU_reg_out ://ALU_OUT register
+                     (Y_Sel == 3'b001) ? D_in_out    ://D_in register
+                                         PC_in       ;//PC
     
     //IO-Mux - selects between io memory out (1) and data memory (0)
     assign mem_in = (io_rd) ? io_out : DY;          
@@ -77,6 +89,9 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     //stack mux selects between S_Addr input and the stack pointer as the     
     //output to the RS register
     assign stack_mux = (stack) ? 5'h1D : S_Addr;
+    
+    //strip lower 5 bits out Y-Mux output for flags
+    assign flags_out = ALU_OUT[4:0];
                                          
     //module reg32(clk, reset, ld, D, Q);
     reg32      HI(.clk(clk), .reset(reset), .ld(HILO_ld), 
@@ -90,7 +105,7 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     reg32    D_in(.clk(clk), .reset(reset), .ld(1'b1), 
                   .D(mem_in)  , .Q(D_in_out)     );
     reg32      RS(.clk(clk), .reset(reset), .ld(1'b1), 
-                  .D(REG_FILE_S), .Q(RS_out) );
+                  .D(S_MUX), .Q(RS_out) );
     reg32      RT(.clk(clk), .reset(reset), .ld(1'b1), 
                   .D(T_MUX), .Q(D_OUT)       );
     

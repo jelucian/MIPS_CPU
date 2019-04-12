@@ -8,6 +8,7 @@
  * 
  * Notes:1.0 Module Instantiates Control Unit, Instruction Unit, Datapath, and
  *           Data Memory
+ 
  *       1.1 Modified for final implmentation. Removed data memory, added signal
  *           as outputs for data memory and io memory
  *
@@ -18,10 +19,10 @@ module MIPS_CPU(clk, reset, intr, inta, dm_cs, dm_wr, dm_rd, dm_address,
     input      clk, reset, intr;
 
     //IDP wires and outputs
-    wire        c, n, z, v, HILO_ld, D_En, T_Sel, stack;
+    wire        c, n, z, v, HILO_ld, D_En, stack;
     wire [ 1:0] DA_Sel;
-    wire [ 2:0] Y_Sel;    
-    wire [ 4:0] FS, S_Addr, T_Addr, D_Addr, shamt;
+    wire [ 2:0] Y_Sel, T_Sel;    
+    wire [ 4:0] FS, S_Addr, T_Addr, D_Addr, shamt, flags_in, flags_out;
 
     //IU wires
     wire        im_cs, im_wr, im_rd, pc_ld, pc_inc, ir_ld;
@@ -48,7 +49,8 @@ module MIPS_CPU(clk, reset, intr, inta, dm_cs, dm_wr, dm_rd, dm_address,
     .D_En(D_En), .DA_sel(DA_Sel), .T_sel(T_Sel), .HILO_ld(HILO_ld), 
     .Y_sel(Y_Sel), .dm_cs(dm_cs), .dm_rd(dm_rd), .dm_wr(dm_wr), .FS(FS),
     .S_Addr(S_Addr), .T_Addr(T_Addr), .D_Addr(D_Addr), .shamt(shamt),
-    .io_rd(io_rd), .io_wr(io_wr), .io_cs(io_cs), .stack(stack) );
+    .io_rd(io_rd), .io_wr(io_wr), .io_cs(io_cs), .stack(stack),
+    .flags_out(flags_out), .flags_in(flags_in) );
 
     CPU_IU Instruction_Unit(.clk(clk), .reset(reset), .im_cs(im_cs), 
     .im_wr(im_wr), .im_rd(im_rd), .pc_ld(pc_ld), .pc_inc(pc_inc), 
@@ -59,6 +61,7 @@ module MIPS_CPU(clk, reset, intr, inta, dm_cs, dm_wr, dm_rd, dm_address,
     .HILO_ld(HILO_ld), .D_En(D_En), .D_Addr(D_Addr), .T_Addr(T_Addr), .DT(SE_16), 
     .T_Sel(T_Sel), .C(c), .V(v), .N(n), .Z(z), .DY(dm_out), .PC_in(PC_out), 
     .Y_Sel(Y_Sel), .ALU_OUT(dm_address), .D_OUT(dm_d_in), .DA_Sel(DA_Sel), 
-    .shamt(shamt), .io_rd(io_rd), .io_out(io_out), .stack(stack) );
+    .shamt(shamt), .io_rd(io_rd), .io_out(io_out), .stack(stack),
+    .flags_in(flags_out), .flags_out(flags_in) );
 
 endmodule

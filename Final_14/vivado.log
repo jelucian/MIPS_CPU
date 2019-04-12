@@ -887,3 +887,76 @@ i M e m [ 0fc ]   =   0xfffffffe
 $finish called at time : 4940 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v" Line 981
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+update_ip_catalog
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/IO.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/Integer_Datapath.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MIPS_CPU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/CPU_IU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/IO.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/Integer_Datapath.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MIPS_CPU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/CPU_IU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/IO.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/Integer_Datapath.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MIPS_CPU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/CPU_IU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/IO.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/Integer_Datapath.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MIPS_CPU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/CPU_IU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MCU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/IO.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/MIPS_CPU/ALU/ALU.srcs/sources_1/new/MIPS_32.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/Integer_Datapath.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/new/MIPS_CPU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sources_1/imports/new/CPU_IU.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog

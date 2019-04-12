@@ -1141,3 +1141,1169 @@ selectCodeEditor("MCU.v", 574, 326); // ce (w, ck)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 120 seconds
+selectCodeEditor("MCU.v", 629, 232); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 604, 186); // ce (w, ck)
+// Elapsed time: 36 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_0;"); // l (aQ, ck)
+selectComboBox(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_0;", 1); // aQ (aI, ck)
+// Elapsed time: 25 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_0;"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 306, 26); // ce (w, ck)
+selectCodeEditor("MCU.v", 306, 26, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 318, 27); // ce (w, ck)
+selectCodeEditor("MCU.v", 519, 35); // ce (w, ck)
+selectCodeEditor("MCU.v", 308, 22, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 670, 429); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 503, 448); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 350, 326); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b1_0;"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 599, 562); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 791, 570); // ce (w, ck)
+selectCodeEditor("MCU.v", 569, 568); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_1;"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 634, 680); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 800, 512); // ce (w, ck)
+selectCodeEditor("MCU.v", 576, 508); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// C (ck): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 6, true); // M (C) - Node
+expandTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 6); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Code Completion]", 7, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Syntax Checking]", 8, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false); // M (C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// [GUI Memory]: 117 MB (+3538kb) [24:53:35]
+// [GUI Memory]: 128 MB (+5125kb) [24:53:35]
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// S (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (ck)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectComboBox(PAResourceQtoS.SettingsThemePanel_SELECT_COLORS_AND_FONT_THAT_HAVE, "Vivado Light Theme", 1); // ds (dp, C)
+selectComboBox(PAResourceQtoS.SettingsThemePanel_SELECT_COLORS_AND_FONT_THAT_HAVE, "Vivado Default Theme", 0); // ds (dp, C)
+selectButton(PAResourceQtoS.SettingsThemePanel_SAVE_AS, "Save As..."); // a (dp, C)
+// df (C): Save Theme As: addNotify
+setText(RDIResource.AbstractSaveAsDialog_NAME, "Dark_Theme", true); // X (Q, df)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (df)
+dismissDialog("Save Theme As"); // df (C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Verilog]", 11, false); // M (C)
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// Tcl Message: update_ip_catalog 
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false); // M (C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 94, 440); // ce (w, ck)
+selectCodeEditor("MCU.v", 328, 435, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Verilog]", 11, false); // M (C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Comments", 1); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// Tcl Message: update_ip_catalog 
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Doc Comments", 2); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", true); // g (C): TRUE
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", false); // g (C): FALSE
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", true); // g (C): TRUE
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", false); // g (C): FALSE
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", true); // g (C): TRUE
+selectCheckBox(RDIResource.HStylePanel_CHECK_TO_MAKE_FONT_BOLD, "Bold", false); // g (C): FALSE
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Strings", 3); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Radix Integers", 4); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Strings", 3); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Label", 5); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Keywords", 6); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// Tcl Message: update_ip_catalog 
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Compiler Directives", 7); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "System Tasks/Functions", 8); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Comments", 1); // aO (aN, C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Normal", 0); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Elapsed time: 24 seconds
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 156, 377); // ce (w, ck)
+selectCodeEditor("MCU.v", 434, 379); // ce (w, ck)
+selectCodeEditor("MCU.v", 434, 397); // ce (w, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// C (ck): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Syntax Checking]", 8, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Code Completion]", 7, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Code Completion]", 7, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Syntax Checking]", 8, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Code Completion]", 7, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Syntax Checking]", 8, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Tabs]", 9, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Tabs]", 9, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Verilog]", 11, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false, false, false, false, true, false); // M (C) - Popup Trigger
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// [GUI Memory]: 135 MB (+1183kb) [24:57:54]
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// [GUI Memory]: 143 MB (+529kb) [24:57:57]
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 260, 387); // ce (w, ck)
+selectCodeEditor("MCU.v", 260, 348); // ce (w, ck)
+selectCodeEditor("MCU.v", 491, 356); // ce (w, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// C (ck): Settings: addNotify
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// [GUI Memory]: 151 MB (+1487kb) [24:58:11]
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 200, 304); // ce (w, ck)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 286, 303); // ce (w, ck)
+selectCodeEditor("MCU.v", 286, 312); // ce (w, ck)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 254, 325); // ce (w, ck)
+selectCodeEditor("MCU.v", 335, 298); // ce (w, ck)
+selectCodeEditor("MCU.v", 281, 306); // ce (w, ck)
+selectCodeEditor("MCU.v", 319, 371); // ce (w, ck)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 283, 338); // ce (w, ck)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// [GUI Memory]: 162 MB (+2841kb) [24:58:43]
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 280, 379); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 262, 230); // ce (w, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_1;"); // l (aQ, ck)
+// [GUI Memory]: 177 MB (+7845kb) [24:59:22]
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "{io_rd, io_wr} = 2'b0_1;"); // l (aQ, ck)
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l (aQ, ck)
+selectCodeEditor("MCU.v", 540, 236); // ce (w, ck)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aI, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("MCU.v", 238, 389); // ce (w, ck)
+selectCodeEditor("MCU.v", 429, 392); // ce (w, ck)
+selectCodeEditor("MCU.v", 569, 390); // ce (w, ck)
+selectCodeEditor("MCU.v", 570, 476); // ce (w, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// C (ck): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Tabs]", 9, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Syntax Checking]", 8, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Code Completion]", 7, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Tabs]", 9, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Tabs]", 9, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Verilog]", 11, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Verilog]", 11, false); // M (C)
+selectList(RDIResource.HStyleListPanel_LIST_OF_STYLE_NAMES, "Strings", 3); // aO (aN, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// [GUI Memory]: 189 MB (+3191kb) [25:00:12]
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// Tcl Message: update_ip_catalog 
+selectCodeEditor("MCU.v", 341, 391); // ce (w, ck)
+selectCodeEditor("MCU.v", 545, 396); // ce (w, ck)
+selectCodeEditor("MCU.v", 549, 393); // ce (w, ck)
+selectCodeEditor("MCU.v", 540, 372); // ce (w, ck)
+// Run Command: PAResourceCommand.PACommandNames_PRINT
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 64 MB. Current time: 4/11/19 8:35:32 PM PDT
+// [Engine Memory]: 676 MB (+2397kb) [25:00:29]
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // V (aj, Popup.HeavyWeightWindow)
+selectCodeEditor("MCU.v", 287, 439); // ce (w, ck)
+selectCodeEditor("MCU.v", 244, 396); // ce (w, ck)
+selectCodeEditor("MCU.v", 477, 391); // ce (w, ck)
+selectCodeEditor("MCU.v", 541, 400); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 301, 306); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 283, 414); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 282, 419); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 278, 483); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 203, 592); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 356, 588); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 475, 570); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 298, 354); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 288, 426); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 394, 315); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 374, 332); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 283, 304); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 200, 218); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 160, 190); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 204, 208); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 412, 187); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 296, 231); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 29 seconds
+selectCodeEditor("Integer_Datapath.v", 200, 135); // ce (w, ck)
+// Elapsed time: 51 seconds
+selectCodeEditor("Integer_Datapath.v", 368, 422); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 306, 316); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 307, 276); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 374, 263, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("Integer_Datapath.v", 440, 276); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 294, 299); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 391, 524); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// C (ck): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, General]", 0, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Simulation]", 1, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Project]", 0, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Colors]", 17, true); // M (C) - Node
+selectButton((HResource) null, "Hierarchy View"); // h (Q, C)
+selectTable(PAResourceQtoS.SettingsColorsHierarchyPage_HIGHLIGHT_COLORS_TABLE, "Background ; java.awt.Color[r=255,g=255,b=255]", 0, "java.awt.Color[r=255,g=255,b=255]", 1); // s (O, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+typeControlKey(null, null, 'z');
+selectTable(PAResourceQtoS.SettingsColorsHierarchyPage_HIGHLIGHT_COLORS_TABLE, "Background ; java.awt.Color[r=128,g=128,b=128]", 0, "java.awt.Color[r=128,g=128,b=128]", 1); // s (O, C)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Colors, Schematic]", 10, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Colors, Waveform]", 11, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Colors, Histogram Chart]", 12, false); // M (C)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Strategies]", 23, true); // M (C) - Node
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Colors]", 8, true); // M (C) - Node
+selectButton((HResource) null, "Hierarchy View"); // h (Q, C)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (C)
+dismissDialog("Settings"); // C (ck)
+selectCodeEditor("Integer_Datapath.v", 577, 230); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 374, 149); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 366, 335); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("Integer_Datapath.v", 174, 351); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 364, 344); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 39 seconds
+selectCodeEditor("Integer_Datapath.v", 380, 238); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 440, 237); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 157, 425); // ce (w, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("Integer_Datapath.v", 379, 625); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 381, 445); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 406, 530); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 325 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B (E, ck)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B (E, ck)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("MIPS_CPU.v", 339, 300); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MIPS_CPU.v", 338, 301); // ce (w, ck)
+// Elapsed time: 467 seconds
+selectCodeEditor("MIPS_CPU.v", 361, 341); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+selectCodeEditor("MCU.v", 227, 510); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 543); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 214, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 281, 565); // ce (w, ck)
+selectCodeEditor("MCU.v", 412, 565); // ce (w, ck)
+selectCodeEditor("MCU.v", 520, 550); // ce (w, ck)
+selectCodeEditor("MCU.v", 542, 540); // ce (w, ck)
+selectCodeEditor("MCU.v", 295, 562); // ce (w, ck)
+selectCodeEditor("MCU.v", 594, 530); // ce (w, ck)
+// [GUI Memory]: 200 MB (+1656kb) [25:21:08]
+selectCodeEditor("MCU.v", 282, 294); // ce (w, ck)
+selectCodeEditor("MCU.v", 209, 301); // ce (w, ck)
+selectCodeEditor("MCU.v", 234, 291); // ce (w, ck)
+selectCodeEditor("MCU.v", 230, 278); // ce (w, ck)
+selectCodeEditor("MCU.v", 404, 277); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 568, 534); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_REPLACE_IN_FILES, "Replace in Files..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_REPLACE_IN_FILES
+// Replace in Files: addNotify
+selectComboBox("pa.FindAndReplaceAllDialog_FIND_COMBO_BOX", "{D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000;", -1); // JComboBox (r, q)
+// Elapsed time: 22 seconds
+selectComboBox("pa.FindAndReplaceAllDialog_FIND_COMBO_BOX", "{D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000;", -1); // JComboBox (r, q)
+selectComboBox("pa.FindAndReplaceAllDialog_REPLACE_COMBO_BOX", "{D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 9'b0_00_00_0_000;", -1); // JComboBox (r, q)
+selectButton(PAResourceEtoH.FindAndReplaceAllDialog_FIND, "Find"); // v (q)
+// k (ck): Text Changed: addNotify
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_YES, "Yes"); // a (k)
+// TclEventType: DG_GRAPH_STALE
+// bx (ck):  Find in Files : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Text Changed"); // k (ck)
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 68 MB. Current time: 4/11/19 8:57:10 PM PDT
+// 'e' command handler elapsed time: 28 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 69 MB. Current time: 4/11/19 8:57:11 PM PDT
+dismissDialog("Find in Files"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceEtoH.FindInFilesView_REPLACE_ALL_OCCURRENCES_IN_ALL_FILES, "Replace All"); // a (N, ck)
+selectCodeEditor("MCU.v", 369, 297); // ce (w, ck)
+selectCodeEditor("MCU.v", 532, 536); // ce (w, ck)
+selectCodeEditor("MCU.v", 557, 531); // ce (w, ck)
+selectCodeEditor("MCU.v", 445, 460); // ce (w, ck)
+selectCodeEditor("MCU.v", 505, 460); // ce (w, ck)
+selectCodeEditor("MCU.v", 523, 467); // ce (w, ck)
+selectCodeEditor("MCU.v", 480, 390); // ce (w, ck)
+selectCodeEditor("MCU.v", 540, 389); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 302, 564); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 427, 387); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 432, 391); // ce (w, ck)
+selectCodeEditor("MCU.v", 489, 390); // ce (w, ck)
+selectCodeEditor("MCU.v", 427, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 485, 529); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("MCU.v", 430, 551); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 490, 552); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("MCU.v", 430, 517); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 492, 507); // ce (w, ck)
+selectCodeEditor("MCU.v", 431, 478); // ce (w, ck)
+selectCodeEditor("MCU.v", 484, 478); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 31 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "8'b"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 436, 424); // ce (w, ck)
+selectCodeEditor("MCU.v", 432, 386); // ce (w, ck)
+selectCodeEditor("MCU.v", 435, 536); // ce (w, ck)
+selectCodeEditor("MCU.v", 435, 425); // ce (w, ck)
+selectCodeEditor("MCU.v", 434, 653); // ce (w, ck)
+selectCodeEditor("MCU.v", 432, 424); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 432, 610); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 432, 421); // ce (w, ck)
+selectCodeEditor("MCU.v", 428, 598); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 430, 479); // ce (w, ck)
+selectCodeEditor("MCU.v", 432, 497); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("MCU.v", 432, 481); // ce (w, ck)
+selectCodeEditor("MCU.v", 435, 424); // ce (w, ck)
+selectCodeEditor("MCU.v", 434, 660); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 433, 527); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 441, 536); // ce (w, ck)
+selectCodeEditor("MCU.v", 442, 696); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 434, 690); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 441, 424); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("MCU.v", 360, 249); // ce (w, ck)
+// Elapsed time: 43 seconds
+selectCodeEditor("MCU.v", 33, 655); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 482); // ce (w, ck)
+selectCodeEditor("MCU.v", 228, 244); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 37 seconds
+selectCodeEditor("MCU.v", 214, 74); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("MCU.v", 238, 346); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 554, 331); // ce (w, ck)
+selectCodeEditor("MCU.v", 182, 412); // ce (w, ck)
+selectCodeEditor("MCU.v", 242, 460); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("MCU.v", 110, 460); // ce (w, ck)
+selectCodeEditor("MCU.v", 109, 485); // ce (w, ck)
+selectCodeEditor("MCU.v", 106, 465); // ce (w, ck)
+selectCodeEditor("MCU.v", 33, 461); // ce (w, ck)
+selectCodeEditor("MCU.v", 187, 444); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 376, 444); // ce (w, ck)
+selectCodeEditor("MCU.v", 235, 406); // ce (w, ck)
+selectCodeEditor("MCU.v", 209, 472); // ce (w, ck)
+selectCodeEditor("MCU.v", 102, 516); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 338, 254); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 122 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l (aQ, ck)
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "9'b0_00_00"); // l (aQ, ck)
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "9'b0_00_00_"); // l (aQ, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // aa (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_REPLACE_IN_FILES, "Replace in Files..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_REPLACE_IN_FILES
+// Replace in Files: addNotify
+// Elapsed time: 11 seconds
+selectComboBox("pa.FindAndReplaceAllDialog_FIND_COMBO_BOX", "9'b0_00_00_", -1); // JComboBox (r, q)
+selectComboBox("pa.FindAndReplaceAllDialog_REPLACE_COMBO_BOX", "{D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 9'b0_00_00_0_000;", -1); // JComboBox (r, q)
+selectButton(PAResourceEtoH.FindAndReplaceAllDialog_FIND, "Find"); // v (q)
+// bx (ck):  Find in Files : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 71 MB. Current time: 4/11/19 9:06:56 PM PDT
+// 'e' command handler elapsed time: 12 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 94 MB. Current time: 4/11/19 9:06:56 PM PDT
+dismissDialog("Find in Files"); // bx (ck)
+selectButton(PAResourceEtoH.FindInFilesView_REPLACE_ALL_OCCURRENCES_IN_ALL_FILES, "Replace All"); // a (N, ck)
+selectCodeEditor("MCU.v", 264, 292); // ce (w, ck)
+selectCodeEditor("MCU.v", 369, 256); // ce (w, ck)
+selectCodeEditor("MCU.v", 526, 296); // ce (w, ck)
+selectCodeEditor("MCU.v", 441, 250); // ce (w, ck)
+selectCodeEditor("MCU.v", 221, 302); // ce (w, ck)
+selectCodeEditor("MCU.v", 224, 359); // ce (w, ck)
+selectCodeEditor("MCU.v", 240, 381); // ce (w, ck)
+selectCodeEditor("MCU.v", 346, 370); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "9'b"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 442, 295); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 448, 535); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 438, 537); // ce (w, ck)
+selectCodeEditor("MCU.v", 439, 474); // ce (w, ck)
+selectCodeEditor("MCU.v", 442, 476); // ce (w, ck)
+selectCodeEditor("MCU.v", 438, 423); // ce (w, ck)
+selectCodeEditor("MCU.v", 437, 590); // ce (w, ck)
+selectCodeEditor("MCU.v", 455, 244); // ce (w, ck)
+selectCodeEditor("MCU.v", 486, 692); // ce (w, ck)
+selectCodeEditor("MCU.v", 438, 684); // ce (w, ck)
+selectCodeEditor("MCU.v", 499, 688); // ce (w, ck)
+selectCodeEditor("MCU.v", 437, 688); // ce (w, ck)
+selectCodeEditor("MCU.v", 504, 686); // ce (w, ck)
+selectCodeEditor("MCU.v", 259, 352); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 448, 334); // ce (w, ck)
+selectCodeEditor("MCU.v", 278, 411); // ce (w, ck)
+selectCodeEditor("MCU.v", 262, 452); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("MIPS_CPU.v", 282, 321); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 190, 322); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 272, 290); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 364, 556); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Integer_Datapath.v", 223, 295); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 282, 264); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 242, 371); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 154, 370); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 255, 384); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 205, 364); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Integer_Datapath.v", 329, 374); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("Integer_Datapath.v", 332, 426); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 426, 426); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 321, 418); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 318, 458); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 341, 369); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 289, 386); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 384, 316); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 515, 394); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Integer_Datapath.v", 448, 477); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Integer_Datapath.v", 454, 472); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("MCU.v", 298, 180); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("MIPS_CPU.v", 436, 416); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MIPS_CPU.v", 499, 479); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 568, 672); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectCodeEditor("MIPS_CPU.v", 410, 562); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MIPS_CPU.v", 258, 171); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false); // B (D, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("MCU.v", 549, 437); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 46 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Integer_Datapath.v", 409, 386); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 106, 410); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 342, 491); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 496, 464); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("Integer_Datapath.v", 332, 387); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 368, 280); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 382, 300); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Integer_Datapath.v", 372, 275); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 359, 297); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 328, 316); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 394, 336); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 121 seconds
+selectCodeEditor("Integer_Datapath.v", 469, 276); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 28 seconds
+selectCodeEditor("Integer_Datapath.v", 617, 458); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 97, 426); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 58 seconds
+selectCodeEditor("Integer_Datapath.v", 547, 118); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Integer_Datapath.v", 373, 249); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 338, 252); // ce (w, ck)
+// Elapsed time: 44 seconds
+selectCodeEditor("Integer_Datapath.v", 598, 246); // ce (w, ck)
+// Elapsed time: 46 seconds
+selectCodeEditor("Integer_Datapath.v", 280, 321); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 424, 343); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 588, 331); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 551, 375); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS_CPU.v", 4); // k (j, ck)
+selectCodeEditor("MIPS_CPU.v", 518, 303); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 473, 224); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MIPS_CPU.v", 600, 595); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MIPS_CPU.v", 546, 628); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 584, 683); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 523, 684); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 520, 677); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 188, 694); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("MIPS_CPU.v", 556, 482); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 537, 620); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 380, 690); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 195, 687); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 302, 592); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 375, 472); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+selectCodeEditor("MCU.v", 284, 219); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("MCU.v", 230, 422); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 460, 281); // ce (w, ck)
+selectCodeEditor("MCU.v", 279, 427); // ce (w, ck)
+selectCodeEditor("MCU.v", 127, 456); // ce (w, ck)
+selectCodeEditor("MCU.v", 363, 458); // ce (w, ck)
+selectCodeEditor("MCU.v", 138, 460); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Integer_Datapath.v", 416, 499); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Integer_Datapath.v", 438, 504); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 463, 618); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "flags"); // l (aQ, ck)
+selectCodeEditor("Integer_Datapath.v", 531, 404); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 422, 425); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 449, 392); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Integer_Datapath.v", 442, 411); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 61 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS_CPU.v", 4); // k (j, ck)
+selectCodeEditor("MIPS_CPU.v", 379, 294); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 558, 463); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 640, 459); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 508, 458); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 202, 476); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("MIPS_CPU.v", 149, 478); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 95, 472); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 127, 479); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 154, 478); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 174, 696); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 184, 482); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 368, 473); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 174, 688); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 365, 692); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+// Elapsed time: 45 seconds
+selectCodeEditor("MCU.v", 414, 241); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("MCU.v", 405, 370); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 218, 361); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 318, 386); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 355, 455); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 615, 474); // ce (w, ck)
+// Elapsed time: 295 seconds
+selectCodeEditor("Integer_Datapath.v", 376, 277); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 381, 258); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 380, 258, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Integer_Datapath.v", 380, 258); // ce (w, ck)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aI, ck)
+selectCodeEditor("Integer_Datapath.v", 498, 258); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 691 MB. GUI used memory: 71 MB. Current time: 4/11/19 9:36:57 PM PDT
+// Elapsed time: 863 seconds
+selectCodeEditor("Integer_Datapath.v", 178, 338); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 323, 244); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+selectCodeEditor("MCU.v", 309, 405); // ce (w, ck)
+selectCodeEditor("MCU.v", 258, 301); // ce (w, ck)
+// Elapsed time: 380 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "intr_1"); // l (aQ, ck)
+selectCodeEditor("MCU.v", 132, 375); // ce (w, ck)
+selectCodeEditor("MCU.v", 120, 351); // ce (w, ck)
+selectCodeEditor("MCU.v", 307, 328); // ce (w, ck)
+selectCodeEditor("MCU.v", 277, 362); // ce (w, ck)
+selectCodeEditor("MCU.v", 270, 362); // ce (w, ck)
+selectCodeEditor("MCU.v", 250, 354); // ce (w, ck)
+selectCodeEditor("MCU.v", 428, 372); // ce (w, ck)
+selectCodeEditor("MCU.v", 317, 368); // ce (w, ck)
+selectCodeEditor("MCU.v", 384, 606); // ce (w, ck)
+selectCodeEditor("MCU.v", 450, 603, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 17 seconds
+selectCodeEditor("MCU.v", 537, 547); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 172, 561); // ce (w, ck)
+selectCodeEditor("MCU.v", 237, 461); // ce (w, ck)
+selectCodeEditor("MCU.v", 280, 461); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 434, 344); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 394, 315); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 297, 422); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 246, 427); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 432, 431); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 394, 424); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 356, 455); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 379, 442); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 586, 442); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 428, 154); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 356, 242); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 325, 423); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 115, 388); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 55, 584); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 33, 402); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 32, 289); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 99, 293); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 334, 371); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 273, 373); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 152, 352); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 178, 346); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 234, 344); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 376, 366); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Integer_Datapath.v", 554, 348); // ce (w, ck)
+typeControlKey((HResource) null, "Integer_Datapath.v", 'c'); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 600, 368, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "Integer_Datapath.v", 'v'); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 135, 318); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 26, 309); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("Integer_Datapath.v", 123, 292); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 32, 329); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 228, 300); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 540, 371); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 283, 364); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 306, 412); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 369, 417); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 355, 312); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 322, 316); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("Integer_Datapath.v", 354, 272); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 352, 320); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 436, 281); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("Integer_Datapath.v", 247, 476); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Integer_Datapath.v", 259, 602); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Integer_Datapath.v", 403, 556); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 404, 564); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Integer_Datapath.v", 470, 532); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 636, 528); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 70 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MCU.v", 1); // k (j, ck)
+selectCodeEditor("MCU.v", 523, 251); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("MCU.v", 118, 66); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
