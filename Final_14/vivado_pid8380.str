@@ -4878,3 +4878,9 @@ selectCodeEditor("IO.v", 185, 465); // ce (w, ck)
 selectCodeEditor("IO.v", 253, 460); // ce (w, ck)
 selectCodeEditor("IO.v", 95, 476); // ce (w, ck)
 typeControlKey((HResource) null, "IO.v", 'c'); // ce (w, ck)
+// Elapsed time: 141 seconds
+selectCodeEditor("IO.v", 395, 358); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

@@ -31,17 +31,6 @@ module IO(clk, intr, inta, io_address, io_d_in, io_out, io_rd, io_wr, io_cs);
     reg intr;
     integer i;
     
-    //interrupt generator
-    initial //generate interrupt at random time
-      begin
-        //Display time in nanoseconds
-        $timeformat(-9, 1, " ps", 9);
-        #200
-        intr = 1'b1;
-        @(posedge inta);//wait for interrupt acknowledge
-        intr = 1'b0;
-      end
-    
     //IO Memory Write - control by io signal
     always @(posedge clk) 
         if(io_wr & io_cs)
