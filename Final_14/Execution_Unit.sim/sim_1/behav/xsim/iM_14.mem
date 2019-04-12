@@ -39,7 +39,6 @@ ac ef 00 00  //            sw   $15, 0($07)      # ST  [R07], R15
                          //************************************************
 3c 10 10 01  // isr:       lui    $16, 0x1001      #load destination IO address
 36 10 00 c0  //            ori    $16, 0x00C0      #  0x100100C0 into r16
-7B A0 00 00  //            reti //added just for debugging
 3c 11 80 00  //            lui    $17, 0x8000      #initialize the pattern of
 36 31 ff ff  //            ori    $17, 0xFFFF      #  0x8000FFFF into r17
 20 12 00 10  //            addi   $18, $0, 0x10    #loop counter set to 16

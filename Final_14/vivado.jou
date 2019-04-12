@@ -121,3 +121,12 @@ launch_simulation
 source CPU_Test_Module_13.tcl
 close_sim
 launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 1 us
+close_sim
