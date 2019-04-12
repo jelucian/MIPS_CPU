@@ -27,13 +27,15 @@
  *       1.2 Increased size of DA_sel to select between more inputs to the
  *           DA_mux
  *
+ *       1.3 Added mux to D_in input controlled by io_rd signal that selects
+ *           between io_out and dmem_out
  *
  *******************************************************************************/
 module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                         DT, T_Sel, C, V, N, Z, DY, PC_in, Y_Sel, ALU_OUT, D_OUT,
-                        DA_Sel, shamt, io_rd, io_out);
+                        DA_Sel, shamt, io_rd, io_out, stack);
     
-    input         clk, reset, HILO_ld, D_En, T_Sel, io_rd;
+    input         clk, reset, HILO_ld, D_En, T_Sel, io_rd, stack;
     input [ 1:0]  DA_Sel;
     input [ 2:0]  Y_Sel;
     input [ 4:0]  S_Addr, FS, D_Addr, T_Addr, shamt;
@@ -43,7 +45,7 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
     output      [31:0] D_OUT;
     output wire [31:0] ALU_OUT;
     
-    wire [ 4:0] DA_mux;
+    wire [ 4:0] DA_mux, stack_mux;
     
     wire [31:0] REG_FILE_S, REG_FILE_T, T_MUX,
                 Y_hi, Y_lo, HI_out, LO_out,
@@ -70,7 +72,11 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                                          PC_in       ;
     
     //IO-Mux - selects between io memory out (1) and data memory (0)
-    assign mem_in = (io_rd) ? io_out : DY;                                             
+    assign mem_in = (io_rd) ? io_out : DY;          
+    
+    //stack mux selects between S_Addr input and the stack pointer as the     
+    //output to the RS register
+    assign stack_mux = (stack) ? 5'h1D : S_Addr;
                                          
     //module reg32(clk, reset, ld, D, Q);
     reg32      HI(.clk(clk), .reset(reset), .ld(HILO_ld), 
@@ -95,7 +101,7 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
 
     //module regfile32(clk, reset, S, T, D, S_Addr, T_Addr, D_Addr, D_En);
     regfile32 REG_FILE(.clk(clk), .reset(reset), .S(REG_FILE_S),
-                       .T(REG_FILE_T), .D(ALU_OUT), .S_Addr(S_Addr),
+                       .T(REG_FILE_T), .D(ALU_OUT), .S_Addr(stack_mux),
                        .T_Addr(T_Addr),.D_Addr(DA_mux), .D_En(D_En) );
                                 
 endmodule

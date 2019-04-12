@@ -11,9 +11,9 @@
  *           need to add memory unit as well
  *
  *******************************************************************************/
-module IO(clk, intr, inta, io_address, io_d_in, io_out, io_rd, io_wr);
+module IO(clk, intr, inta, io_address, io_d_in, io_out, io_rd, io_wr, io_cs);
     //interrupt inputs/outputs
-    input clk, inta, io_rd, io_wr;
+    input clk, inta, io_rd, io_wr, io_cs;
     output intr;
     
     //memory inputs/outputs
@@ -44,10 +44,10 @@ module IO(clk, intr, inta, io_address, io_d_in, io_out, io_rd, io_wr);
     
     //IO Memory Write - control by io signal
     always @(posedge clk) 
-        if(io_wr)
+        if(io_wr & io_cs)
             M[io_address[9:0]] = io_d_in; //write to memory every clock pulse
     //IO Memory Read - 9 LSB's
-    assign io_out = (io_rd) ? M[io_address[9:0]] : 32'hz;//asynchronous read
+    assign io_out = (io_rd & io_cs) ? M[io_address[9:0]] : 32'hz;//asynchronous read
     
 
     

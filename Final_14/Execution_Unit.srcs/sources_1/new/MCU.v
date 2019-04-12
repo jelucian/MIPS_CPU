@@ -25,11 +25,16 @@
  *           begin written/read and to control dataflow into the D_in register
  *           by selecting between io_out and dmem_out
  *
+ *       1.5 Added IO module chip select signal, io_cs, and a stack control 
+ *           signal that chooses the output of the regfile in the IDP
+ *
+ *       1.6 Expanded interrupt and return from interrupt states
+ *
  *******************************************************************************
  *  Control Word Format
  *  @(negedge sys_clk)
  *  {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
- *  {im_cs, im_rd, im_wr} = 3'b0_0_0;
+ *  {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
  *  {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
  *  {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
  *  {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -38,13 +43,14 @@
  *******************************************************************************/
 module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
            ir_ld, im_cs, im_rd, im_wr, D_En, DA_sel, T_sel, HILO_ld, Y_sel,
-           dm_cs, dm_rd, dm_wr, FS, S_Addr, T_Addr, D_Addr, shamt, io_rd, io_wr);
+           dm_cs, dm_rd, dm_wr, FS, S_Addr, T_Addr, D_Addr, shamt, io_rd, io_wr,
+           io_cs, stack);
            
     input        sys_clk, reset, intr, c, n, z, v;
     input [31:0] IR;
     //control signals as outputs
     output reg       pc_ld, pc_inc, ir_ld, im_cs, im_rd, im_wr, D_En, T_sel, 
-                     HILO_ld, dm_cs, dm_rd, dm_wr, int_ack;
+                     HILO_ld, dm_cs, dm_rd, dm_wr, int_ack, io_cs, stack;
     output reg [1:0] pc_sel, DA_sel;
     output reg [2:0] Y_sel;
     output reg [4:0] FS, S_Addr, T_Addr, D_Addr, shamt;
@@ -90,15 +96,13 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
     
     //Control Unit Finite State Machine
     always @ (negedge sys_clk, posedge reset) begin
-     //@(negedge sys_clk);
      if(reset)
         begin
           //reset state control word
-          //@(negedge sys_clk)
           {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-          {im_cs, im_rd, im_wr} = 3'b0_0_0;
+          {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
           {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sp_init_;
-          {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;  {io_rd, io_wr} = 2'b0_0;
+          {dm_cs, dm_rd, dm_wr} = 3'b0_0_0;  {io_cs, io_rd, io_wr} = 3'b0_0_0;
           {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
           state = RESET; {IE, N, Z, V, C} = {IE, N, Z, V, C};
         end
@@ -110,10 +114,10 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               begin//new interrupt pending
                 //control word to "deassert" everyting
                 {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-                {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
-                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
-                state = INTR_1; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+                state = INTR_1; {IE, N, Z, V, C} = {IE, N, Z, V, C}; 
                 $display("T = %t | State = FETCH  | Next State = INTR_1 | PC = %h | IR = %h",
                          $time, CPU_IU.PC_out, CPU_IU.IR_out);
               end
@@ -123,9 +127,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 //IR <- iM[PC]; PC <- PC + 4
                 //@(negedge sys_clk)
                 {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_1_1; 
-                {im_cs, im_rd, im_wr} = 3'b1_1_0;
+                {im_cs, im_rd, im_wr} = 3'b1_1_0; stack = 1'b0;
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
-                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
+                {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
                 {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
                 state = DECODE; {IE, N, Z, V, C} = {IE, N, Z, V, C};
                 $display("T = %t | State = FETCH  | Next State = DECODE | PC = %h | IR = %h",
@@ -134,13 +138,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             
           RESET:
             begin
-                //PC <- 32'h0
-                //$sp <- ALU_Out(3FC)
-                //int_ack<-0
-                //{IE, N, Z, V, C} <- 5'b0
-                //@(negedge sys_clk)
+                //PC <- 32'h0, Reg($sp) <- ALU_Out(3FC), int_ack<-0, {IE, N, Z, V, C} <- 5'b0
                 {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-                {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
                 {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_11_0_0_010; FS = no_op_;
                 {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
                 {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -156,7 +156,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 //R-Type Instruction or BEQ or BNE
                   begin//RS <- $rs; RT <- $rt
                     {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-                    {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                    {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
                     {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
                     {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
                     {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -196,7 +196,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                   begin//I or J type format
                     //RS <- $rs; RT <- DT(se_16)
                     {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-                    {im_cs, im_rd, im_wr} = 3'b0_0_0;
+                    {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
                     {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_1_0_000; FS = no_op_;
                     {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
                     {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -228,9 +228,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           ADD:
             begin
               //ALU_OUT <- RS($rs) + RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -242,9 +241,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           ADDU:
             begin
               //ALU_OUT <- RS($rs) + RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = addu_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -256,9 +254,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           AND:
             begin
               //ALU_OUT <- RS($rt) & RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = and_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -270,9 +267,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           DIV:
             begin
               //HI <- RS($rs) % RT($rt), LO <- RS($rs) / RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_1_000; FS = div_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -280,13 +276,12 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               $display("T = %t | State = DIV    | Next State = FETCH  | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
-          //PC <- RS($rs)  
+
           JR_1:
             begin
               //ALU_OUT <- RS($rs)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = pass_s_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -298,9 +293,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           JR_2:
             begin
               //PC <- ALU_OUT($rs)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -312,9 +306,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           MFHI:
             begin
               //Reg($rd) <- HI
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_00_0_0_100; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -326,9 +319,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           MFLO:
             begin
               //Reg($rd) <- LO
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_00_0_0_011; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -340,9 +332,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           MULT:
             begin
               //{HI, LO} <- RS($rs) * RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_1_000; FS = mult_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -354,9 +345,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           NOR:
             begin
               //ALU_OUT <- !( RS($rs) | RT($rt) )
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = nor_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -368,9 +358,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           OR:
             begin
               //ALU_OUT <- RS($rs) | RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = or_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -382,9 +371,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SETIE:
             begin
               //IE <- 1'b1
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -396,9 +384,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SLL:
             begin
               //ALU_OUT <- RT($rt) << shamt
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sll_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -413,9 +400,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               //    ALU_OUT <- 1
               //else
               //    ALU_OUT <- 0
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = slt_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -430,9 +416,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               //    ALU_OUT <- 1
               //else
               //    ALU_OUT <- 0
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sltu_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -444,9 +429,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SRA:
             begin
               //ALU_OUT <- RT($rt) >> shamt
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sra_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -458,9 +442,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SRL:
             begin
               //ALU_OUT <- RT($rt) >> shamt
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = srl_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -472,9 +455,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SUB:
             begin
               //ALU_OUT <- RS($rs) - RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sub_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -486,9 +468,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SUBU:
             begin
               //ALU_OUT <- RS($rs) - RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = subu_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -500,9 +481,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           XOR:
             begin
               //ALU_OUT <- RS($rs) ^ RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = xor_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -514,9 +494,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           ADDI:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -528,9 +507,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           ANDI:
             begin
               //ALU_OUT <- RS($rs) & RT(se_16)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = andi_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -542,9 +520,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BEQ_1:
             begin
               //ALU_OUT <- RS($rs) - RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sub_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -556,11 +533,10 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BEQ_2:
             begin
               //if(Z == 1) PC <- PC + {se_16[29:0], 2'b00}
-             // @(negedge sys_clk)
               pc_sel = 2'b00;//PC plus branch offset
               pc_ld  = Z;
               { pc_inc, ir_ld} = 2'b0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -572,9 +548,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BLEZ_1:
             begin
               //ALU_OUT <- RS($rs), update flags register
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = pass_s_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -586,15 +561,14 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BLEZ_2:
             begin
               //if(Z = 1 | N = 1) PC <- PC + {se_16[29:0], 2'b00}
-              //@(negedge sys_clk)
                pc_sel = 2'b00;
                pc_ld  = (Z | N);
               {pc_inc, ir_ld} = 2'b0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = FETCH; {IE, N, Z, V, C} = {IE, n, z, v, c};
+              state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = BLEZ_2 | Next State = FETCH  | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end  
@@ -602,9 +576,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BNE_1:
             begin
               //ALU_OUT <- RS($rs) - RT($rt)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sub_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -616,10 +589,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BNE_2:
             begin
               //if( Z == 0) PC <- PC + {se_16[29:0], 2'b00}
-              //@(negedge sys_clk)
               pc_ld = ~Z;
               {pc_sel, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -631,9 +603,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BGTZ_1:
             begin
               //ALU_OUT <- RS($rs)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = pass_s_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -645,10 +616,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BGTZ_2:
             begin
               //if(Z != 0 & N != 0) PC <- PC + {SE_16{29:0}, 2'b00}
-              //@(negedge sys_clk)
                pc_sel = 2'b00;
                pc_ld  = (~Z & ~N);//must be non negative and not zero
-              {pc_inc, ir_ld} = 2'b0_0; 
+              {pc_inc, ir_ld} = 2'b0_0;  stack = 1'b0;
               {im_cs, im_rd, im_wr} = 3'b0_0_0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
@@ -661,9 +631,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           LUI:
             begin
               //ALU_OUT <- {RT[15:0], 16'h0}
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = lui_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -675,9 +644,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           LW_1:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -689,9 +657,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           LW_2:
             begin
               //D_in <- M[ALU_OUT($rs + se_16)]
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -703,9 +670,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           WB_lw:
             begin
               //Reg($rt) <- Din(M[$rs + se_16])
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_01_0_0_001; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -717,9 +683,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           ORI:
             begin
               //ALU_OUT <- RS($rs) | {16'h0, RT[15:0]}
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = ori_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -731,9 +696,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SLTI:
             begin
               //ALU_OUT <- (RS($rs) < RT(se_16)) ? 1 : 0
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = slt_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -745,9 +709,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SLTIU:
             begin
               //ALU_OUT <- (RS($rs) < RT(se_16)) ? 1 : 0
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = sltu_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -759,9 +722,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           SW:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16), RT <- $rt
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -773,9 +735,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           XORI:
             begin
               //ALU_OUT <- RS($rs) ^ RT(se_16)
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = xori_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -787,9 +748,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           J:
             begin
               //PC <- {PC[31:28], IR[25:0], 2'b00}
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b01_1_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -800,11 +760,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           
           JAL:
             begin
-              //PC <- {PC[31:28], IR[25:0], 2'b00}
-              //Reg($ra) <- PC
-            //  @(negedge sys_clk)
+              //PC <- {PC[31:28], IR[25:0], 2'b00}, Reg($ra) <- PC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b01_1_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -816,9 +774,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           INPUT_1:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16)
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -830,9 +787,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           INPUT_2:
             begin
               //D_in <- IO[ALU_OUT($rs + se_16) ]
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b1_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -844,9 +800,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           WB_INPUT:
             begin
               //Reg($rt) <- D_in
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_01_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -858,9 +813,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           OUTPUT_1:
             begin
               //ALU_OUT <- RS($rs) + RT(se_16), RT <- $rt
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = add_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -872,9 +826,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           OUTPUT_2:
             begin
               //IO[ ALU_OUT($rs + se_16) ] <- RT($rt)
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_1;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -886,9 +839,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           WB_alu:
             begin
               //R[rd] <- ALU_OUT
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -901,9 +853,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           WB_imm:
             begin
               //R[rt] <- ALU_OUT
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_01_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -915,9 +866,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           WB_mem:
             begin
               //M[ ALU_OUT($rs + se_16) ] <- RT($rt)
-             // @(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_0_1; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -929,9 +879,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           BREAK:
             begin
               $display("BREAK INSTRUCTION FETCHED %t", $time);
-             //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {IE, N, Z, V, C} = {IE, N, Z, V, C};
@@ -945,16 +894,14 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               $display("ILLEGAL OPCODE FETCH %t | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
-              //@(negedge sys_clk)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = 5'h0;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               {IE, N, Z, V, C} = {IE, N, Z, V, C};
               Dump_Reg; 
               Dump_dMem;
-              //Dump_PC_and_IR;
               $finish;
             end
           
@@ -962,7 +909,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- $sp
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -975,7 +922,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //ALU_OUT <- RS($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -988,7 +935,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //D_in <- dMem[ALU_OUT($sp)], RS <- Reg($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1001,7 +948,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //PC <- D_in, ALU_OUT <- RS($sp) - 4
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1014,7 +961,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //Reg($sp) <- ALU_OUT($sp - 4), D_in <- dMem[ALU_OUT($sp - 4)]
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1027,7 +974,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- Reg($sp - 4), Flags <- D_in
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1040,7 +987,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //ALU_OUT <- RS($sp - 4) - 4
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1053,7 +1000,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //Reg($sp) <- ALU_OUT ($sp-8)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1066,7 +1013,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- Reg($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1079,7 +1026,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //ALU_OUT <- RS($sp) + 4, RT <- PC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1092,7 +1039,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //dMem[ALU_OUT($sp+4)] <- RT(PC), Reg($sp) <- ALU_OUT($sp + 4)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1105,7 +1052,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- Reg($sp+4)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b1_10_0_0_000; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1118,7 +1065,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //ALU_OUT <- RS($sp+4) + 4, RT <- flags
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1131,7 +1078,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //dMem[ALU_OUT($sp + 8)] <- RT(flags), Reg($sp) <- ALU_OUT($sp + 8), ALU_OUT <- 0x3FC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1144,7 +1091,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //D_in <- dMem[ALU_OUT($sp + 8)]
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_010; FS = sp_init_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1157,7 +1104,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //PC <- D_in( dMem[0x3FC] ), int_ack <- 1
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 8'b0_00_0_0_001; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_rd, io_wr} = 2'b0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -1192,7 +1139,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
         $display("D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y");
         for(i = 32'h3C0; i < 12'h400; i = i + 4)
           begin
-             $display("d M e m [ %h ]   =   0x%h%h%h%h",i[11:0],
+             $display("d M e m [ %h ]   =   %h%h%h%h",i[11:0],
                       dMem.M[i  ], dMem.M[i+1], 
                       dMem.M[i+2], dMem.M[i+3] ); 
           end
@@ -1206,7 +1153,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
         $display("D i s p l a y i n g   C o n t e n t s   o f   I O   M e m o r y");
         for(i = 32'hC0; i < 12'h100; i = i + 4)
                   begin
-                     $display("i M e m [ %h ]   =   0x%h",i[9:0],IO.M[i[9:0]] ); 
+                     $display("i M e m [ %h ]   =   %h",i[9:0],IO.M[i[9:0]] ); 
                   end
     end
     endtask

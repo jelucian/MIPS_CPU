@@ -582,3 +582,562 @@ selectCodeEditor("MCU.v", 223, 474); // ce (w, ck)
 // [GUI Memory]: 108 MB (+98kb) [02:30:49]
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 32950257 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 46 MB. Current time: 4/11/19 7:23:25 AM PDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 236169 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 44 MB. Current time: 4/11/19 7:53:24 AM PDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 265926 ms. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 9275024 ms. Increasing delay to 7000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 44 MB. Current time: 4/11/19 10:55:59 AM PDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 590480 ms. Increasing delay to 8000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 45 MB. Current time: 4/11/19 11:25:59 AM PDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 365829 ms. Increasing delay to 9000 ms.
+// Elapsed time: 49241 seconds
+selectCodeEditor("MCU.v", 149, 352); // ce (w, ck)
+selectCodeEditor("MCU.v", 141, 352); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 142, 350); // ce (w, ck)
+selectCodeEditor("MCU.v", 145, 351); // ce (w, ck)
+selectCodeEditor("MCU.v", 171, 352); // ce (w, ck)
+selectCodeEditor("MCU.v", 171, 352, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 171, 352); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectCodeEditor("MCU.v", 226, 255); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("MCU.v", 113, 292); // ce (w, ck)
+selectCodeEditor("MCU.v", 140, 274); // ce (w, ck)
+selectCodeEditor("MCU.v", 110, 291); // ce (w, ck)
+selectCodeEditor("MCU.v", 112, 370); // ce (w, ck)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 28572886 ms. Increasing delay to 10000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 45 MB. Current time: 4/11/19 7:44:20 PM PDT
+// Elapsed time: 29796 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 4, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 77 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Instruction_Unit : CPU_IU (CPU_IU.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Instruction_Unit : CPU_IU (CPU_IU.v)]", 3, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("CPU_IU.v", 392, 347); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Integer_Datapath.v", 2); // k (j, ck)
+selectCodeEditor("Integer_Datapath.v", 245, 450); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 418, 173); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 247, 410); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 74 seconds
+selectCodeEditor("Integer_Datapath.v", 78, 162); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("Integer_Datapath.v", 47, 172); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 291, 174); // ce (w, ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("Integer_Datapath.v", 306, 590); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 621, 588); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Integer_Datapath.v", 212, 360); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 47, 293); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 452, 210); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 475, 254); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Integer_Datapath.v", 279, 478); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Integer_Datapath.v", 204, 404); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 377, 416, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("Integer_Datapath.v", 376, 416, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 47 seconds
+selectCodeEditor("Integer_Datapath.v", 250, 511); // ce (w, ck)
+selectCodeEditor("Integer_Datapath.v", 480, 672); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1); // B (D, ck)
+selectCodeEditor("MIPS_CPU.v", 428, 137); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 418, 86); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 406, 80); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 404, 74); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MIPS_CPU.v", 262, 613); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 425, 665); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 257, 446); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("MIPS_CPU.v", 264, 608); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MIPS_CPU.v", 160, 372); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 457, 307); // ce (w, ck)
+selectCodeEditor("MIPS_CPU.v", 379, 310); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 11); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 12); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v)]", 13, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v)]", 13, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("MIPS_CPU_TB01.v", 246, 352); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("MIPS_CPU_TB01.v", 196, 166); // ce (w, ck)
+selectCodeEditor("MIPS_CPU_TB01.v", 654, 431); // ce (w, ck)
+selectCodeEditor("MIPS_CPU_TB01.v", 660, 429); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v), io_mod : IO (IO.v)]", 16, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v), io_mod : IO (IO.v)]", 16, false, false, false, false, false, true); // B (D, ck) - Double Click
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("IO.v", 556, 264); // ce (w, ck)
+selectCodeEditor("IO.v", 324, 316); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("IO.v", 128, 536); // ce (w, ck)
+selectCodeEditor("IO.v", 207, 590); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v)]", 13, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, CPU_Test_Module_13 (MIPS_CPU_TB01.v)]", 13, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MIPS_CPU.v", 4); // k (j, ck)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), IDP : Integer_Datapath (Integer_Datapath.v)]", 7, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MIPS_CPU (MIPS_CPU.v), Control_Unit : MCU (MCU.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("MCU.v", 631, 249); // ce (w, ck)
+selectCodeEditor("MCU.v", 420, 317); // ce (w, ck)
+selectCodeEditor("MCU.v", 506, 396); // ce (w, ck)
+selectCodeEditor("MCU.v", 467, 211); // ce (w, ck)
+selectCodeEditor("MCU.v", 369, 207); // ce (w, ck)
+selectCodeEditor("MCU.v", 651, 215); // ce (w, ck)
+selectCodeEditor("MCU.v", 561, 210); // ce (w, ck)
+selectCodeEditor("MCU.v", 696, 217); // ce (w, ck)
+// Elapsed time: 60 seconds
+selectCodeEditor("MCU.v", 371, 162); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 46 MB. Current time: 4/11/19 8:14:21 PM PDT
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 556, 255); // ce (w, ck)
+selectCodeEditor("MCU.v", 638, 213); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 598, 312); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 573, 327); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("MCU.v", 638, 212); // ce (w, ck)
+selectCodeEditor("MCU.v", 359, 218); // ce (w, ck)
+selectCodeEditor("MCU.v", 612, 253); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 384, 170); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 614, 252); // ce (w, ck)
+selectCodeEditor("MCU.v", 676, 390); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 419, 330); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 390, 332); // ce (w, ck)
+selectCodeEditor("MCU.v", 579, 394); // ce (w, ck)
+selectCodeEditor("MCU.v", 550, 392); // ce (w, ck)
+selectCodeEditor("MCU.v", 166, 193); // ce (w, ck)
+selectCodeEditor("MCU.v", 166, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 166, 194); // ce (w, ck)
+selectCodeEditor("MCU.v", 164, 107); // ce (w, ck)
+selectCodeEditor("MCU.v", 82, 114); // ce (w, ck)
+selectCodeEditor("MCU.v", 82, 114, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 82, 114); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 296, 134); // ce (w, ck)
+selectCodeEditor("MCU.v", 478, 154); // ce (w, ck)
+selectCodeEditor("MCU.v", 540, 161); // ce (w, ck)
+selectCodeEditor("MCU.v", 632, 211); // ce (w, ck)
+selectCodeEditor("MCU.v", 479, 300); // ce (w, ck)
+selectCodeEditor("MCU.v", 670, 90); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 454, 392); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 612, 440); // ce (w, ck)
+selectCodeEditor("MCU.v", 576, 427); // ce (w, ck)
+selectCodeEditor("MCU.v", 542, 169); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 610, 425); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 415, 398); // ce (w, ck)
+selectCodeEditor("MCU.v", 509, 508); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'c'); // ce (w, ck)
+selectCodeEditor("MCU.v", 397, 466); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 438, 554); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 431, 395); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 387, 345); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 384, 328); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 386, 430); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 389, 536); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 374, 514); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 372, 489); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 379, 412); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 378, 506); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 377, 431); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 376, 408); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 379, 266); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 384, 420); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 380, 410); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 379, 388); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 158, 351); // ce (w, ck)
+selectCodeEditor("MCU.v", 158, 351, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 158, 351); // ce (w, ck)
+selectCodeEditor("MCU.v", 152, 308); // ce (w, ck)
+selectCodeEditor("MCU.v", 152, 308, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 152, 308); // ce (w, ck)
+selectCodeEditor("MCU.v", 168, 330); // ce (w, ck)
+selectCodeEditor("MCU.v", 168, 330, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 168, 330); // ce (w, ck)
+selectCodeEditor("MCU.v", 159, 404); // ce (w, ck)
+selectCodeEditor("MCU.v", 159, 404, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 159, 404); // ce (w, ck)
+selectCodeEditor("MCU.v", 154, 363); // ce (w, ck)
+selectCodeEditor("MCU.v", 154, 362, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 154, 362); // ce (w, ck)
+selectCodeEditor("MCU.v", 137, 72); // ce (w, ck)
+selectCodeEditor("MCU.v", 137, 72, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 137, 72); // ce (w, ck)
+selectCodeEditor("MCU.v", 149, 143); // ce (w, ck)
+selectCodeEditor("MCU.v", 149, 143, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 149, 143); // ce (w, ck)
+selectCodeEditor("MCU.v", 149, 143); // ce (w, ck)
+selectCodeEditor("MCU.v", 149, 143, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 149, 143); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 411); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 411, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 220, 411); // ce (w, ck)
+selectCodeEditor("MCU.v", 170, 78); // ce (w, ck)
+selectCodeEditor("MCU.v", 170, 78, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 170, 78); // ce (w, ck)
+selectCodeEditor("MCU.v", 161, 334); // ce (w, ck)
+selectCodeEditor("MCU.v", 161, 334, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 161, 334); // ce (w, ck)
+selectCodeEditor("MCU.v", 162, 358); // ce (w, ck)
+selectCodeEditor("MCU.v", 162, 358, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 162, 358); // ce (w, ck)
+selectCodeEditor("MCU.v", 218, 307); // ce (w, ck)
+selectCodeEditor("MCU.v", 218, 307, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 218, 307); // ce (w, ck)
+selectCodeEditor("MCU.v", 196, 386); // ce (w, ck)
+selectCodeEditor("MCU.v", 196, 386, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 196, 386); // ce (w, ck)
+selectCodeEditor("MCU.v", 177, 349); // ce (w, ck)
+selectCodeEditor("MCU.v", 177, 349, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 177, 349); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("MCU.v", 177, 349); // ce (w, ck)
+selectCodeEditor("MCU.v", 177, 349, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 177, 349); // ce (w, ck)
+selectCodeEditor("MCU.v", 154, 368); // ce (w, ck)
+selectCodeEditor("MCU.v", 154, 368, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 154, 368); // ce (w, ck)
+selectCodeEditor("MCU.v", 412, 271); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 180, 238); // ce (w, ck)
+selectCodeEditor("MCU.v", 180, 238, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 180, 238); // ce (w, ck)
+selectCodeEditor("MCU.v", 164, 248); // ce (w, ck)
+selectCodeEditor("MCU.v", 164, 248, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 164, 248); // ce (w, ck)
+selectCodeEditor("MCU.v", 407, 266); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 234, 272); // ce (w, ck)
+selectCodeEditor("MCU.v", 234, 272, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 234, 272); // ce (w, ck)
+selectCodeEditor("MCU.v", 383, 285); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 248, 234); // ce (w, ck)
+selectCodeEditor("MCU.v", 248, 234, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 248, 234); // ce (w, ck)
+selectCodeEditor("MCU.v", 385, 256); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 193, 306); // ce (w, ck)
+selectCodeEditor("MCU.v", 194, 306, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 194, 306); // ce (w, ck)
+selectCodeEditor("MCU.v", 397, 337); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 145, 450); // ce (w, ck)
+selectCodeEditor("MCU.v", 145, 450, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 145, 450); // ce (w, ck)
+selectCodeEditor("MCU.v", 388, 464); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 278, 468); // ce (w, ck)
+selectCodeEditor("MCU.v", 278, 468, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 278, 468); // ce (w, ck)
+selectCodeEditor("MCU.v", 417, 493); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 226, 436); // ce (w, ck)
+selectCodeEditor("MCU.v", 226, 436, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 226, 436); // ce (w, ck)
+selectCodeEditor("MCU.v", 409, 449); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 202, 270); // ce (w, ck)
+selectCodeEditor("MCU.v", 202, 270, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 202, 270); // ce (w, ck)
+selectCodeEditor("MCU.v", 411, 291); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 197, 402); // ce (w, ck)
+selectCodeEditor("MCU.v", 197, 402, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 197, 402); // ce (w, ck)
+selectCodeEditor("MCU.v", 404, 477); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 212, 466); // ce (w, ck)
+selectCodeEditor("MCU.v", 213, 466, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 213, 466); // ce (w, ck)
+selectCodeEditor("MCU.v", 407, 496); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 229, 488); // ce (w, ck)
+selectCodeEditor("MCU.v", 229, 488, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 229, 488); // ce (w, ck)
+selectCodeEditor("MCU.v", 409, 544); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("MCU.v", 244, 433); // ce (w, ck)
+selectCodeEditor("MCU.v", 244, 434, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 244, 434); // ce (w, ck)
+selectCodeEditor("MCU.v", 423, 454); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 169, 504); // ce (w, ck)
+selectCodeEditor("MCU.v", 169, 504, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 169, 504); // ce (w, ck)
+selectCodeEditor("MCU.v", 432, 559); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 490); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 490, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 220, 490); // ce (w, ck)
+selectCodeEditor("MCU.v", 417, 499); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 204, 451); // ce (w, ck)
+selectCodeEditor("MCU.v", 204, 451, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 204, 451); // ce (w, ck)
+selectCodeEditor("MCU.v", 368, 488); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 429, 445); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectCodeEditor("MCU.v", 219, 458); // ce (w, ck)
+selectCodeEditor("MCU.v", 220, 459, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 220, 459); // ce (w, ck)
+selectCodeEditor("MCU.v", 405, 466); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 203, 348); // ce (w, ck)
+selectCodeEditor("MCU.v", 203, 348, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 203, 348); // ce (w, ck)
+selectCodeEditor("MCU.v", 405, 369); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 238, 252); // ce (w, ck)
+selectCodeEditor("MCU.v", 238, 252, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 238, 252); // ce (w, ck)
+selectCodeEditor("MCU.v", 399, 269); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 208, 331); // ce (w, ck)
+selectCodeEditor("MCU.v", 208, 331, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 208, 331); // ce (w, ck)
+selectCodeEditor("MCU.v", 418, 346); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 235, 356); // ce (w, ck)
+selectCodeEditor("MCU.v", 235, 356, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 235, 356); // ce (w, ck)
+selectCodeEditor("MCU.v", 414, 373); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 217, 310); // ce (w, ck)
+selectCodeEditor("MCU.v", 217, 310, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 217, 310); // ce (w, ck)
+selectCodeEditor("MCU.v", 450, 333); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 171, 390); // ce (w, ck)
+selectCodeEditor("MCU.v", 171, 390, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 171, 390); // ce (w, ck)
+selectCodeEditor("MCU.v", 404, 410); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 236, 410); // ce (w, ck)
+selectCodeEditor("MCU.v", 236, 410, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 236, 410); // ce (w, ck)
+selectCodeEditor("MCU.v", 426, 434); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 212, 308); // ce (w, ck)
+selectCodeEditor("MCU.v", 212, 308, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 212, 308); // ce (w, ck)
+selectCodeEditor("MCU.v", 410, 327); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 216, 270); // ce (w, ck)
+selectCodeEditor("MCU.v", 216, 270, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 216, 270); // ce (w, ck)
+selectCodeEditor("MCU.v", 396, 292); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 173, 189); // ce (w, ck)
+selectCodeEditor("MCU.v", 173, 189, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 173, 189); // ce (w, ck)
+selectCodeEditor("MCU.v", 412, 210); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 452); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 452, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 190, 452); // ce (w, ck)
+selectCodeEditor("MCU.v", 425, 467); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 112, 176); // ce (w, ck)
+selectCodeEditor("MCU.v", 127, 175); // ce (w, ck)
+selectCodeEditor("MCU.v", 166, 454); // ce (w, ck)
+selectCodeEditor("MCU.v", 166, 454, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 166, 454); // ce (w, ck)
+selectCodeEditor("MCU.v", 418, 474); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 236, 420); // ce (w, ck)
+selectCodeEditor("MCU.v", 236, 420, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 230, 410); // ce (w, ck)
+selectCodeEditor("MCU.v", 230, 410, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 230, 410); // ce (w, ck)
+selectCodeEditor("MCU.v", 406, 427); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 314); // ce (w, ck)
+selectCodeEditor("MCU.v", 190, 314, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 190, 314); // ce (w, ck)
+selectCodeEditor("MCU.v", 411, 333); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 216, 454); // ce (w, ck)
+selectCodeEditor("MCU.v", 216, 454, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 216, 454); // ce (w, ck)
+selectCodeEditor("MCU.v", 416, 472); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 179, 477); // ce (w, ck)
+selectCodeEditor("MCU.v", 179, 477, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 179, 477); // ce (w, ck)
+selectCodeEditor("MCU.v", 414, 491); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 214, 510); // ce (w, ck)
+selectCodeEditor("MCU.v", 214, 510, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 214, 510); // ce (w, ck)
+selectCodeEditor("MCU.v", 405, 530); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 254, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 254, 532, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 254, 532); // ce (w, ck)
+selectCodeEditor("MCU.v", 428, 558); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 174, 545); // ce (w, ck)
+selectCodeEditor("MCU.v", 174, 545, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 174, 545); // ce (w, ck)
+selectCodeEditor("MCU.v", 448, 566); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 410, 590); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 212, 548); // ce (w, ck)
+selectCodeEditor("MCU.v", 212, 548, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 212, 548); // ce (w, ck)
+selectCodeEditor("MCU.v", 180, 604); // ce (w, ck)
+selectCodeEditor("MCU.v", 170, 590); // ce (w, ck)
+selectCodeEditor("MCU.v", 170, 591, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("MCU.v", 170, 591); // ce (w, ck)
+selectCodeEditor("MCU.v", 423, 428); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 385, 506); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("MCU.v", 404, 526); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 390, 610); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 388, 450); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 388, 526); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 381, 432); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 390, 503); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 390, 526); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 396, 546); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 393, 572); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 400, 530); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 394, 489); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 394, 577); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 394, 522); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 385, 425); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("MCU.v", 183, 254); // ce (w, ck)
+selectCodeEditor("MCU.v", 370, 428); // ce (w, ck)
+selectCodeEditor("MCU.v", 431, 587); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 24 seconds
+selectCodeEditor("MCU.v", 353, 140); // ce (w, ck)
+typeControlKey((HResource) null, "MCU.v", 'v'); // ce (w, ck)
+selectCodeEditor("MCU.v", 440, 326); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 46 seconds
+selectCodeEditor("MCU.v", 102, 169); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MCU.v", 574, 326); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

@@ -18,7 +18,7 @@ module CPU_Test_Module_13();
     wire dm_cs, dm_wr, dm_rd;
     wire [31:0] dm_address, dm_d_in, dm_out;
     
-    wire io_rd, io_wr;
+    wire io_rd, io_wr, io_cs;
     wire [31:0] io_out;
     
     integer i;
@@ -27,11 +27,12 @@ module CPU_Test_Module_13();
     MIPS_CPU CPU(.clk(clk), .reset(reset), .intr(intr), .inta(inta), 
                  .dm_cs(dm_cs), .dm_rd(dm_rd), .dm_wr(dm_wr), .dm_address(dm_address),
                  .dm_d_in(dm_d_in), .dm_out(dm_out), .io_rd(io_rd), .io_out(io_out),
-                 .io_wr(io_wr) );
+                 .io_wr(io_wr), .io_cs(io_cs) );
     Memory  dMem(.clk(clk), .cs(dm_cs), .rd(dm_rd), .wr(dm_wr), .Address(dm_address),
                 .D_In(dm_d_in), .D_Out(dm_out) );
     IO    io_mod(.clk(clk), .intr(intr), .inta(inta), .io_address(dm_address),
-                 .io_d_in(dm_d_in), .io_out(io_out), .io_rd(io_rd), .io_wr(io_wr) );
+                 .io_d_in(dm_d_in), .io_out(io_out), .io_rd(io_rd), .io_wr(io_wr), 
+                 .io_cs(io_cs) );
     
     always #5 clk = ~clk;
     
