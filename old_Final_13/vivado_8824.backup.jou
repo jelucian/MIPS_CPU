@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Mar 25 15:29:02 2019
+# Process ID: 8824
+# Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8660 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\Execution_Unit_modified\Execution_Unit.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified/Execution_Unit.xpr}
+update_compile_order -fileset sources_1
