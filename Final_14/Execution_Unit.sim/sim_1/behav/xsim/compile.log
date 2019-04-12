@@ -28,5 +28,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS
 INFO: [VRFC 10-311] analyzing module regfile32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.srcs/sim_1/new/MIPS_CPU_TB01.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU_Test_Module_13
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Execution_Unit.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

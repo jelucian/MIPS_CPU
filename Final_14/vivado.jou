@@ -57,3 +57,67 @@ update_ip_catalog
 update_ip_catalog
 update_ip_catalog
 update_ip_catalog
+synth_design -rtl -name rtl_1
+launch_simulation
+launch_simulation
+source CPU_Test_Module_13.tcl
+run all
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 10 ms
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run all
+run all
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source CPU_Test_Module_13.tcl
+run all
+restart
+run 1 us
+run 1 us
+run 8 us
+run 1 us
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 1 us
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 1 us
+Dump_dMem
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 1 us
+close_sim
+launch_simulation
+source CPU_Test_Module_13.tcl
+run 1 ms
+close_sim
+launch_simulation
+launch_simulation
+source CPU_Test_Module_13.tcl
+close_sim
+launch_simulation

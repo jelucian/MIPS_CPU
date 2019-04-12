@@ -31,7 +31,7 @@ module IO(clk, intr, inta, io_address, io_d_in, io_out, io_rd, io_wr, io_cs);
       begin
         //Display time in nanoseconds
         $timeformat(-9, 1, " ps", 9);
-        #170
+        #200
         intr = 1'b1;
         $display("T = %t | Interrupt Request Signal HIGH", $time);
         //wait for interrupt acknowledge

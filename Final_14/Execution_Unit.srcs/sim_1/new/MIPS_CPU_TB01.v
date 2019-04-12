@@ -42,9 +42,9 @@ module CPU_Test_Module_13();
         $timeformat(-9, 1, " ps", 9);
         
         //initialize iMem
-        $readmemh("iM_13.mem", CPU.Instruction_Unit.IM.M);
+        $readmemh("iM_14.mem", CPU.Instruction_Unit.IM.M);
         //initialize dMem
-        $readmemh("dM_13.mem", dMem.M);
+        $readmemh("dM_14.mem", dMem.M);
         
         clk = 0;
         reset = 0;
@@ -56,6 +56,9 @@ module CPU_Test_Module_13();
         for(i = 0; i < 10000; i=i+1)
             @(negedge clk);
         
+        CPU.Control_Unit.Dump_Reg;
+        CPU.Control_Unit.Dump_dMem;
+        CPU.Control_Unit.Dump_IO;
         $display("ERROR: REACHED END OF TESTBENCH LOOP");
 
         

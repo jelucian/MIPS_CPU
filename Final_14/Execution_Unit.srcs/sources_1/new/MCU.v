@@ -105,7 +105,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
     reg [8:0] state;
     
     //Control Unit Finite State Machine
-    always @ (negedge sys_clk, posedge reset) begin
+    always @ (posedge sys_clk, posedge reset) begin
      if(reset)
         begin
           //reset state control word
@@ -118,8 +118,12 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
         end
      else 
       begin
+        @(negedge sys_clk);
         case(state)
-          FETCH:
+          FETCH: begin
+            //Dump_Reg;
+            //Dump_dMem;
+            //Dump_IO;
             if(int_ack == 0 & intr == 1)
               begin//new interrupt pending
                 //control word to "deassert" everyting
@@ -145,6 +149,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
                 $display("T = %t | State = FETCH  | Next State = DECODE | PC = %h | IR = %h",
                          $time, CPU_IU.PC_out, CPU_IU.IR_out);
               end
+          end
             
           RESET:
             begin
@@ -919,7 +924,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- $sp
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b1;
               {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
@@ -933,7 +938,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               //ALU_OUT <- RS($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = pass_s_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = RETI_3; {IE, N, Z, V, C} = {IE, N, Z, V, C};
@@ -945,9 +950,9 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //D_in <- dMem[ALU_OUT($sp)], RS <- Reg($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b1;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = RETI_4; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = RETI_3 | Next State = RETI_4 | PC = %h | IR = %h",
@@ -956,24 +961,24 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
 
           RETI_4:
             begin
-              //PC <- D_in, ALU_OUT <- RS($sp) - 4
+              //flags <- D_in, ALU_OUT <- RS($sp) + 4
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_001; FS = inc4_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = RETI_5; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              state = RETI_5; #1 {IE, N, Z, V, C} = flags_in;
               $display("T = %t | State = RETI_4 | Next State = RETI_5 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
             
           RETI_5:
             begin
-              //Reg($sp) <- ALU_OUT($sp - 4), D_in <- dMem[ALU_OUT($sp - 4)]
+              //RS <- ALU_OUT($sp + 4), D_in <- dMem[ALU_OUT($sp + 4)]
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_100_0_010; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = RETI_6; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = RETI_5 | Next State = RETI_6 | PC = %h | IR = %h",
@@ -982,40 +987,27 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             
           RETI_6:
             begin
-              //RS <- Reg($sp - 4), Flags <- D_in
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
+              //ALU_OUT <- RS($sp + 4) + 4, PC <- D_in
+              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_001; FS = inc4_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = RETI_7; {IE, N, Z, V, C} = {IE, N, Z, V, C};
+              state = RETI_7; #1 {IE, N, Z, V, C} = flags_in;
               $display("T = %t | State = RETI_6 | Next State = RETI_7 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
-                    
+
           RETI_7:
             begin
-              //ALU_OUT <- RS($sp - 4) - 4
+              //Reg($sp) <- ALU_OUT ($sp + 8)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
-              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
-              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = RETI_8; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = RETI_7 | Next State = RETI_8 | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end
-            
-          RETI_8:
-            begin
-              //Reg($sp) <- ALU_OUT ($sp-8)
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b1_11_000_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = RETI_8 | Next State = FETCH  | PC = %h | IR = %h",
+              $display("T = %t | State = RETI_7 | Next State = FETCH  | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
           
@@ -1023,8 +1015,8 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
             begin
               //RS <- Reg($sp)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b1_10_000_0_000; FS = sp_init_;
+              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b1;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_000; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_2; {IE, N, Z, V, C} = {IE, N, Z, V, C};
@@ -1034,11 +1026,11 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
         
           INTR_2:
             begin
-              //ALU_OUT <- RS($sp) + 4, RT <- PC
+              //ALU_OUT <- RS($sp) - 4, RT <- PC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = sp_init_;
-              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_010_0_000; FS = dec4_;
+              {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_3; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = INTR_2 | Next State = INTR_3 | PC = %h | IR = %h",
@@ -1047,70 +1039,58 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
           
           INTR_3:
             begin
-              //dMem[ALU_OUT($sp+4)] <- RT(PC), RT <- ALU_OUT($sp - 4)
+              //dMem[ALU_OUT($sp - 4)] <- RT(PC), RS <- ALU_OUT($sp - 4)
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = sp_init_;
-              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_100_0_010; FS = no_op_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_0_1; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_4; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = INTR_3 | Next State = INTR_4 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
             
+        
           INTR_4:
             begin
-              //RS <- Reg($sp+4)
+              //ALU_OUT <- RS($sp - 4) - 4, RT <- {27'b0, flags}
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b1_10_000_0_000; FS = sp_init_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_011_0_000; FS = dec4_;
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_5; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = INTR_4 | Next State = INTR_5 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
-        
+          
           INTR_5:
             begin
-              //ALU_OUT <- RS($sp+4) + 4, RT <- flags
+              //dMem[ALU_OUT($sp - 8)] <- RT(flags), Reg($sp) <- ALU_OUT($sp - 8), ALU_OUT <- 0x3FC
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = sp_init_;
-              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b1_11_000_0_010; FS = sp_init_;
+              {dm_cs, dm_rd, dm_wr} = 3'b1_0_1; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_6; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = INTR_5 | Next State = INTR_6 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end
-          
+            end 
+                       
           INTR_6:
             begin
-              //dMem[ALU_OUT($sp + 8)] <- RT(flags), Reg($sp) <- ALU_OUT($sp + 8), ALU_OUT <- 0x3FC
+              //D_in <- dMem[ALU_OUT(0x3FC)]
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
               {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = sp_init_;
+              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = no_op_;
               {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = INTR_7; {IE, N, Z, V, C} = {IE, N, Z, V, C};
               $display("T = %t | State = INTR_6 | Next State = INTR_7 | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
-            end 
-                       
-          INTR_7:
-            begin
-              //D_in <- dMem[ALU_OUT($sp + 8)]
-              {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b00_0_0_0; 
-              {im_cs, im_rd, im_wr} = 3'b0_0_0; stack = 1'b0;
-              {D_En, DA_sel, T_sel, HILO_ld, Y_sel} = 10'b0_00_000_0_010; FS = sp_init_;
-              {dm_cs, dm_rd, dm_wr} = 3'b1_1_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
-              {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
-              state = INTR_8; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = INTR_7 | Next State = INTR_8 | PC = %h | IR = %h",
-                       $time, CPU_IU.PC_out, CPU_IU.IR_out);
             end
           
-          INTR_8:
+          INTR_7:
             begin
               //PC <- D_in( dMem[0x3FC] ), int_ack <- 1
               {pc_sel, pc_ld, pc_inc, ir_ld} = 5'b10_1_0_0; 
@@ -1119,9 +1099,10 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
               {dm_cs, dm_rd, dm_wr} = 3'b0_0_0; {io_cs, io_rd, io_wr} = 3'b0_0_0;
               {S_Addr, T_Addr, D_Addr, shamt} = { IR[26:21], IR[20:16], IR[15:11], IR[10:6] };
               state = FETCH; {IE, N, Z, V, C} = {IE, N, Z, V, C};
-              $display("T = %t | State = INTR_8 | Next State = FETCH  | PC = %h | IR = %h",
+              $display("T = %t | State = INTR_7 | Next State = FETCH  | PC = %h | IR = %h",
                        $time, CPU_IU.PC_out, CPU_IU.IR_out);
               int_ack = 1;
+              Dump_Reg;
             end
         
         endcase//end of FSM

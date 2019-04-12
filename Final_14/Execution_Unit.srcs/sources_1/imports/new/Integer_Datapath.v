@@ -67,8 +67,8 @@ module Integer_Datapath(clk, reset, S_Addr, FS, HILO_ld, D_En, D_Addr, T_Addr,
                                         D_Addr;//Default
     
     //S-MUX
-    assign S_MUX = (T_Sel[2] == 1'b1) ? ALU_OUT   ://Y_Mux output
-                                        REG_FILE_S;//Regfile
+    assign S_MUX = (T_Sel == 3'b100) ? ALU_OUT   ://Y_Mux output
+                                       REG_FILE_S;//Regfile
     
     //T-MUX
     assign T_MUX = (T_Sel == 3'b011) ? {26'b0, flags_in}://flags_in
