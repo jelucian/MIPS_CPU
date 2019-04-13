@@ -1,0 +1,40 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+BREAK INSTRUCTION FETCHED 1420.0 ps
+ 
+D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e
+R [  0 ]   =   00000000    |   R [ 16 ]   =   xxxxxxxx
+R [  1 ]   =   00040911    |   R [ 17 ]   =   xxxxxxxx
+R [  2 ]   =   000003e8    |   R [ 18 ]   =   xxxxxxxx
+R [  3 ]   =   fffbf6ef    |   R [ 19 ]   =   xxxxxxxx
+R [  4 ]   =   fffffc18    |   R [ 20 ]   =   xxxxxxxx
+R [  5 ]   =   00000108    |   R [ 21 ]   =   xxxxxxxx
+R [  6 ]   =   000001d1    |   R [ 22 ]   =   xxxxxxxx
+R [  7 ]   =   fffffef8    |   R [ 23 ]   =   xxxxxxxx
+R [  8 ]   =   fffffe2f    |   R [ 24 ]   =   xxxxxxxx
+R [  9 ]   =   00000108    |   R [ 25 ]   =   xxxxxxxx
+R [ 10 ]   =   fffffe2f    |   R [ 26 ]   =   xxxxxxxx
+R [ 11 ]   =   00000000    |   R [ 27 ]   =   xxxxxxxx
+R [ 12 ]   =   00000000    |   R [ 28 ]   =   xxxxxxxx
+R [ 13 ]   =   00000000    |   R [ 29 ]   =   000003fc
+R [ 14 ]   =   00000000    |   R [ 30 ]   =   xxxxxxxx
+R [ 15 ]   =   10010000    |   R [ 31 ]   =   xxxxxxxx
+ 
+D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y
+d M e m [ 3c0 ]   =   xxxxxxxx
+d M e m [ 3c4 ]   =   xxxxxxxx
+d M e m [ 3c8 ]   =   xxxxxxxx
+d M e m [ 3cc ]   =   xxxxxxxx
+d M e m [ 3d0 ]   =   xxxxxxxx
+d M e m [ 3d4 ]   =   xxxxxxxx
+d M e m [ 3d8 ]   =   xxxxxxxx
+d M e m [ 3dc ]   =   xxxxxxxx
+d M e m [ 3e0 ]   =   xxxxxxxx
+d M e m [ 3e4 ]   =   xxxxxxxx
+d M e m [ 3e8 ]   =   xxxxxxxx
+d M e m [ 3ec ]   =   xxxxxxxx
+d M e m [ 3f0 ]   =   xxxxxxxx
+d M e m [ 3f4 ]   =   xxxxxxxx
+d M e m [ 3f8 ]   =   00000000
+d M e m [ 3fc ]   =   xxxxxxxx
+$finish called at time : 1420 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_1-12/Final_1-12/Final_1-12.srcs/sources_1/new/MCU.v" Line 789

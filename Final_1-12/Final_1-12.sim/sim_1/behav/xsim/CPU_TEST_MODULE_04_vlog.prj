@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Final_1-12.srcs/sources_1/new/DIV_32.v" \
+"../../../../Final_1-12.srcs/sources_1/new/IDP.v" \
+"../../../../Final_1-12.srcs/sources_1/new/IO.v" \
+"../../../../Final_1-12.srcs/sources_1/new/IU.v" \
+"../../../../Final_1-12.srcs/sources_1/new/MCU.v" \
+"../../../../Final_1-12.srcs/sources_1/new/MIPS_32.v" \
+"../../../../Final_1-12.srcs/sources_1/new/MIPS_CPU.v" \
+"../../../../Final_1-12.srcs/sources_1/new/MPY_32.v" \
+"../../../../Final_1-12.srcs/sources_1/new/Memory.v" \
+"../../../../Final_1-12.srcs/sources_1/new/SHIFT.v" \
+"../../../../Final_1-12.srcs/sources_1/new/alu_32.v" \
+"../../../../Final_1-12.srcs/sources_1/new/reg32.v" \
+"../../../../Final_1-12.srcs/sources_1/new/reg32_inc.v" \
+"../../../../Final_1-12.srcs/sources_1/new/regfile32.v" \
+"../../../../Final_1-12.srcs/sim_1/new/CPU_TEST_MODULE_04.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

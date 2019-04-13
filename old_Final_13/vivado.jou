@@ -2,128 +2,13 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Apr 10 15:43:24 2019
-# Process ID: 3196
-# Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9512 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\Execution_Unit_modified - Copy\Execution_Unit.xpr
-# Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/vivado.log
-# Journal file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy\vivado.jou
+# Start of session at: Fri Apr 12 16:59:37 2019
+# Process ID: 4852
+# Current directory: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/old_Final_13
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7440 C:\Users\Jesus Luciano\Desktop\MIPS_CPU\old_Final_13\Execution_Unit.xpr
+# Log file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/old_Final_13/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/MIPS_CPU/old_Final_13\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.xpr}
+open_project {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/old_Final_13/Execution_Unit.xpr}
 update_compile_order -fileset sources_1
-close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/IO.v} w ]
-add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/IO.v}}
-update_compile_order -fileset sources_1
-close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/iM_13.mem} w ]
-add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/iM_13.mem}}
-close [ open {C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/dM_13.mem} w ]
-add_files {{C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Execution_Unit_modified - Copy/Execution_Unit.srcs/sources_1/new/dM_13.mem}}
-launch_simulation
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
-close_design
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-close_sim
-synth_design -rtl -name rtl_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-run all
-close_sim
-launch_simulation
-source CPU_Test_Module_13.tcl
-run all
-close_sim
-update_compile_order -fileset sources_1
-launch_simulation
-source CPU_Test_Module_13.tcl
-run all
-close_sim
-launch_simulation
-launch_simulation
-source CPU_Test_Module_13.tcl
-run all
-close_sim
