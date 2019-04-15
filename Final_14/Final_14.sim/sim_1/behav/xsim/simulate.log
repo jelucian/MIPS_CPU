@@ -21,22 +21,22 @@ R [ 14 ]   =   fffffef9    |   R [ 30 ]   =   xxxxxxxx
 R [ 15 ]   =   fffffef8    |   R [ 31 ]   =   xxxxxxxx
  
 D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y
-d M e m [ 3c0 ]   =   xxxxxxxx
-d M e m [ 3c4 ]   =   xxxxxxxx
-d M e m [ 3c8 ]   =   xxxxxxxx
-d M e m [ 3cc ]   =   xxxxxxxx
-d M e m [ 3d0 ]   =   xxxxxxxx
-d M e m [ 3d4 ]   =   xxxxxxxx
-d M e m [ 3d8 ]   =   xxxxxxxx
-d M e m [ 3dc ]   =   xxxxxxxx
-d M e m [ 3e0 ]   =   xxxxxxxx
-d M e m [ 3e4 ]   =   xxxxxxxx
-d M e m [ 3e8 ]   =   xxxxxxxx
-d M e m [ 3ec ]   =   xxxxxxxx
-d M e m [ 3f0 ]   =   fffffef8
-d M e m [ 3f4 ]   =   0000001X
-d M e m [ 3f8 ]   =   00000014
-d M e m [ 3fc ]   =   00000200
+d M e m [ 0c0 ]   =   xxxxxxxx
+d M e m [ 0c4 ]   =   xxxxxxxx
+d M e m [ 0c8 ]   =   xxxxxxxx
+d M e m [ 0cc ]   =   xxxxxxxx
+d M e m [ 0d0 ]   =   xxxxxxxx
+d M e m [ 0d4 ]   =   xxxxxxxx
+d M e m [ 0d8 ]   =   xxxxxxxx
+d M e m [ 0dc ]   =   xxxxxxxx
+d M e m [ 0e0 ]   =   xxxxxxxx
+d M e m [ 0e4 ]   =   xxxxxxxx
+d M e m [ 0e8 ]   =   xxxxxxxx
+d M e m [ 0ec ]   =   xxxxxxxx
+d M e m [ 0f0 ]   =   xxxxxxxx
+d M e m [ 0f4 ]   =   xxxxxxxx
+d M e m [ 0f8 ]   =   xxxxxxxx
+d M e m [ 0fc ]   =   xxxxxxxx
  
 D i s p l a y i n g   C o n t e n t s   o f   I O   M e m o r y
 i M e m [ 0c0 ]   =   8000ffff
@@ -55,4 +55,4 @@ i M e m [ 0f0 ]   =   ffffff80
 i M e m [ 0f4 ]   =   ffffffe0
 i M e m [ 0f8 ]   =   fffffff8
 i M e m [ 0fc ]   =   fffffffe
-$finish called at time : 5040 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_1-12/Final_14/Final_14.srcs/sources_1/new/MCU.v" Line 789
+$finish called at time : 5040 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Final_14.srcs/sources_1/new/MCU.v" Line 789

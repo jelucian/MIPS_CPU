@@ -60,7 +60,7 @@ module CPU_TEST_MODULE_01();
         //Dump Registers and Memory if there is an error
         CPU.Control_Unit.Dump_Reg;
         CPU.Control_Unit.Dump_dMem;
-        CPU.Control_Unit.Dump_IO;
+        //CPU.Control_Unit.Dump_IO;
         
       end            
 endmodule

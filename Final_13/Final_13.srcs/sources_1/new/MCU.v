@@ -875,7 +875,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
     begin
         $display(" ");
         $display("D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y");
-        for(i = 32'h3C0; i < 12'h400; i = i + 4)
+        for(i = 32'hC0; i < 12'hFF; i = i + 4)
           begin
              $display("d M e m [ %h ]   =   %h%h%h%h",i[11:0],
                       dMem.M[i  ], dMem.M[i+1], 
@@ -889,7 +889,7 @@ module MCU(sys_clk, reset, intr, c, n, z, v, IR, int_ack, pc_sel, pc_ld, pc_inc,
     begin
         $display(" ");
         $display("D i s p l a y i n g   C o n t e n t s   o f   I O   M e m o r y");
-        for(i = 32'hC0; i < 12'h100; i = i + 4)
+        for(i = 32'hC0; i < 12'hFF; i = i + 4)
                   begin
                      $display("i M e m [ %h ]   =   %h",i[9:0],IO.M[i[9:0]] ); 
                   end
