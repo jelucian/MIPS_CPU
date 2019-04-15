@@ -1,0 +1,29 @@
+ISim log file
+Running: C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\Register_File_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/Register_File_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+T=               35000, R_Adr = 0, R_Adr = 0000, S_Adr = 7  , S = 0000
+T=               45000, R_Adr = 1, R_Adr = 0000, S_Adr = 6  , S = 0000
+T=               55000, R_Adr = 2, R_Adr = 0000, S_Adr = 5  , S = 0000
+T=               65000, R_Adr = 3, R_Adr = 0000, S_Adr = 4  , S = 0000
+T=               75000, R_Adr = 4, R_Adr = 0000, S_Adr = 3  , S = 0000
+T=               85000, R_Adr = 5, R_Adr = 0000, S_Adr = 2  , S = 0000
+T=               95000, R_Adr = 6, R_Adr = 0000, S_Adr = 1  , S = 0000
+T=              105000, R_Adr = 7, R_Adr = 0000, S_Adr = 0  , S = 0000
+T=              195000, R_Adr = 0, R_Adr = ffff, S_Adr = 7  , S = fff8
+T=              205000, R_Adr = 1, R_Adr = fffe, S_Adr = 6  , S = fff9
+T=              215000, R_Adr = 2, R_Adr = fffd, S_Adr = 5  , S = fffa
+T=              225000, R_Adr = 3, R_Adr = fffc, S_Adr = 4  , S = fffb
+T=              235000, R_Adr = 4, R_Adr = fffb, S_Adr = 3  , S = fffc
+T=              245000, R_Adr = 5, R_Adr = fffa, S_Adr = 2  , S = fffd
+T=              255000, R_Adr = 6, R_Adr = fff9, S_Adr = 1  , S = fffe
+T=              265000, R_Adr = 7, R_Adr = fff8, S_Adr = 0  , S = ffff

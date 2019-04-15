@@ -184,3 +184,5 @@ i M e m [ 0fc ]   =   fffffffe
 $finish called at time : 5040 ns : File "C:/Users/Jesus Luciano/Desktop/MIPS_CPU/Final_14/Final_14.srcs/sources_1/new/MCU.v" Line 789
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 19:48:53 2019...
