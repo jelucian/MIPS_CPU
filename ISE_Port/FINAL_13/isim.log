@@ -1,0 +1,67 @@
+ISim log file
+Running: C:\Users\Jesus Luciano\Desktop\ISE_Port\FINAL_13\CPU_TEST_MODULE_13_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_13/CPU_TEST_MODULE_13_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+BREAK INSTRUCTION FETCHED 4960.0 ps
+ 
+D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e
+R [  0 ]   =   00000000    |   R [ 16 ]   =   100100c0
+R [  1 ]   =   12345678    |   R [ 17 ]   =   ffffffff
+R [  2 ]   =   87654321    |   R [ 18 ]   =   00000000
+R [  3 ]   =   abcdef01    |   R [ 19 ]   =   00000234
+R [  4 ]   =   01fedcba    |   R [ 20 ]   =   00000238
+R [  5 ]   =   5a5a5a5a    |   R [ 21 ]   =   0000023c
+R [  6 ]   =   ffffffff    |   R [ 22 ]   =   00000240
+R [  7 ]   =   100103f0    |   R [ 23 ]   =   00000244
+R [  8 ]   =   fffffeff    |   R [ 24 ]   =   00000248
+R [  9 ]   =   fffffefe    |   R [ 25 ]   =   xxxxxxxx
+R [ 10 ]   =   fffffefd    |   R [ 26 ]   =   xxxxxxxx
+R [ 11 ]   =   fffffefc    |   R [ 27 ]   =   xxxxxxxx
+R [ 12 ]   =   fffffefb    |   R [ 28 ]   =   xxxxxxxx
+R [ 13 ]   =   fffffefa    |   R [ 29 ]   =   000003fc
+R [ 14 ]   =   fffffef9    |   R [ 30 ]   =   xxxxxxxx
+R [ 15 ]   =   fffffef8    |   R [ 31 ]   =   00000014
+ 
+D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y
+d M e m [ 0c0 ]   =   xxxxxxxx
+d M e m [ 0c4 ]   =   xxxxxxxx
+d M e m [ 0c8 ]   =   xxxxxxxx
+d M e m [ 0cc ]   =   xxxxxxxx
+d M e m [ 0d0 ]   =   xxxxxxxx
+d M e m [ 0d4 ]   =   xxxxxxxx
+d M e m [ 0d8 ]   =   xxxxxxxx
+d M e m [ 0dc ]   =   xxxxxxxx
+d M e m [ 0e0 ]   =   xxxxxxxx
+d M e m [ 0e4 ]   =   xxxxxxxx
+d M e m [ 0e8 ]   =   xxxxxxxx
+d M e m [ 0ec ]   =   xxxxxxxx
+d M e m [ 0f0 ]   =   xxxxxxxx
+d M e m [ 0f4 ]   =   xxxxxxxx
+d M e m [ 0f8 ]   =   xxxxxxxx
+d M e m [ 0fc ]   =   xxxxxxxx
+ 
+D i s p l a y i n g   C o n t e n t s   o f   I O   M e m o r y
+i M e m [ 0c0 ]   =   8000ffff
+i M e m [ 0c4 ]   =   e0003fff
+i M e m [ 0c8 ]   =   f8000fff
+i M e m [ 0cc ]   =   fe0003ff
+i M e m [ 0d0 ]   =   ff8000ff
+i M e m [ 0d4 ]   =   ffe0003f
+i M e m [ 0d8 ]   =   fff8000f
+i M e m [ 0dc ]   =   fffe0003
+i M e m [ 0e0 ]   =   ffff8000
+i M e m [ 0e4 ]   =   ffffe000
+i M e m [ 0e8 ]   =   fffff800
+i M e m [ 0ec ]   =   fffffe00
+i M e m [ 0f0 ]   =   ffffff80
+i M e m [ 0f4 ]   =   ffffffe0
+i M e m [ 0f8 ]   =   fffffff8
+i M e m [ 0fc ]   =   fffffffe
+Stopped at time : 4960 ns : File "C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_13/MCU.v" Line 789

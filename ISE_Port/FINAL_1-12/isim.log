@@ -1,0 +1,48 @@
+ISim log file
+Running: C:\Users\Jesus Luciano\Downloads\FINAL_1-12\CPU_TEST_MODULE_01_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Jesus Luciano/Downloads/FINAL_1-12/CPU_TEST_MODULE_01_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+BREAK INSTRUCTION FETCHED  620.0 ps
+ 
+D i s p l a y i n g   C o n t e n t s   o f   R e g f i l e
+R [  0 ]   =   00000000    |   R [ 16 ]   =   xxxxxxxx
+R [  1 ]   =   12345678    |   R [ 17 ]   =   xxxxxxxx
+R [  2 ]   =   87654321    |   R [ 18 ]   =   xxxxxxxx
+R [  3 ]   =   12345678    |   R [ 19 ]   =   xxxxxxxx
+R [  4 ]   =   xxxxxxxx    |   R [ 20 ]   =   xxxxxxxx
+R [  5 ]   =   xxxxxxxx    |   R [ 21 ]   =   xxxxxxxx
+R [  6 ]   =   xxxxxxxx    |   R [ 22 ]   =   xxxxxxxx
+R [  7 ]   =   xxxxxxxx    |   R [ 23 ]   =   xxxxxxxx
+R [  8 ]   =   xxxxxxxx    |   R [ 24 ]   =   xxxxxxxx
+R [  9 ]   =   xxxxxxxx    |   R [ 25 ]   =   xxxxxxxx
+R [ 10 ]   =   xxxxxxxx    |   R [ 26 ]   =   xxxxxxxx
+R [ 11 ]   =   xxxxxxxx    |   R [ 27 ]   =   xxxxxxxx
+R [ 12 ]   =   xxxxxxxx    |   R [ 28 ]   =   xxxxxxxx
+R [ 13 ]   =   100100c0    |   R [ 29 ]   =   000003fc
+R [ 14 ]   =   00000000    |   R [ 30 ]   =   xxxxxxxx
+R [ 15 ]   =   00000000    |   R [ 31 ]   =   xxxxxxxx
+ 
+D i s p l a y i n g   C o n t e n t s   o f   D a t a   M e m o r y
+d M e m [ 0c0 ]   =   12345678
+d M e m [ 0c4 ]   =   xxxxxxxx
+d M e m [ 0c8 ]   =   xxxxxxxx
+d M e m [ 0cc ]   =   xxxxxxxx
+d M e m [ 0d0 ]   =   xxxxxxxx
+d M e m [ 0d4 ]   =   xxxxxxxx
+d M e m [ 0d8 ]   =   xxxxxxxx
+d M e m [ 0dc ]   =   xxxxxxxx
+d M e m [ 0e0 ]   =   xxxxxxxx
+d M e m [ 0e4 ]   =   xxxxxxxx
+d M e m [ 0e8 ]   =   xxxxxxxx
+d M e m [ 0ec ]   =   xxxxxxxx
+d M e m [ 0f0 ]   =   xxxxxxxx
+d M e m [ 0f4 ]   =   xxxxxxxx
+d M e m [ 0f8 ]   =   xxxxxxxx
+d M e m [ 0fc ]   =   xxxxxxxx
+Stopped at time : 620 ns : File "C:/Users/Jesus Luciano/Downloads/FINAL_1-12/MCU.v" Line 788

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Apr 15 19:45:28 2019
+# Process ID: 5196
+# Current directory: C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_1-12
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6632 C:\Users\Jesus Luciano\Desktop\ISE_Port\FINAL_1-12\CPU_TEST_MODULE_12_isim_beh.wdb
+# Log file: C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_1-12/vivado.log
+# Journal file: C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_1-12\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {C:\Users\Jesus Luciano\Desktop\ISE_Port\FINAL_1-12\CPU_TEST_MODULE_12_isim_beh.wdb}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 737.449 ; gain = 74.109
+ERROR: [Wavedata 42-25] The waveform database 'C:\Users\Jesus Luciano\Desktop\ISE_Port\FINAL_1-12\CPU_TEST_MODULE_12_isim_beh.wdb' could not be opened for the following reason: The file may be corrupt or of an unsupported older format.  As of version 2014.3 Vivado includes a new, enhanced waveform database. Because the new database is incompatible with the old database, the current version of Vivado cannot open WDB files created in versions prior to 2014.3.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 15 19:46:26 2019...

@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/Register_File_tb_isim_beh.exe" -prj "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/Register_File_tb_beh.prj" "Register_File_tb" "work.glbl" 

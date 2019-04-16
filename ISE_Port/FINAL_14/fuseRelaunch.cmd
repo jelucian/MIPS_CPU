@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_14/CPU_TEST_MODULE_14_isim_beh.exe" -prj "C:/Users/Jesus Luciano/Desktop/ISE_Port/FINAL_14/CPU_TEST_MODULE_14_beh.prj" "work.CPU_TEST_MODULE_14" "work.glbl" 
